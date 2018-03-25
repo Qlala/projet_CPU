@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 27 16:23:50 2018" VIVADOVERSION="2017.4.1">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="design_1" PACKAGE="csg324" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="OK_button" SIGIS="undef" SIGNAME="External_Ports_OK_button">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="switches_manager_0" PORT="save_enable"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="JA1" SIGIS="undef"/>
+    <PORT DIR="O" NAME="CA" SIGIS="undef" SIGNAME="digit_display_0_CA">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="digit_display_0" PORT="CA"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="CB" SIGIS="undef" SIGNAME="digit_display_0_CB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="digit_display_0" PORT="CB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="CC" SIGIS="undef" SIGNAME="digit_display_0_CC">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="digit_display_0" PORT="CC"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="CD" SIGIS="undef" SIGNAME="digit_display_0_CD">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="digit_display_0" PORT="CD"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="CE" SIGIS="undef" SIGNAME="digit_display_0_CE">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="digit_display_0" PORT="CE"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="CF" SIGIS="undef" SIGNAME="digit_display_0_CF">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="digit_display_0" PORT="CF"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="CG" SIGIS="undef" SIGNAME="digit_display_0_CG">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="digit_display_0" PORT="CG"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="DP" SIGIS="undef" SIGNAME="digit_display_0_DP">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="digit_display_0" PORT="DP"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="AN" RIGHT="7" SIGIS="undef" SIGNAME="digit_display_0_AN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="digit_display_0" PORT="AN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="EXT_OSC" SIGIS="clk" SIGNAME="External_Ports_EXT_OSC">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="CLOCK_manager_0" PORT="master_CLK"/>
+        <CONNECTION INSTANCE="Freq_Divider_2" PORT="CLK"/>
+        <CONNECTION INSTANCE="switches_manager_0" PORT="CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="RST_button" SIGIS="rst" SIGNAME="External_Ports_RST_button">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="CLOCK_manager_0" PORT="reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="15" NAME="SW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SW">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="switches_manager_0" PORT="switches"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/CLOCK_manager_0" HWVERSION="1.0" INSTANCE="CLOCK_manager_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CLOCK_manager" VLNV="xilinx.com:module_ref:CLOCK_manager:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="multiplier" VALUE="16"/>
+        <PARAMETER NAME="Divide_0" VALUE="15"/>
+        <PARAMETER NAME="Divide_1" VALUE="16"/>
+        <PARAMETER NAME="Divide_2" VALUE="64"/>
+        <PARAMETER NAME="Divide_3" VALUE="64"/>
+        <PARAMETER NAME="Divide_4" VALUE="64"/>
+        <PARAMETER NAME="Divide_5" VALUE="64"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_CLOCK_manager_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="master_CLK" SIGIS="clk" SIGNAME="External_Ports_EXT_OSC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="EXT_OSC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_RST_button">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RST_button"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CLK_out0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="CLK_out1" SIGIS="undef" SIGNAME="CLOCK_manager_0_CLK_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Freq_Divider_1" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CLK_out2" SIGIS="undef"/>
+        <PORT DIR="O" NAME="CLK_out3" SIGIS="undef"/>
+        <PORT DIR="O" NAME="CLK_out4" SIGIS="undef"/>
+        <PORT DIR="O" NAME="CLK_out5" SIGIS="undef"/>
+        <PORT DIR="O" NAME="locked" SIGIS="undef"/>
+        <PORT DIR="I" NAME="CLKFBIN" SIGIS="undef" SIGNAME="CLOCK_manager_0_CLKFBOUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CLOCK_manager_0" PORT="CLKFBOUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CLKFBOUT" SIGIS="undef" SIGNAME="CLOCK_manager_0_CLKFBOUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CLOCK_manager_0" PORT="CLKFBIN"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Freq_Divider_1" HWVERSION="1.0" INSTANCE="Freq_Divider_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Freq_Divider" VLNV="xilinx.com:module_ref:Freq_Divider:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="divide_by" VALUE="100000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_Freq_Divider_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="CLOCK_manager_0_CLK_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CLOCK_manager_0" PORT="CLK_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CLK_out" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Freq_Divider_2" HWVERSION="1.0" INSTANCE="Freq_Divider_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Freq_Divider" VLNV="xilinx.com:module_ref:Freq_Divider:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="divide_by" VALUE="10000"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_Freq_Divider_1_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_EXT_OSC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="EXT_OSC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CLK_out" SIGIS="undef" SIGNAME="Freq_Divider_2_CLK_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="digit_display_0" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/digit_display_0" HWVERSION="1.0" INSTANCE="digit_display_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="digit_display" VLNV="xilinx.com:module_ref:digit_display:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_digit_display_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="CA" SIGIS="undef" SIGNAME="digit_display_0_CA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CB" SIGIS="undef" SIGNAME="digit_display_0_CB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CC" SIGIS="undef" SIGNAME="digit_display_0_CC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CD" SIGIS="undef" SIGNAME="digit_display_0_CD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CE" SIGIS="undef" SIGNAME="digit_display_0_CE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CF" SIGIS="undef" SIGNAME="digit_display_0_CF">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CF"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CG" SIGIS="undef" SIGNAME="digit_display_0_CG">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CG"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="DP" SIGIS="undef" SIGNAME="digit_display_0_DP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="DP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="OK_button" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="AN" RIGHT="7" SIGIS="undef" SIGNAME="digit_display_0_AN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="disp_byte0" RIGHT="0" SIGIS="undef" SIGNAME="switches_manager_0_byte0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="switches_manager_0" PORT="byte0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="disp_byte1" RIGHT="0" SIGIS="undef" SIGNAME="switches_manager_0_byte1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="switches_manager_0" PORT="byte1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="disp_byte2" RIGHT="0" SIGIS="undef" SIGNAME="switches_manager_0_byte0_saved">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="switches_manager_0" PORT="byte0_saved"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="disp_byte3" RIGHT="0" SIGIS="undef" SIGNAME="switches_manager_0_byte1_saved">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="switches_manager_0" PORT="byte1_saved"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="Freq_Divider_2_CLK_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Freq_Divider_2" PORT="CLK_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/switches_manager_0" HWVERSION="1.0" INSTANCE="switches_manager_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="switches_manager" VLNV="xilinx.com:module_ref:switches_manager:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_switches_manager_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="switches" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reg_change" SIGIS="undef"/>
+        <PORT DIR="I" NAME="save_enable" SIGIS="undef" SIGNAME="External_Ports_OK_button">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="OK_button"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_EXT_OSC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="EXT_OSC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="byte0" RIGHT="0" SIGIS="undef" SIGNAME="switches_manager_0_byte0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="digit_display_0" PORT="disp_byte0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="byte1" RIGHT="0" SIGIS="undef" SIGNAME="switches_manager_0_byte1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="digit_display_0" PORT="disp_byte1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="byte0_saved" RIGHT="0" SIGIS="undef" SIGNAME="switches_manager_0_byte0_saved">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="digit_display_0" PORT="disp_byte2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="byte1_saved" RIGHT="0" SIGIS="undef" SIGNAME="switches_manager_0_byte1_saved">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="digit_display_0" PORT="disp_byte3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

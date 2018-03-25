@@ -1,0 +1,640 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Mon Mar 12 22:06:22 2018
+| Host         : Qlala-Blade running 64-bit major release  (build 9200)
+| Command      : report_methodology -file main_interconnect_methodology_drc_routed.rpt -pb main_interconnect_methodology_drc_routed.pb -rpx main_interconnect_methodology_drc_routed.rpx
+| Design       : main_interconnect
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 102
++-----------+----------+-------------------------------------------------+------------+
+| Rule      | Severity | Description                                     | Violations |
++-----------+----------+-------------------------------------------------+------------+
+| PDRC-190  | Warning  | Suboptimally placed synchronized register chain | 12         |
+| TIMING-17 | Warning  | Non-clocked sequential cell                     | 28         |
+| XDCB-5    | Warning  | Runtime inefficient way to find pin objects     | 1          |
+| XDCC-5    | Warning  | User Non-Timing constraint/property overwritten | 45         |
+| REQP-1959 | Advisory | connects_SERDES_RST_driver_not_FF               | 16         |
++-----------+----------+-------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X62Y102 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X65Y102 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X66Y102 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X62Y99 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X67Y99 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X64Y103 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X66Y99 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#8 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X63Y101 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#9 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X61Y99 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#10 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X64Y100 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#11 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X65Y99 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#12 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X63Y99 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-17#1 Warning
+Non-clocked sequential cell  
+The clock pin digit_display_0/char_select_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Warning
+Non-clocked sequential cell  
+The clock pin digit_display_0/char_select_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Warning
+Non-clocked sequential cell  
+The clock pin digit_display_0/char_select_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Warning
+Non-clocked sequential cell  
+The clock pin digit_display_0/char_select_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Warning
+Non-clocked sequential cell  
+The clock pin digit_display_0/char_select_reg[3]_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Warning
+Non-clocked sequential cell  
+The clock pin digit_display_0/char_select_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Warning
+Non-clocked sequential cell  
+The clock pin digit_display_0/char_select_reg[4]_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Warning
+Non-clocked sequential cell  
+The clock pin digit_display_0/char_select_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Warning
+Non-clocked sequential cell  
+The clock pin digit_display_0/char_select_reg[5]_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Warning
+Non-clocked sequential cell  
+The clock pin digit_display_0/char_select_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Warning
+Non-clocked sequential cell  
+The clock pin digit_display_0/char_select_reg[6]_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Warning
+Non-clocked sequential cell  
+The clock pin digit_display_0/char_select_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Warning
+Non-clocked sequential cell  
+The clock pin digit_display_0/char_select_reg[7]_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/byte0_saved_reg_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/byte0_saved_reg_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/byte0_saved_reg_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/byte0_saved_reg_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/byte0_saved_reg_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/byte0_saved_reg_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/byte0_saved_reg_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#21 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/byte0_saved_reg_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/byte1_saved_reg_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/byte1_saved_reg_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/byte1_saved_reg_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/byte1_saved_reg_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/byte1_saved_reg_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/byte1_saved_reg_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Warning
+Non-clocked sequential cell  
+The clock pin switches_manager_0/clk_en_reg/C is not reached by a timing clock
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option '-through : [get_pins -hier -filter {NAME =~ */u_iodelay_ctrl/sys_rst}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '8' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/xilinx_project/project_2/project_2.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc (Line: 333)
+Related violations: <none>
+
+XDCC-5#1 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on SW[8] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 97)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#2 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on SW[9] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 98)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#3 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_addr[0] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 203)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#4 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_addr[10] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 193)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#5 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_addr[11] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 192)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#6 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_addr[12] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 191)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#7 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_addr[1] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 202)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#8 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_addr[2] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 201)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#9 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_addr[3] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 200)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#10 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_addr[4] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 199)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#11 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_addr[5] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 198)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#12 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_addr[6] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 197)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#13 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_addr[7] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 196)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#14 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_addr[8] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 195)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#15 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_addr[9] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 194)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#16 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_ba[0] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 206)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#17 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_ba[1] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 205)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#18 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_ba[2] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 204)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#19 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_cas_n overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 210)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#20 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_ck_p[0] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 207)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#21 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_cke[0] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 212)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#22 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_cs_n[0] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 214)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#23 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dm[0] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 185)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#24 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dm[1] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 186)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#25 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[0] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 169)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#26 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[10] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 179)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#27 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[11] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 180)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#28 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[12] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 181)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#29 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[13] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 182)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#30 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[14] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 183)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#31 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[15] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 184)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#32 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[1] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 170)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#33 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[2] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 171)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#34 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[3] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 172)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#35 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[4] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 173)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#36 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[5] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 174)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#37 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[6] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 175)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#38 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[7] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 176)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#39 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[8] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 177)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#40 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dq[9] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 178)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#41 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dqs_p[0] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 187)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#42 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_dqs_p[1] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 189)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#43 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_odt[0] overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 213)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#44 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_ras_n overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 209)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+XDCC-5#45 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on ddr2_we_n overrides a previous user property.
+New Source: C:/xilinx_project/project_2/const.xdc (Line: 211)
+Previous Source: C:/xilinx_project/project_2/const.xdc (Line: 63)
+Related violations: <none>
+
+REQP-1959#1 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#2 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#3 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#4 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#5 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#6 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#7 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[8].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#8 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#9 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#10 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#11 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#12 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#13 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#14 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#15 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#16 Advisory
+connects_SERDES_RST_driver_not_FF  
+memory_controller_0/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[8].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+

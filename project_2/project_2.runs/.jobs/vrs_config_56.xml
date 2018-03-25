@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_Freq_Divider_1_1_synth_1" LaunchDir="E:/xilinx_project/project_2/project_2.runs/design_1_Freq_Divider_1_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_CLOCK_manager_0_0_synth_1" LaunchDir="E:/xilinx_project/project_2/project_2.runs/design_1_CLOCK_manager_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_Freq_Divider_1_0_synth_1" LaunchDir="E:/xilinx_project/project_2/project_2.runs/design_1_Freq_Divider_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_digit_display_0_0_synth_1" LaunchDir="E:/xilinx_project/project_2/project_2.runs/design_1_digit_display_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_switches_manager_0_0_synth_1" LaunchDir="E:/xilinx_project/project_2/project_2.runs/design_1_switches_manager_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_memory_controller_0_0_synth_1" LaunchDir="E:/xilinx_project/project_2/project_2.runs/design_1_memory_controller_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="E:/xilinx_project/project_2/project_2.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="design_1_Freq_Divider_1_1_synth_1"/>
+		<Parent Id="design_1_CLOCK_manager_0_0_synth_1"/>
+		<Parent Id="design_1_Freq_Divider_1_0_synth_1"/>
+		<Parent Id="design_1_digit_display_0_0_synth_1"/>
+		<Parent Id="design_1_switches_manager_0_0_synth_1"/>
+		<Parent Id="design_1_memory_controller_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_2" LaunchDir="E:/xilinx_project/project_2/project_2.runs/impl_2" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="design_1_Freq_Divider_1_1_synth_1"/>
+		<Parent Id="design_1_CLOCK_manager_0_0_synth_1"/>
+		<Parent Id="design_1_Freq_Divider_1_0_synth_1"/>
+		<Parent Id="design_1_digit_display_0_0_synth_1"/>
+		<Parent Id="design_1_switches_manager_0_0_synth_1"/>
+		<Parent Id="design_1_memory_controller_0_0_synth_1"/>
+	</Run>
+</Runs>
+

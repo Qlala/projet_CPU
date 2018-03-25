@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_main_0_0_synth_1" LaunchDir="E:/xilinx_project/project_2/project_2.runs/design_1_main_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_memory_controller_0_0_synth_1" LaunchDir="E:/xilinx_project/project_2/project_2.runs/design_1_memory_controller_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_Freq_Divider_0_0_synth_1" LaunchDir="E:/xilinx_project/project_2/project_2.runs/design_1_Freq_Divider_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

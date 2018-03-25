@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x21F80DB9537E24C4" bd:device="xc7a100tcsg324-1" bd:synthFlowMode="None" bd:tool_version="2017.4.1" bd:top="design_1" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_1</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>CLK.EXT_OSC</spirit:name>
+        <spirit:displayName>Clk</spirit:displayName>
+        <spirit:description>Clock</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>CLK</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>EXT_OSC</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>100000000</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>RST.RST_BUTTON</spirit:name>
+        <spirit:displayName>Reset</spirit:displayName>
+        <spirit:description>Reset</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>RST</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>RST_button</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters/>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="design_1_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>JA1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>EXT_OSC</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>RST_button</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>CA</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>CB</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>CF</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AN</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>0</spirit:left>
+              <spirit:right>7</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>CE</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>CD</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>CC</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>CG</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>DP</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>OK_button</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>SW</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>15</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_1_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>Freq_Divider_2</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="Freq_Divider" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_Freq_Divider_1_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="divide_by">10000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Freq_Divider</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>Freq_Divider_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="Freq_Divider" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_Freq_Divider_1_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="divide_by">100000000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Freq_Divider</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>digit_display_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="digit_display" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_digit_display_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">digit_display</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>switches_manager_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="switches_manager" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_switches_manager_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">switches_manager</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>CLOCK_manager_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="CLOCK_manager" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_CLOCK_manager_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="multiplier">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Divide_0">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Divide_1">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">CLOCK_manager</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>EXT_OSC_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="EXT_OSC"/>
+        <spirit:internalPortReference spirit:componentRef="Freq_Divider_2" spirit:portRef="CLK"/>
+        <spirit:internalPortReference spirit:componentRef="switches_manager_0" spirit:portRef="CLK"/>
+        <spirit:internalPortReference spirit:componentRef="CLOCK_manager_0" spirit:portRef="master_CLK"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>CLOCK_manager_0_CLKFBOUT</spirit:name>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>CLOCK_manager_0_CLK_out1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="CLOCK_manager_0" spirit:portRef="CLK_out1"/>
+        <spirit:internalPortReference spirit:componentRef="Freq_Divider_1" spirit:portRef="CLK"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>RST_button_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="RST_button"/>
+        <spirit:internalPortReference spirit:componentRef="CLOCK_manager_0" spirit:portRef="reset"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Freq_Divider_2_CLK_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="Freq_Divider_2" spirit:portRef="CLK_out"/>
+        <spirit:internalPortReference spirit:componentRef="digit_display_0" spirit:portRef="CLK"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>digit_display_0_CA</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="digit_display_0" spirit:portRef="CA"/>
+        <spirit:externalPortReference spirit:portRef="CA"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>digit_display_0_CB</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="digit_display_0" spirit:portRef="CB"/>
+        <spirit:externalPortReference spirit:portRef="CB"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>digit_display_0_CF</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="digit_display_0" spirit:portRef="CF"/>
+        <spirit:externalPortReference spirit:portRef="CF"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>digit_display_0_AN</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="digit_display_0" spirit:portRef="AN"/>
+        <spirit:externalPortReference spirit:portRef="AN"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>digit_display_0_CE</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="digit_display_0" spirit:portRef="CE"/>
+        <spirit:externalPortReference spirit:portRef="CE"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>digit_display_0_CD</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="digit_display_0" spirit:portRef="CD"/>
+        <spirit:externalPortReference spirit:portRef="CD"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>digit_display_0_CC</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="digit_display_0" spirit:portRef="CC"/>
+        <spirit:externalPortReference spirit:portRef="CC"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>digit_display_0_CG</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="digit_display_0" spirit:portRef="CG"/>
+        <spirit:externalPortReference spirit:portRef="CG"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>digit_display_0_DP</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="digit_display_0" spirit:portRef="DP"/>
+        <spirit:externalPortReference spirit:portRef="DP"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>OK_button_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="OK_button"/>
+        <spirit:internalPortReference spirit:componentRef="switches_manager_0" spirit:portRef="save_enable"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>SW_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="SW"/>
+        <spirit:internalPortReference spirit:componentRef="switches_manager_0" spirit:portRef="switches"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>switches_manager_0_byte0</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="switches_manager_0" spirit:portRef="byte0"/>
+        <spirit:internalPortReference spirit:componentRef="digit_display_0" spirit:portRef="disp_byte0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>switches_manager_0_byte1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="switches_manager_0" spirit:portRef="byte1"/>
+        <spirit:internalPortReference spirit:componentRef="digit_display_0" spirit:portRef="disp_byte1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>switches_manager_0_byte0_saved</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="switches_manager_0" spirit:portRef="byte0_saved"/>
+        <spirit:internalPortReference spirit:componentRef="digit_display_0" spirit:portRef="disp_byte2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>switches_manager_0_byte1_saved</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="switches_manager_0" spirit:portRef="byte1_saved"/>
+        <spirit:internalPortReference spirit:componentRef="digit_display_0" spirit:portRef="disp_byte3"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>
