@@ -35,6 +35,8 @@ use UNIMACRO.vcomponents.all;
 
 entity physical_controller is
   Port ( 
+  
+  
 rd_data : out  std_logic_vector(63 downto 0);
 wr_data : in  std_logic_vector(63 downto 0); 
 upper_addr: out std_logic_vector (23 downto 0);
@@ -52,8 +54,7 @@ architecture Behavioral of physical_controller is
 --36 kB => 64Kb => 8000Address =>2^13 => 13 bit =>adress de la forme"0000000001XXXXXXXXXXXXX"
 begin
 
---  <-----Cut code below this line and paste into the architecture body---->
-
+--  <-----Cut code below this linj
    -- BRAM_SINGLE_MACRO: Single Port RAM
    --                    Artix-7
    -- Xilinx HDL Language Template, version 2017.4

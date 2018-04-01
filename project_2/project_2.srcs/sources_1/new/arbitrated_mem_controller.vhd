@@ -77,7 +77,7 @@ entity arbitrated_mem_controller is
  physical_write_mask : out std_logic_vector(7 downto 0);
  
  --interaction entre les controlleur
- inib_ram:in std_logic;
+ inib_ram:in std_logic;--inib si à 1 deconect si à 1
  inib_physical : in std_logic;
  inib_read_data: in std_logic;
  waiting_ram_read : out std_logic;
