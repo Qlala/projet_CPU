@@ -237,7 +237,9 @@ begin
                   port_ddr_lower_addr<=lower_addr;
                   --saved_addr_mode<=addr_mode;
                   port_ddr_wr_data<=write_data;
-
+         when wait_ram_read =>
+                 --port_ddr_upper_addr<=upper_addr;
+                 --port_ddr_lower_addr<=lower_addr;   
           --sauvergarde de la commande   
           --when wait_other_controller_read =>
                -- saved_upper_addr<=upper_addr;
@@ -250,6 +252,10 @@ begin
           when sending_physical_read => 
                 port_physical_upper_addr<=upper_addr;
                 port_physical_lower_addr<=lower_addr;
+         when wait_physical_read => 
+                 --port_physical_upper_addr<=upper_addr;
+                 --port_physical_lower_addr<=lower_addr;
+          
                            
           when sending_physical_write => 
                  port_physical_upper_addr<=upper_addr;

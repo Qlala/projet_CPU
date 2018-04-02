@@ -35,15 +35,23 @@ use UNIMACRO.vcomponents.all;
 
 entity physical_controller is
   Port ( 
-  
+  --commande
+  read_cmd: in std_logic;
+  write_cmd: in std_logic;
   
 rd_data : out  std_logic_vector(63 downto 0);
 wr_data : in  std_logic_vector(63 downto 0); 
-upper_addr: out std_logic_vector (23 downto 0);
-lower_addr :out std_logic_vector (1 downto 0):="00";--pour ça non plus
-write_mask : out std_logic_vector(7 downto 0);--je sais pas trop si je vais prendre ça en compte (pas supporter ensemble)
-
+upper_addr: in std_logic_vector (23 downto 0);
+lower_addr :in std_logic_vector (1 downto 0):="00";--pour ça non plus
+write_mask : in std_logic_vector(7 downto 0);--je sais pas trop si je vais prendre ça en compte (pas supporter ensemble)
 --on ne peut pas acceder a des division qui ne sont pas dans le mot de 64bit
+physical_rd_data_valid : out std_logic;
+
+--on connect maintenant au port extern bi directionelle 512 adress => "000000000000000XXXXXXXXX"
+extern_port: inout std_logic_vector(512*64-1 downto 0);
+extern_port_EN: out std_logic_vector(512-1 downto 0);--activé si 1
+extern_port_WE: out std_logic_vector(512-1 downto 0);--mode write si 1
+extern_port_rd_valid :in std_logic_vector(512-1 downto 0);--mode write si 1
 --clk
 CLK:in std_logic;
 RST:in std_logic
@@ -51,8 +59,39 @@ RST:in std_logic
 end physical_controller;
 
 architecture Behavioral of physical_controller is
---36 kB => 64Kb => 8000Address =>2^13 => 13 bit =>adress de la forme"0000000001XXXXXXXXXXXXX"
+--36 kB => 64Kb => 512Address =>2^9 => 9 bit =>adress de la forme"000000000000001XXXXXXXXX"
+signal BRAM_address : std_logic_vector(8 downto 0);
+signal BRAM_EN : std_logic;
+signal BRAM_DO : std_logic_vector(63 downto 0);
+signal BRAM_DI : std_logic_vector(63 downto 0);
+signal BRAM_WE : std_logic_vector(7 downto 0);
+signal BRAM_valid : std_logic;
+signal EN_synth: std_logic; --synthetic enable
+signal WE_synth: std_logic; --synthetic Write enable
+
 begin
+
+EN_synth<=read_cmd or write_cmd;
+WE_synth<=(not read_cmd) AND write_cmd;
+
+
+BRAM_valid<=BRAM_EN when rising_edge(clk);--sync avec le BRAM
+process(upper_addr(9),upper_addr(8 downto 0),clk)
+begin
+    --probleme si l'adress n'est pas maintenu sur le port pendant la phase suivant la lecture(peut etre mettre la read commande comme l'adress avant a phase de lecture)
+    if upper_addr(9)='1' then
+        BRAM_EN<=EN_synth;
+        BRAM_DI<=wr_data;
+        BRAM_WE<=(others => WE_synth);
+        rd_data<=BRAM_DO;
+        physical_rd_data_valid<=BRAM_valid;
+    else
+    --
+    end if;
+
+end process;
+
+
 
 --  <-----Cut code below this linj
    -- BRAM_SINGLE_MACRO: Single Port RAM
@@ -244,17 +283,19 @@ begin
       INITP_0E => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_0F => X"0000000000000000000000000000000000000000000000000000000000000000")
    port map (
-      DO => DO,      -- Output data, width defined by READ_WIDTH parameter
-      ADDR => ADDR,  -- Input address, width defined by read/write port depth
+      DO => BRAM_DO,      -- Output data, width defined by READ_WIDTH parameter
+      ADDR => BRAM_address,  -- Input address, width defined by read/write port depth
       CLK => CLK,    -- 1-bit input clock
-      DI => DI,      -- Input data port, width defined by WRITE_WIDTH parameter
-      EN => EN,      -- 1-bit input RAM enable
-      REGCE => REGCE, -- 1-bit input output register enable
+      DI => BRAM_DI,      -- Input data port, width defined by WRITE_WIDTH parameter
+      EN => BRAM_EN,      -- 1-bit input RAM enable
+      REGCE => BRAM_EN, -- 1-bit input output register enable
       RST => RST,    -- 1-bit input reset
-      WE => WE       -- Input write enable, width defined by write port depth
+      WE => BRAM_WE       -- Input write enable, width defined by write port depth
    );
+;
 
    -- End of BRAM_SINGLE_MACRO_inst instantiation
+
 
 				
 				
