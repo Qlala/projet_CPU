@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Apr 12 20:50:40 2018
+# Process ID: 5348
+# Current directory: C:/xilinx_project/git_project/projet_CPU/projet_CPU/project_4/project_4.runs/synth_1
+# Command line: vivado.exe -log main_interconnect.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_interconnect.tcl
+# Log file: C:/xilinx_project/git_project/projet_CPU/projet_CPU/project_4/project_4.runs/synth_1/main_interconnect.vds
+# Journal file: C:/xilinx_project/git_project/projet_CPU/projet_CPU/project_4/project_4.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source main_interconnect.tcl -notrace
+Command: synth_design -top main_interconnect -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13924 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 469.469 ; gain = 88.633
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2947] error reading binary file 'C:/Xilinx/Vivado/2018.1/scripts/rt/data/vhdl/pkgs/2008/vdbs/ieee/std_logic_1164.vdb'
+ERROR: [Synth 8-1086] ieee.std_logic_1164 failed to restore
+ERROR: [Synth 8-4169] error in use clause: package 'std_logic_1164' not found in library 'ieee' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:11]
+ERROR: [Synth 8-2947] error reading binary file 'C:/Xilinx/Vivado/2018.1/scripts/rt/data/vhdl/pkgs/2008/vdbs/ieee/numeric_std.vdb'
+ERROR: [Synth 8-1086] ieee.numeric_std failed to restore
+ERROR: [Synth 8-4169] error in use clause: package 'numeric_std' not found in library 'ieee' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:12]
+ERROR: [Synth 8-2947] error reading binary file 'C:/Xilinx/Vivado/2018.1/scripts/rt/data/vhdl/pkgs/2008/vdbs/std/standard.vdb'
+ERROR: [Synth 8-1086] std.standard failed to restore
+ERROR: [Synth 8-4169] error in use clause: package 'standard' not found in library 'std' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:13]
+ERROR: [Synth 8-1031] string is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:14]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:68]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:69]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:70]
+ERROR: [Synth 8-2398] near string "PRIMITIVE" ; 0 visible types match here [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:74]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:79]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:80]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:81]
+ERROR: [Synth 8-2398] near string "PRIMITIVE" ; 0 visible types match here [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:85]
+ERROR: [Synth 8-1031] bit is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:90]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 500.957 ; gain = 120.121
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+2 Infos, 0 Warnings, 0 Critical Warnings and 20 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 12 20:51:02 2018...

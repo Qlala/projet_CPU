@@ -1,0 +1,294 @@
+
+*** Running vivado
+    with args -log main_interconnect.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_interconnect.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source main_interconnect.tcl -notrace
+Command: synth_design -top main_interconnect -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1940 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 468.711 ; gain = 88.277
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:40]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:41]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:42]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:43]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:44]
+INFO: [Synth 8-2810] unit io_mem_controller ignored due to previous errors [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:35]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 521.832 ; gain = 141.398
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 6 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 12 20:36:12 2018...
+
+*** Running vivado
+    with args -log main_interconnect.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_interconnect.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source main_interconnect.tcl -notrace
+Command: synth_design -top main_interconnect -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9920 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 468.879 ; gain = 88.234
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:40]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:41]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:42]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:43]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:44]
+INFO: [Synth 8-2810] unit io_mem_controller ignored due to previous errors [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:35]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 521.898 ; gain = 141.254
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 6 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 12 20:37:56 2018...
+
+*** Running vivado
+    with args -log main_interconnect.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_interconnect.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source main_interconnect.tcl -notrace
+Command: synth_design -top main_interconnect -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6640 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 468.680 ; gain = 87.508
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:40]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:41]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:42]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:43]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:44]
+INFO: [Synth 8-2810] unit io_mem_controller ignored due to previous errors [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:35]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 521.688 ; gain = 140.516
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 6 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 12 20:40:01 2018...
+
+*** Running vivado
+    with args -log main_interconnect.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_interconnect.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source main_interconnect.tcl -notrace
+Command: synth_design -top main_interconnect -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10364 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 469.090 ; gain = 89.375
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-4169] error in use clause: package 'cpu_package' not found in library 'work' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:33]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:40]
+ERROR: [Synth 8-1031] bus_array is not declared [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:40]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:41]
+ERROR: [Synth 8-1031] bus_array is not declared [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:41]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:42]
+ERROR: [Synth 8-1031] bus_array is not declared [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:42]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:43]
+ERROR: [Synth 8-1031] bus_array is not declared [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:43]
+ERROR: [Synth 8-2190] illegal syntax for subtype indication [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:44]
+ERROR: [Synth 8-1031] bus_array is not declared [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:44]
+ERROR: [Synth 8-1031] io_port_bus_type is not declared [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:67]
+ERROR: [Synth 8-1031] io_port_count is not declared [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:68]
+ERROR: [Synth 8-1031] io_port_count is not declared [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:69]
+ERROR: [Synth 8-1031] io_port_count is not declared [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:70]
+INFO: [Synth 8-2810] unit io_mem_controller ignored due to previous errors [C:/xilinx_project/git_project/projet_CPU/projet_CPU/src/io_mem_controller.vhd:35]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 520.762 ; gain = 141.047
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 16 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 12 20:41:24 2018...
+
+*** Running vivado
+    with args -log main_interconnect.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_interconnect.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source main_interconnect.tcl -notrace
+Command: synth_design -top main_interconnect -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12616 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 469.023 ; gain = 88.828
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2947] error reading binary file 'C:/Xilinx/Vivado/2018.1/scripts/rt/data/vhdl/pkgs/2008/vdbs/ieee/std_logic_1164.vdb'
+ERROR: [Synth 8-1086] ieee.std_logic_1164 failed to restore
+ERROR: [Synth 8-4169] error in use clause: package 'std_logic_1164' not found in library 'ieee' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:11]
+ERROR: [Synth 8-2947] error reading binary file 'C:/Xilinx/Vivado/2018.1/scripts/rt/data/vhdl/pkgs/2008/vdbs/ieee/numeric_std.vdb'
+ERROR: [Synth 8-1086] ieee.numeric_std failed to restore
+ERROR: [Synth 8-4169] error in use clause: package 'numeric_std' not found in library 'ieee' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:12]
+ERROR: [Synth 8-2947] error reading binary file 'C:/Xilinx/Vivado/2018.1/scripts/rt/data/vhdl/pkgs/2008/vdbs/std/standard.vdb'
+ERROR: [Synth 8-1086] std.standard failed to restore
+ERROR: [Synth 8-4169] error in use clause: package 'standard' not found in library 'std' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:13]
+ERROR: [Synth 8-1031] string is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:14]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:68]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:69]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:70]
+ERROR: [Synth 8-2398] near string "PRIMITIVE" ; 0 visible types match here [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:74]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:79]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:80]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:81]
+ERROR: [Synth 8-2398] near string "PRIMITIVE" ; 0 visible types match here [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:85]
+ERROR: [Synth 8-1031] bit is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:90]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 500.656 ; gain = 120.461
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+2 Infos, 0 Warnings, 0 Critical Warnings and 20 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 12 20:45:53 2018...
+
+*** Running vivado
+    with args -log main_interconnect.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_interconnect.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source main_interconnect.tcl -notrace
+Command: synth_design -top main_interconnect -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13756 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 469.523 ; gain = 88.973
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2947] error reading binary file 'C:/Xilinx/Vivado/2018.1/scripts/rt/data/vhdl/pkgs/2008/vdbs/ieee/std_logic_1164.vdb'
+ERROR: [Synth 8-1086] ieee.std_logic_1164 failed to restore
+ERROR: [Synth 8-4169] error in use clause: package 'std_logic_1164' not found in library 'ieee' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:11]
+ERROR: [Synth 8-2947] error reading binary file 'C:/Xilinx/Vivado/2018.1/scripts/rt/data/vhdl/pkgs/2008/vdbs/ieee/numeric_std.vdb'
+ERROR: [Synth 8-1086] ieee.numeric_std failed to restore
+ERROR: [Synth 8-4169] error in use clause: package 'numeric_std' not found in library 'ieee' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:12]
+ERROR: [Synth 8-2947] error reading binary file 'C:/Xilinx/Vivado/2018.1/scripts/rt/data/vhdl/pkgs/2008/vdbs/std/standard.vdb'
+ERROR: [Synth 8-1086] std.standard failed to restore
+ERROR: [Synth 8-4169] error in use clause: package 'standard' not found in library 'std' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:13]
+ERROR: [Synth 8-1031] string is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:14]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:68]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:69]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:70]
+ERROR: [Synth 8-2398] near string "PRIMITIVE" ; 0 visible types match here [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:74]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:79]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:80]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:81]
+ERROR: [Synth 8-2398] near string "PRIMITIVE" ; 0 visible types match here [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:85]
+ERROR: [Synth 8-1031] bit is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:90]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 501.270 ; gain = 120.719
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+2 Infos, 0 Warnings, 0 Critical Warnings and 20 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 12 20:50:04 2018...
+
+*** Running vivado
+    with args -log main_interconnect.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_interconnect.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source main_interconnect.tcl -notrace
+Command: synth_design -top main_interconnect -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13924 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 469.469 ; gain = 88.633
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2947] error reading binary file 'C:/Xilinx/Vivado/2018.1/scripts/rt/data/vhdl/pkgs/2008/vdbs/ieee/std_logic_1164.vdb'
+ERROR: [Synth 8-1086] ieee.std_logic_1164 failed to restore
+ERROR: [Synth 8-4169] error in use clause: package 'std_logic_1164' not found in library 'ieee' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:11]
+ERROR: [Synth 8-2947] error reading binary file 'C:/Xilinx/Vivado/2018.1/scripts/rt/data/vhdl/pkgs/2008/vdbs/ieee/numeric_std.vdb'
+ERROR: [Synth 8-1086] ieee.numeric_std failed to restore
+ERROR: [Synth 8-4169] error in use clause: package 'numeric_std' not found in library 'ieee' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:12]
+ERROR: [Synth 8-2947] error reading binary file 'C:/Xilinx/Vivado/2018.1/scripts/rt/data/vhdl/pkgs/2008/vdbs/std/standard.vdb'
+ERROR: [Synth 8-1086] std.standard failed to restore
+ERROR: [Synth 8-4169] error in use clause: package 'standard' not found in library 'std' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:13]
+ERROR: [Synth 8-1031] string is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:14]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:68]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:69]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:70]
+ERROR: [Synth 8-2398] near string "PRIMITIVE" ; 0 visible types match here [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:74]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:79]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:80]
+ERROR: [Synth 8-1031] std_ulogic is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:81]
+ERROR: [Synth 8-2398] near string "PRIMITIVE" ; 0 visible types match here [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:85]
+ERROR: [Synth 8-1031] bit is not declared [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_VCOMP.vhd:90]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 500.957 ; gain = 120.121
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+2 Infos, 0 Warnings, 0 Critical Warnings and 20 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 12 20:51:02 2018...

@@ -1,0 +1,361 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date             : Wed May  9 15:56:04 2018
+| Host             : Qlala-Blade running 64-bit major release  (build 9200)
+| Command          : report_power -file main_interconnect_power_routed.rpt -pb main_interconnect_power_summary_routed.pb -rpx main_interconnect_power_routed.rpx
+| Design           : main_interconnect
+| Device           : xc7a100tcsg324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 1.322        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.213        |
+| Device Static (W)        | 0.109        |
+| Total Off-Chip Power (W) | 0.633        |
+| Effective TJA (C/W)      | 4.6          |
+| Max Ambient (C)          | 79.0         |
+| Junction Temperature (C) | 31.0         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.045 |       23 |       --- |             --- |
+| Slice Logic              |     0.011 |    10725 |       --- |             --- |
+|   LUT as Logic           |     0.010 |     4712 |     63400 |            7.43 |
+|   LUT as Distributed RAM |    <0.001 |      352 |     19000 |            1.85 |
+|   Register               |    <0.001 |     3871 |    126800 |            3.05 |
+|   CARRY4                 |    <0.001 |      105 |     15850 |            0.66 |
+|   LUT as Shift Register  |    <0.001 |       12 |     19000 |            0.06 |
+|   F7/F8 Muxes            |    <0.001 |      408 |     63400 |            0.64 |
+|   Others                 |     0.000 |      135 |       --- |             --- |
+| Signals                  |     0.016 |     8335 |       --- |             --- |
+| MMCM                     |     0.109 |        1 |         6 |           16.67 |
+| PLL                      |     0.220 |        2 |         6 |           33.33 |
+| I/O                      |     0.703 |      101 |       210 |           48.10 |
+| PHASER                   |     0.106 |       14 |       --- |             --- |
+| XADC                     |     0.004 |        1 |       --- |             --- |
+| Static Power             |     0.109 |          |           |                 |
+| Total                    |     1.322 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.134 |       0.115 |      0.019 |
+| Vccaux    |       1.800 |     0.302 |       0.284 |      0.018 |
+| Vcco33    |       3.300 |     0.048 |       0.044 |      0.004 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.600 |       0.596 |      0.004 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.022 |       0.002 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.6                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                                                     | Domain                                                                                                                                                                                                                                                     | Constraint (ns) |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| CLK                                                                                                                                                       | EXT_OSC                                                                                                                                                                                                                                                    |            10.0 |
+| CLK_feedback_loop_1                                                                                                                                       | CLOCK_manager_1/CLK_feedback_loop                                                                                                                                                                                                                          |            10.0 |
+| clk_pll_i                                                                                                                                                 | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_ddr2_infrastructure/clk_pll_i                                                                                                                                                              |             6.7 |
+| freq_refclk                                                                                                                                               | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_ddr2_infrastructure/freq_refclk                                                                                                                                                            |             1.7 |
+| intern_CLK_out0_1                                                                                                                                         | CLOCK_manager_1/intern_CLK_out0                                                                                                                                                                                                                            |             5.0 |
+| iserdes_clkdiv                                                                                                                                            | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clkdiv                                 |            13.3 |
+| iserdes_clkdiv_1                                                                                                                                          | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clkdiv                                 |            13.3 |
+| mem_refclk                                                                                                                                                | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_ddr2_infrastructure/mem_refclk                                                                                                                                                             |             3.3 |
+| oserdes_clk                                                                                                                                               | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk                                    |             3.3 |
+| oserdes_clk_1                                                                                                                                             | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk                                    |             3.3 |
+| oserdes_clk_2                                                                                                                                             | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk                                    |             3.3 |
+| oserdes_clk_3                                                                                                                                             | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk                                    |             3.3 |
+| oserdes_clkdiv                                                                                                                                            | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clkdiv                                 |             6.7 |
+| oserdes_clkdiv_1                                                                                                                                          | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clkdiv                                 |             6.7 |
+| oserdes_clkdiv_2                                                                                                                                          | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clkdiv                                 |             6.7 |
+| oserdes_clkdiv_3                                                                                                                                          | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clkdiv                                 |             6.7 |
+| pll_clk3_out                                                                                                                                              | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_ddr2_infrastructure/pll_clk3_out                                                                                                                                                           |             6.7 |
+| pll_clkfbout                                                                                                                                              | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_ddr2_infrastructure/pll_clkfbout                                                                                                                                                           |             5.0 |
+| sync_pulse                                                                                                                                                | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_ddr2_infrastructure/sync_pulse                                                                                                                                                             |            53.3 |
+| u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.if_empty_r_reg[3]_0 |             3.3 |
+| u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk | memory_controller_0/DDRAM/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.if_empty_r_reg[3]_0 |             3.3 |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------------------------------------------------------------------------------------------+-----------+
+| Name                                                                                                    | Power (W) |
++---------------------------------------------------------------------------------------------------------+-----------+
+| main_interconnect                                                                                       |     1.213 |
+|   CLOCK_manager_1                                                                                       |     0.109 |
+|   Freq_Divider_0                                                                                        |    <0.001 |
+|   digit_display_0                                                                                       |     0.006 |
+|   memory_controller_0                                                                                   |     0.940 |
+|     CTRL[0].ARB_I                                                                                       |     0.002 |
+|     DDRAM                                                                                               |     0.922 |
+|       u_mig_7series_0                                                                                   |     0.922 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_24_29 |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_30_35 |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_36_41 |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_42_47 |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_48_53 |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_54_59 |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_60_65 |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_66_71 |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_6_11  |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_72_77 |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_0_5              |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_12_17            |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_18_23            |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_24_29            |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_30_35            |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_36_41            |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_42_47            |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_48_53            |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_54_59            |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_60_65            |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_66_71            |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_6_11             |    <0.001 |
+|         ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_72_77            |    <0.001 |
+|         ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_0_5              |    <0.001 |
+|         ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_12_17            |    <0.001 |
+|         ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_18_23            |    <0.001 |
+|         ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_24_29            |    <0.001 |
+|         ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_30_35            |    <0.001 |
+|         ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_36_41            |    <0.001 |
+|         ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_42_47            |    <0.001 |
+|         ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_48_53            |    <0.001 |
+|         ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_54_59            |    <0.001 |
+|         ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_60_65            |    <0.001 |
+|         ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_66_71            |    <0.001 |
+|         ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_6_11             |    <0.001 |
+|         ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_72_77            |    <0.001 |
+|         ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_78_79            |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_0_5   |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_12_17 |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_18_23 |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_30_35 |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_36_41 |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_42_47 |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_48_53 |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_54_59 |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_60_65 |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_66_71 |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_6_11  |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_0_5              |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_12_17            |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_18_23            |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_24_29            |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_30_35            |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_36_41            |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_42_47            |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_48_53            |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_54_59            |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_60_65            |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_66_71            |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_6_11             |    <0.001 |
+|         ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_72_77            |    <0.001 |
+|         u_mig_7series_0_mig                                                                             |     0.918 |
+|           temp_mon_enabled.u_tempmon                                                                    |     0.006 |
+|           u_ddr2_clk_ibuf                                                                               |     0.000 |
+|           u_ddr2_infrastructure                                                                         |     0.220 |
+|           u_iodelay_ctrl                                                                                |    <0.001 |
+|           u_memc_ui_top_std                                                                             |     0.692 |
+|             mem_intfc0                                                                                  |     0.689 |
+|               ddr_phy_top0                                                                              |     0.684 |
+|                 u_ddr_calib_top                                                                         |     0.024 |
+|                   ddr_phy_rdlvl_gen.u_ddr_phy_rdlvl                                                     |     0.008 |
+|                   ddr_phy_tempmon_0                                                                     |     0.002 |
+|                   dqsfind_calib_left.u_ddr_phy_dqs_found_cal_hr                                         |     0.001 |
+|                   mb_wrlvl_off.u_phy_wrlvl_off_delay                                                    |    <0.001 |
+|                   u_ddr_phy_init                                                                        |     0.009 |
+|                   u_ddr_phy_wrcal                                                                       |     0.003 |
+|                 u_ddr_mc_phy_wrapper                                                                    |     0.660 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[0].u_iobuf_dq                                            |     0.013 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[10].u_iobuf_dq                                           |     0.014 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[11].u_iobuf_dq                                           |     0.013 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[12].u_iobuf_dq                                           |     0.013 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[13].u_iobuf_dq                                           |     0.013 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[14].u_iobuf_dq                                           |     0.013 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[15].u_iobuf_dq                                           |     0.013 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[1].u_iobuf_dq                                            |     0.013 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[2].u_iobuf_dq                                            |     0.013 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[3].u_iobuf_dq                                            |     0.013 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[4].u_iobuf_dq                                            |     0.013 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[5].u_iobuf_dq                                            |     0.013 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[6].u_iobuf_dq                                            |     0.013 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[7].u_iobuf_dq                                            |     0.013 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[8].u_iobuf_dq                                            |     0.013 |
+|                   gen_dq_iobuf_HR.gen_dq_iobuf[9].u_iobuf_dq                                            |     0.013 |
+|                   gen_dqs_iobuf_HR.gen_dqs_iobuf[0].gen_ddr2_or_low_dqs_diff.u_iobuf_dqs                |     0.027 |
+|                     IBUFDS                                                                              |     0.017 |
+|                     OBUFTDS                                                                             |     0.010 |
+|                   gen_dqs_iobuf_HR.gen_dqs_iobuf[1].gen_ddr2_or_low_dqs_diff.u_iobuf_dqs                |     0.027 |
+|                     IBUFDS                                                                              |     0.017 |
+|                     OBUFTDS                                                                             |     0.010 |
+|                   u_ddr_mc_phy                                                                          |     0.207 |
+|                     ddr_phy_4lanes_0.u_ddr_phy_4lanes                                                   |     0.207 |
+|                       ddr_byte_lane_A.ddr_byte_lane_A                                                   |     0.051 |
+|                         ddr_byte_group_io                                                               |     0.031 |
+|                         dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo                                   |    <0.001 |
+|                         of_pre_fifo_gen.u_ddr_of_pre_fifo                                               |    <0.001 |
+|                       ddr_byte_lane_B.ddr_byte_lane_B                                                   |     0.016 |
+|                         ddr_byte_group_io                                                               |    <0.001 |
+|                         of_pre_fifo_gen.u_ddr_of_pre_fifo                                               |    <0.001 |
+|                       ddr_byte_lane_C.ddr_byte_lane_C                                                   |     0.051 |
+|                         ddr_byte_group_io                                                               |     0.031 |
+|                         dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo                                   |    <0.001 |
+|                         of_pre_fifo_gen.u_ddr_of_pre_fifo                                               |    <0.001 |
+|                       ddr_byte_lane_D.ddr_byte_lane_D                                                   |     0.049 |
+|                         ddr_byte_group_io                                                               |    <0.001 |
+|                         ddr_ck_gen_loop[0].ddr_ck_gen.ddr_ck_obuf                                       |     0.032 |
+|                         of_pre_fifo_gen.u_ddr_of_pre_fifo                                               |     0.001 |
+|                           mem_reg_0_15_12_17                                                            |    <0.001 |
+|                           mem_reg_0_15_18_23                                                            |    <0.001 |
+|                           mem_reg_0_15_24_29                                                            |    <0.001 |
+|                           mem_reg_0_15_30_35                                                            |    <0.001 |
+|                           mem_reg_0_15_36_41                                                            |    <0.001 |
+|                           mem_reg_0_15_42_47                                                            |    <0.001 |
+|                           mem_reg_0_15_48_53                                                            |    <0.001 |
+|                           mem_reg_0_15_54_59                                                            |    <0.001 |
+|                           mem_reg_0_15_60_65                                                            |    <0.001 |
+|                           mem_reg_0_15_66_71                                                            |    <0.001 |
+|                           mem_reg_0_15_6_11                                                             |    <0.001 |
+|                           mem_reg_0_15_72_77                                                            |    <0.001 |
+|               mc0                                                                                       |     0.005 |
+|                 bank_mach0                                                                              |     0.004 |
+|                   arb_mux0                                                                              |    <0.001 |
+|                     arb_row_col0                                                                        |    <0.001 |
+|                       col_arb0                                                                          |    <0.001 |
+|                       config_arb0                                                                       |    <0.001 |
+|                       row_arb0                                                                          |    <0.001 |
+|                     arb_select0                                                                         |    <0.001 |
+|                   bank_cntrl[0].bank0                                                                   |    <0.001 |
+|                     bank_compare0                                                                       |    <0.001 |
+|                     bank_queue0                                                                         |    <0.001 |
+|                     bank_state0                                                                         |    <0.001 |
+|                   bank_cntrl[1].bank0                                                                   |    <0.001 |
+|                     bank_compare0                                                                       |    <0.001 |
+|                     bank_queue0                                                                         |    <0.001 |
+|                     bank_state0                                                                         |    <0.001 |
+|                   bank_cntrl[2].bank0                                                                   |    <0.001 |
+|                     bank_compare0                                                                       |    <0.001 |
+|                     bank_queue0                                                                         |    <0.001 |
+|                     bank_state0                                                                         |    <0.001 |
+|                   bank_cntrl[3].bank0                                                                   |    <0.001 |
+|                     bank_compare0                                                                       |    <0.001 |
+|                     bank_queue0                                                                         |    <0.001 |
+|                     bank_state0                                                                         |    <0.001 |
+|                   bank_common0                                                                          |    <0.001 |
+|                 col_mach0                                                                               |    <0.001 |
+|                   read_fifo.fifo_ram[0].RAM32M0                                                         |    <0.001 |
+|                 rank_mach0                                                                              |    <0.001 |
+|                   rank_cntrl[0].rank_cntrl0                                                             |    <0.001 |
+|                   rank_common0                                                                          |    <0.001 |
+|                     maintenance_request.maint_arb0                                                      |    <0.001 |
+|             u_ui_top                                                                                    |     0.003 |
+|               ui_cmd0                                                                                   |    <0.001 |
+|               ui_rd_data0                                                                               |    <0.001 |
+|               ui_wr_data0                                                                               |     0.002 |
+|                 pointer_ram.rams[0].RAM32M0                                                             |    <0.001 |
+|                 pointer_ram.rams[1].RAM32M0                                                             |    <0.001 |
+|                 write_buffer.wr_buffer_ram[0].RAM32M0                                                   |    <0.001 |
+|                 write_buffer.wr_buffer_ram[10].RAM32M0                                                  |    <0.001 |
+|                 write_buffer.wr_buffer_ram[11].RAM32M0                                                  |    <0.001 |
+|                 write_buffer.wr_buffer_ram[1].RAM32M0                                                   |    <0.001 |
+|                 write_buffer.wr_buffer_ram[2].RAM32M0                                                   |    <0.001 |
+|                 write_buffer.wr_buffer_ram[3].RAM32M0                                                   |    <0.001 |
+|                 write_buffer.wr_buffer_ram[4].RAM32M0                                                   |    <0.001 |
+|                 write_buffer.wr_buffer_ram[5].RAM32M0                                                   |    <0.001 |
+|                 write_buffer.wr_buffer_ram[6].RAM32M0                                                   |    <0.001 |
+|                 write_buffer.wr_buffer_ram[7].RAM32M0                                                   |    <0.001 |
+|                 write_buffer.wr_buffer_ram[8].RAM32M0                                                   |    <0.001 |
+|                 write_buffer.wr_buffer_ram[9].RAM32M0                                                   |    <0.001 |
+|     phys                                                                                                |     0.016 |
+|       BRAM_SINGLE_MACRO_inst                                                                            |     0.000 |
+|   switches_manager_0                                                                                    |    <0.001 |
++---------------------------------------------------------------------------------------------------------+-----------+
+
+

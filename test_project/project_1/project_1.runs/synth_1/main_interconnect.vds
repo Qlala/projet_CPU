@@ -1,0 +1,512 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Oct  4 23:34:49 2018
+# Process ID: 5076
+# Current directory: C:/xilinx_project/test_project/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log main_interconnect.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_interconnect.tcl
+# Log file: C:/xilinx_project/test_project/project_1/project_1.runs/synth_1/main_interconnect.vds
+# Journal file: C:/xilinx_project/test_project/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source main_interconnect.tcl -notrace
+Command: synth_design -top main_interconnect -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11412 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 390.105 ; gain = 97.836
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main_interconnect' [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:73]
+INFO: [Synth 8-3491] module 'digit_display' declared at 'C:/xilinx_project/test_project/project_1/digit_display.vhd:36' bound to instance 'digit_display_0' of component 'digit_display' [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'digit_display' [C:/xilinx_project/test_project/project_1/digit_display.vhd:60]
+INFO: [Synth 8-226] default block is never used [C:/xilinx_project/test_project/project_1/digit_display.vhd:94]
+INFO: [Synth 8-256] done synthesizing module 'digit_display' (1#1) [C:/xilinx_project/test_project/project_1/digit_display.vhd:60]
+	Parameter divide_by bound to: 400000 - type: integer 
+INFO: [Synth 8-3491] module 'Freq_Divider' declared at 'C:/xilinx_project/test_project/project_1/Freq_Divider.vhd:36' bound to instance 'Freq_Divider_0' of component 'Freq_Divider' [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'Freq_Divider' [C:/xilinx_project/test_project/project_1/Freq_Divider.vhd:43]
+	Parameter divide_by bound to: 400000 - type: integer 
+INFO: [Synth 8-113] binding component instance 'BUFG_inst' to cell 'BUFG' [C:/xilinx_project/test_project/project_1/Freq_Divider.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'Freq_Divider' (2#1) [C:/xilinx_project/test_project/project_1/Freq_Divider.vhd:43]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'mult' declared at 'C:/Users/Qlala/Documents/VHDL/mult/mult.vhd:32' bound to instance 'mult_inst' of component 'mult' [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'mult' [C:/Users/Qlala/Documents/VHDL/mult/mult.vhd:43]
+	Parameter N bound to: 4 - type: integer 
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'RC_adder' declared at 'C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/RC_adder.vhd:34' bound to instance 'add' of component 'RC_adder' [C:/Users/Qlala/Documents/VHDL/mult/mult.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'RC_adder' [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/RC_adder.vhd:46]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'one_bit_adder' declared at 'C:/Users/Qlala/Documents/VHDL/mult/one_bit_adder.vhf:28' bound to instance 'add' of component 'one_bit_adder' [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/RC_adder.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'one_bit_adder' [C:/Users/Qlala/Documents/VHDL/mult/one_bit_adder.vhf:36]
+INFO: [Synth 8-3491] module 'AND2' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:14' bound to instance 'XLXI_3' of component 'AND2' [C:/Users/Qlala/Documents/VHDL/mult/one_bit_adder.vhf:65]
+INFO: [Synth 8-638] synthesizing module 'AND2' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:14]
+INFO: [Synth 8-256] done synthesizing module 'AND2' (3#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:14]
+INFO: [Synth 8-3491] module 'AND2' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:14' bound to instance 'XLXI_4' of component 'AND2' [C:/Users/Qlala/Documents/VHDL/mult/one_bit_adder.vhf:70]
+INFO: [Synth 8-3491] module 'AND2' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:14' bound to instance 'XLXI_5' of component 'AND2' [C:/Users/Qlala/Documents/VHDL/mult/one_bit_adder.vhf:75]
+INFO: [Synth 8-3491] module 'OR3' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30891' bound to instance 'XLXI_6' of component 'OR3' [C:/Users/Qlala/Documents/VHDL/mult/one_bit_adder.vhf:80]
+INFO: [Synth 8-638] synthesizing module 'OR3' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30891]
+INFO: [Synth 8-256] done synthesizing module 'OR3' (4#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30891]
+INFO: [Synth 8-3491] module 'XOR3' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52678' bound to instance 'XLXI_7' of component 'XOR3' [C:/Users/Qlala/Documents/VHDL/mult/one_bit_adder.vhf:86]
+INFO: [Synth 8-638] synthesizing module 'XOR3' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52678]
+INFO: [Synth 8-256] done synthesizing module 'XOR3' (5#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52678]
+INFO: [Synth 8-256] done synthesizing module 'one_bit_adder' (6#1) [C:/Users/Qlala/Documents/VHDL/mult/one_bit_adder.vhf:36]
+INFO: [Synth 8-3491] module 'one_bit_adder' declared at 'C:/Users/Qlala/Documents/VHDL/mult/one_bit_adder.vhf:28' bound to instance 'add' of component 'one_bit_adder' [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/RC_adder.vhd:61]
+INFO: [Synth 8-3491] module 'one_bit_adder' declared at 'C:/Users/Qlala/Documents/VHDL/mult/one_bit_adder.vhf:28' bound to instance 'add' of component 'one_bit_adder' [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/RC_adder.vhd:61]
+INFO: [Synth 8-3491] module 'one_bit_adder' declared at 'C:/Users/Qlala/Documents/VHDL/mult/one_bit_adder.vhf:28' bound to instance 'add' of component 'one_bit_adder' [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/RC_adder.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'RC_adder' (7#1) [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/RC_adder.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'mult' (8#1) [C:/Users/Qlala/Documents/VHDL/mult/mult.vhd:43]
+	Parameter multiplier bound to: 16 - type: integer 
+	Parameter Divide_0 bound to: 8 - type: integer 
+	Parameter Divide_1 bound to: 16 - type: integer 
+	Parameter Divide_2 bound to: 16 - type: integer 
+	Parameter Divide_3 bound to: 16 - type: integer 
+	Parameter Divide_4 bound to: 16 - type: integer 
+	Parameter Divide_5 bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'CLOCK_manager' declared at 'C:/xilinx_project/test_project/project_1/Clock_manager.vhd:36' bound to instance 'CLOCK_manager_0' of component 'CLOCK_manager' [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:178]
+INFO: [Synth 8-638] synthesizing module 'CLOCK_manager' [C:/xilinx_project/test_project/project_1/Clock_manager.vhd:59]
+	Parameter multiplier bound to: 16 - type: integer 
+	Parameter Divide_0 bound to: 8 - type: integer 
+	Parameter Divide_1 bound to: 16 - type: integer 
+	Parameter Divide_2 bound to: 16 - type: integer 
+	Parameter Divide_3 bound to: 16 - type: integer 
+	Parameter Divide_4 bound to: 16 - type: integer 
+	Parameter Divide_5 bound to: 16 - type: integer 
+	Parameter BANDWIDTH bound to: HIGH - type: string 
+	Parameter CLKFBOUT_MULT bound to: 16 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.000000 - type: float 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-113] binding component instance 'PLLE2_BASE_inst' to cell 'PLLE2_BASE' [C:/xilinx_project/test_project/project_1/Clock_manager.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'CLOCK_manager' (9#1) [C:/xilinx_project/test_project/project_1/Clock_manager.vhd:59]
+WARNING: [Synth 8-3848] Net JA1 in module/entity main_interconnect does not have driver. [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:45]
+WARNING: [Synth 8-3848] Net addr in module/entity main_interconnect does not have driver. [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'main_interconnect' (10#1) [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:73]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JA1
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[15]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[14]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[13]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[12]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[11]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[10]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[9]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[8]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[7]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[6]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[5]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[4]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[3]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[2]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[1]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LEFT_button
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port RIGHT_button
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port DOWN_button
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port RST_button
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[15]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[14]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[13]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[12]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[7]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[6]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[5]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 442.387 ; gain = 150.117
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte0[7] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte0[6] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte0[5] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte0[4] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte0[3] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte0[2] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte0[1] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte0[0] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte1[7] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte1[6] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte1[5] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte1[4] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte1[3] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte1[2] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte1[1] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte1[0] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte2[7] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte2[6] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte2[5] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte2[4] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte2[3] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte2[2] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte2[1] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_0:secondary_disp_byte2[0] to constant 0 [C:/xilinx_project/test_project/project_1/project_1.srcs/sources_1/new/main_interconnect.vhd:154]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 442.387 ; gain = 150.117
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/xilinx_project/test_project/project_1/project_1.srcs/constrs_1/new/const.xdc]
+WARNING: [Vivado 12-507] No nets matched 'OK_button_IBUF'. [C:/xilinx_project/test_project/project_1/project_1.srcs/constrs_1/new/const.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/xilinx_project/test_project/project_1/project_1.srcs/constrs_1/new/const.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks -filter { BANK_TYPE !~  "BT_MGT" }]]'. [C:/xilinx_project/test_project/project_1/project_1.srcs/constrs_1/new/const.xdc:63]
+Finished Parsing XDC File [C:/xilinx_project/test_project/project_1/project_1.srcs/constrs_1/new/const.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/xilinx_project/test_project/project_1/project_1.srcs/constrs_1/new/const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_interconnect_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_interconnect_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 21 instances were transformed.
+  AND2 => LUT2: 12 instances
+  OR3 => LUT3: 4 instances
+  PLLE2_BASE => PLLE2_ADV: 1 instances
+  XOR3 => LUT3: 4 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 782.426 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 782.426 ; gain = 490.156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 782.426 ; gain = 490.156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 782.426 ; gain = 490.156
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "clk_intern" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "nState" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 782.426 ; gain = 490.156
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               19 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 1     
+	   4 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   9 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module digit_display 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+	   9 Input      4 Bit        Muxes := 1     
+Module Freq_Divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
++---Registers : 
+	               19 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module RC_adder 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module mult 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      9 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "Freq_Divider_0/clk_intern" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JA1
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[15]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[14]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[13]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[12]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[11]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[10]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[9]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[8]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[7]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[6]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[5]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[4]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[3]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[2]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port led[1]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LEFT_button
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port RIGHT_button
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port DOWN_button
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port RST_button
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[15]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[14]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[13]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[12]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[7]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[6]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[5]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[4]
+WARNING: [Synth 8-3332] Sequential element (mult_inst/S_i_reg[0]) is unused and will be removed from module main_interconnect.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 782.426 ; gain = 490.156
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 782.426 ; gain = 490.156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 791.035 ; gain = 498.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 802.879 ; gain = 510.609
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 802.879 ; gain = 510.609
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 802.879 ; gain = 510.609
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 802.879 ; gain = 510.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 802.879 ; gain = 510.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 802.879 ; gain = 510.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 802.879 ; gain = 510.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |AND2       |    12|
+|2     |BUFG       |     2|
+|3     |CARRY4     |     5|
+|4     |LUT1       |     2|
+|5     |LUT2       |    10|
+|6     |LUT3       |     6|
+|7     |LUT4       |    14|
+|8     |LUT5       |     4|
+|9     |LUT6       |    12|
+|10    |OR3        |     4|
+|11    |PLLE2_BASE |     1|
+|12    |XOR3       |     4|
+|13    |FDRE       |    56|
+|14    |IBUF       |    11|
+|15    |OBUF       |    17|
+|16    |OBUFT      |    16|
++------+-----------+------+
+
+Report Instance Areas: 
++------+------------------+----------------+------+
+|      |Instance          |Module          |Cells |
++------+------------------+----------------+------+
+|1     |top               |                |   176|
+|2     |  CLOCK_manager_0 |CLOCK_manager   |     1|
+|3     |  Freq_Divider_0  |Freq_Divider    |    31|
+|4     |  digit_display_0 |digit_display   |    31|
+|5     |  mult_inst       |mult            |    68|
+|6     |    add           |RC_adder        |    29|
+|7     |      \RC[0].add  |one_bit_adder   |     8|
+|8     |      \RC[1].add  |one_bit_adder_0 |     7|
+|9     |      \RC[2].add  |one_bit_adder_1 |     7|
+|10    |      \RC[3].add  |one_bit_adder_2 |     7|
++------+------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 802.879 ; gain = 510.609
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 802.879 ; gain = 170.570
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 802.879 ; gain = 510.609
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 37 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 21 instances were transformed.
+  AND2 => LUT2: 12 instances
+  OR3 => LUT3: 4 instances
+  PLLE2_BASE => PLLE2_ADV: 1 instances
+  XOR3 => LUT3: 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+55 Infos, 85 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 802.879 ; gain = 523.484
+INFO: [Common 17-1381] The checkpoint 'C:/xilinx_project/test_project/project_1/project_1.runs/synth_1/main_interconnect.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_interconnect_utilization_synth.rpt -pb main_interconnect_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 802.879 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  4 23:35:39 2018...

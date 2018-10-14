@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sat Apr  7 03:46:50 2018
+# Process ID: 16560
+# Current directory: C:/xilinx_project/git_project/projet_CPU/projet_CPU/project_2/project_2.runs/synth_no_flatening
+# Command line: vivado.exe -log main_interconnect.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_interconnect.tcl
+# Log file: C:/xilinx_project/git_project/projet_CPU/projet_CPU/project_2/project_2.runs/synth_no_flatening/main_interconnect.vds
+# Journal file: C:/xilinx_project/git_project/projet_CPU/projet_CPU/project_2/project_2.runs/synth_no_flatening\vivado.jou
+#-----------------------------------------------------------
+source main_interconnect.tcl -notrace
