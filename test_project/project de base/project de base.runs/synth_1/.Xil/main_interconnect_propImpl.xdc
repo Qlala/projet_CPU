@@ -186,21 +186,21 @@ set_property -dict { PACKAGE_PIN G2    IOSTANDARD LVCMOS33 } [get_ports { JD[9] 
 set_property src_info {type:XDC file:1 line:139 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN F3    IOSTANDARD LVCMOS33 } [get_ports { JD[10] }]; #IO_L13N_T2_MRCC_35 Sch=jd[10]
 set_property src_info {type:XDC file:1 line:144 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN A14   IOSTANDARD LVDS     } [get_ports { XA_N[1] }]; #IO_L9N_T1_DQS_AD3N_15 Sch=xa_n[1]
+set_property -dict { PACKAGE_PIN A14   IOSTANDARD LVCMOS33     } [get_ports { XA_N[1] }]; #IO_L9N_T1_DQS_AD3N_15 Sch=xa_n[1]
 set_property src_info {type:XDC file:1 line:145 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN A13   IOSTANDARD LVDS     } [get_ports { XA_P[1] }]; #IO_L9P_T1_DQS_AD3P_15 Sch=xa_p[1]
+set_property -dict { PACKAGE_PIN A13   IOSTANDARD LVCMOS33     } [get_ports { XA_P[1] }]; #IO_L9P_T1_DQS_AD3P_15 Sch=xa_p[1]
 set_property src_info {type:XDC file:1 line:146 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN A16   IOSTANDARD LVDS     } [get_ports { XA_N[2] }]; #IO_L8N_T1_AD10N_15 Sch=xa_n[2]
+set_property -dict { PACKAGE_PIN A16   IOSTANDARD LVCMOS33     } [get_ports { XA_N[2] }]; #IO_L8N_T1_AD10N_15 Sch=xa_n[2]
 set_property src_info {type:XDC file:1 line:147 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN A15   IOSTANDARD LVDS     } [get_ports { XA_P[2] }]; #IO_L8P_T1_AD10P_15 Sch=xa_p[2]
+set_property -dict { PACKAGE_PIN A15   IOSTANDARD LVCMOS33     } [get_ports { XA_P[2] }]; #IO_L8P_T1_AD10P_15 Sch=xa_p[2]
 set_property src_info {type:XDC file:1 line:148 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN B17   IOSTANDARD LVDS     } [get_ports { XA_N[3] }]; #IO_L7N_T1_AD2N_15 Sch=xa_n[3]
+set_property -dict { PACKAGE_PIN B17   IOSTANDARD LVCMOS33     } [get_ports { XA_N[3] }]; #IO_L7N_T1_AD2N_15 Sch=xa_n[3]
 set_property src_info {type:XDC file:1 line:149 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN B16   IOSTANDARD LVDS     } [get_ports { XA_P[3] }]; #IO_L7P_T1_AD2P_15 Sch=xa_p[3]
+set_property -dict { PACKAGE_PIN B16   IOSTANDARD LVCMOS33     } [get_ports { XA_P[3] }]; #IO_L7P_T1_AD2P_15 Sch=xa_p[3]
 set_property src_info {type:XDC file:1 line:150 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN A18   IOSTANDARD LVDS     } [get_ports { XA_N[4] }]; #IO_L10N_T1_AD11N_15 Sch=xa_n[4]
+set_property -dict { PACKAGE_PIN A18   IOSTANDARD LVCMOS33     } [get_ports { XA_N[4] }]; #IO_L10N_T1_AD11N_15 Sch=xa_n[4]
 set_property src_info {type:XDC file:1 line:151 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN B18   IOSTANDARD LVDS     } [get_ports { XA_P[4] }]; #IO_L10P_T1_AD11P_15 Sch=xa_p[4]
+set_property -dict { PACKAGE_PIN B18   IOSTANDARD LVCMOS33     } [get_ports { XA_P[4] }]; #IO_L10P_T1_AD11P_15 Sch=xa_p[4]
 set_property src_info {type:XDC file:1 line:156 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN A3    IOSTANDARD LVCMOS33 } [get_ports { VGA_R[0] }]; #IO_L8N_T1_AD14N_35 Sch=vga_r[0]
 set_property src_info {type:XDC file:1 line:157 export:INPUT save:INPUT read:READ} [current_design]
@@ -276,13 +276,13 @@ set_property -dict { PACKAGE_PIN A11   IOSTANDARD LVCMOS33 } [get_ports { AUD_PW
 set_property src_info {type:XDC file:1 line:214 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN D12   IOSTANDARD LVCMOS33 } [get_ports { AUD_SD }]; #IO_L6P_T0_15 Sch=aud_sd
 set_property src_info {type:XDC file:1 line:219 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN C4    IOSTANDARD LVCMOS33 } [get_ports { UART_TXD_IN }]; #IO_L7P_T1_AD6P_35 Sch=uart_txd_in
+set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports {UART_TX_OUT}]; #IO_L7P_T1_AD6P_35 Sch=uart_txd_in
 set_property src_info {type:XDC file:1 line:220 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports { UART_RXD_OUT }]; #IO_L11N_T1_SRCC_35 Sch=uart_rxd_out
+set_property -dict { PACKAGE_PIN C4    IOSTANDARD LVCMOS33 } [get_ports {UART_RX_IN  }]; #IO_L11N_T1_SRCC_35 Sch=uart_rxd_out
 set_property src_info {type:XDC file:1 line:221 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN D3    IOSTANDARD LVCMOS33 } [get_ports { UART_CTS }]; #IO_L12N_T1_MRCC_35 Sch=uart_cts
+set_property -dict { PACKAGE_PIN E5    IOSTANDARD LVCMOS33 } [get_ports { UART_CTS }]; #IO_L12N_T1_MRCC_35 Sch=uart_cts
 set_property src_info {type:XDC file:1 line:222 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN E5    IOSTANDARD LVCMOS33 } [get_ports { UART_RTS }]; #IO_L5N_T0_AD13N_35 Sch=uart_rts
+set_property -dict { PACKAGE_PIN D3    IOSTANDARD LVCMOS33 } [get_ports { UART_RTS }]; #IO_L5N_T0_AD13N_35 Sch=uart_rts
 set_property src_info {type:XDC file:1 line:226 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN F4    IOSTANDARD LVCMOS33 } [get_ports { PS2_CLK }]; #IO_L13P_T2_MRCC_35 Sch=ps2_clk
 set_property src_info {type:XDC file:1 line:227 export:INPUT save:INPUT read:READ} [current_design]

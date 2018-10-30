@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 entity  main_interconnect is
   port (
-    AN : out STD_LOGIC_VECTOR ( 0 to 7 );
+    AN : out STD_LOGIC_VECTOR ( 7 downto 0 );
     CA : out STD_LOGIC;
     CB : out STD_LOGIC;
     CC : out STD_LOGIC;
@@ -52,7 +52,7 @@ entity  main_interconnect is
     CPU_RST : in STD_LOGIC;--actif sur niveau bas
 	--switches and led
     SW : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    led : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    LED : out STD_LOGIC_VECTOR ( 15 downto 0 );
 	-- led RGB
 	LED16_B : out std_logic;
 	LED16_G : out std_logic;
@@ -96,10 +96,10 @@ entity  main_interconnect is
 	 M_DATA : in std_logic;
      M_LRSEL : out std_logic;--channel select (L or R)
 	--USB RS232
-	UART_TXD_IN : in std_logic;
-	UART_RXD_OUT : out std_logic; 
-	UART_CTS : out std_logic;
-	UART_RTS : in std_logic;
+	UART_TX_OUT : out std_logic:='H';
+	UART_RX_IN : in std_logic; 
+	UART_CTS : in std_logic:='H';
+	UART_RTS : out std_logic:='H';
 	--USB HID (PS/2)
 	PS2_CLK : inout std_logic;
 	PS2_DATA : inout std_logic;
@@ -140,19 +140,77 @@ entity  main_interconnect is
 end main_interconnect;
 
 architecture Behavioral of main_interconnect is
- 
+component UART_RS232 is
+  Port (
+   --extern port 
+   TX:out std_logic:='H';
+   RX: in std_logic;
+   CTS : in std_logic;
+   RTS : out std_logic;
+   --port intern rx
+   rx_data : out std_logic_vector(7 downto 0);
+   rx_valid : out std_logic; --1 if valid
+   rx_new_data : out  std_logic;--assert if data is valid
+   rx_ack : in std_logic :='1';--asert to acknowledge data.
+   
+   --port intern tx
+   tx_data: in std_logic_vector(7 downto 0);
+   tx_start: in std_logic;
+   tx_done : out std_logic;
+   --CLK and RST
+   CLK :in std_logic;
+   RST : in std_logic --active on low front
+  );
+end component;
+component  digit_display is
+    Port ( 
+    CA : out STD_LOGIC;
+    CB : out STD_LOGIC;
+    CC : out STD_LOGIC;
+    CD : out STD_LOGIC;
+    CE : out STD_LOGIC;
+    CF : out STD_LOGIC;
+    CG : out STD_LOGIC;
+    DP : out STD_LOGIC;
+    select_secondary : in STD_LOGIC;
+    AN : out STD_LOGIC_VECTOR (7 downto 0);
+    disp_byte0 : in std_logic_vector(7 downto 0);
+    disp_byte1 : in std_logic_vector(7 downto 0);
+    disp_byte2 : in std_logic_vector(7 downto 0);
+    disp_byte3 : in std_logic_vector(7 downto 0);
+    secondary_disp_byte0 : in std_logic_vector(7 downto 0);
+    secondary_disp_byte1 : in std_logic_vector(7 downto 0);
+    secondary_disp_byte2 : in std_logic_vector(7 downto 0);
+    secondary_disp_byte3 : in std_logic_vector(7 downto 0);
+    CLK : in std_logic);
+    
+end component;
+component symetric_freq_Divider is
+    generic ( divide_by: Natural :=100 );
+    Port ( CLK : in STD_LOGIC;
+           CLK_out : out STD_LOGIC);
+        
+end component;
+signal byte_in: std_logic_vector(7 downto 0);
+signal CLK_10KHZ : std_logic;
+signal CLK_2MHZ : std_logic;
+signal CLK_1MHZ : std_logic;
+signal byte_out : std_logic_vector(7 downto 0);
+signal TX_line : std_logic:='H';
+signal TX_line_late : std_logic;
+signal Ctrl_signal :std_logic;
 begin
 --valeur par d√©fault
-AN <= (others =>'1');
-CA <='0';
-CB <='0';
-CC <='0';
-CD <='0';
-CE <='0';
-CF <='0';
-CG <='0';
-DP <='0';
-led<=(others=>'0');
+--AN <= (others =>'1');
+--CA <='0';
+--CB <='0';
+--CC <='0';
+--CD <='0';
+--CE <='0';
+--CF <='0';
+--CG <='0';
+--DP <='0';
+--led<=(others=>'0');
 LED16_B <='0';
 LED16_G <='0';
 LED16_R <='0';
@@ -180,13 +238,73 @@ ACL_CSN <='1';--actif sur niveau bas
 TMP_SCL<='0';
  M_CLK <='0';
  M_LRSEL <='0';
-UART_RXD_OUT<='0';
-UART_CTS <='0';
+--UART_TX_OUT<='0';
+--UART_RTS <='0';
 ETH_MDC <='Z';
 ETH_RSTN <='Z';
 ETH_TXEN<='Z';
 ETH_TXD<=(others=>'Z');
 ETH_REFCLK<='Z';
 QSPI_CSN<='Z';
- 
+ --commencez l'Ècriture ici
+ byte_in<=SW(7 downto 0);
+ digit_display_inst: digit_display
+    port map (
+       -- Input Ports - Single Bit
+       CLK                              => CLK_10khz,                            
+       select_secondary                 => '0',               
+       -- Input Ports - Busses
+       disp_byte0(7 downto 0)           => byte_in,         
+       disp_byte1(7 downto 0)           => byte_out,         
+       disp_byte2(7 downto 0)           => (others=>'0'),         
+       disp_byte3(7 downto 0)           => (others=>'0'),         
+       secondary_disp_byte0(7 downto 0) => (others=>'0'),
+       secondary_disp_byte1(7 downto 0) => (others=>'0'),
+       secondary_disp_byte2(7 downto 0) => (others=>'0'),
+       secondary_disp_byte3(7 downto 0) => (others=>'0'),
+       -- Output Ports - Single Bit
+       CA                               => CA,                             
+       CB                               => CB,                             
+       CC                               => CC,                             
+       CD                               => CD,                             
+       CE                               => CE,                             
+       CF                               => CF,                             
+       CG                               => CG,                             
+       DP                               => DP,                             
+       -- Output Ports - Busses
+       AN(7 downto 0)                   =>  AN(7 downto 0)                 
+       -- InOut Ports - Single Bit
+       -- InOut Ports - Busses
+    );
+UART_RS232_inst : UART_RS232
+   Port map(
+     --extern port 
+     TX=>UART_TX_OUT,
+     RX=>UART_RX_IN,
+     CTS => UART_CTS,
+     RTS => Ctrl_signal,
+     --port intern rx
+     rx_data  =>byte_out,
+     rx_valid =>led(0),
+     rx_new_data =>led(7),
+     rx_ack =>'1',
+     
+     --port intern tx
+     tx_data  =>byte_in,
+     tx_start =>OK_BTN,
+     tx_done  =>led(1),
+     --CLK and RST
+     CLK =>CLK_10KHZ,
+     RST =>CPU_RST
+    );  
+    
+led(3)<=OK_BTN;
+led(2)<=UART_CTS;
+UART_RTS<=Ctrl_signal;
+--led(5)<=UART_RX_IN;
+led(4)<=Ctrl_signal;
+TX_line_late<=TX_line when rising_edge(CLK_2MHZ);
+inst:symetric_freq_Divider generic map(10000) port map(CLK=>CLK100MHZ,CLK_out=>CLK_10KHZ);
+inst_1MHZ:symetric_freq_Divider generic map(100) port map(CLK=>CLK100MHZ,CLK_out=>CLK_1MHZ);
+inst_2MHZ:symetric_freq_Divider generic map(50) port map(CLK=>CLK100MHZ,CLK_out=>CLK_2MHZ);
  end Behavioral;

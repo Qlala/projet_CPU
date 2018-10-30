@@ -27,7 +27,12 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_output_repo {c:/xilinx_project/test_project/project de base/project de base.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib {{C:/xilinx_project/test_project/project de base/project de base.srcs/sources_1/imports/my_lib/main_interconnect.vhd}}
+read_vhdl -library xil_defaultlib {
+  {C:/xilinx_project/test_project/project de base/project de base.srcs/sources_1/imports/my_lib/digit_display.vhd}
+  {C:/xilinx_project/test_project/project de base/project de base.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd}
+  {C:/xilinx_project/test_project/project de base/project de base.srcs/sources_1/imports/my_lib/main_interconnect.vhd}
+}
+read_vhdl -vhdl2008 -library xil_defaultlib {{C:/xilinx_project/test_project/project de base/project de base.srcs/sources_1/new/UART_RS232.vhd}}
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be

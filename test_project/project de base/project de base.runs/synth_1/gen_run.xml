@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1539119547">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1540583150">
   <File Type="PA-TCL" Name="main_interconnect.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="main_interconnect_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="main_interconnect_reports.tcl"/>
@@ -11,6 +11,28 @@
   <File Type="VDS-TIMING-PB" Name="main_interconnect_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/my_lib/digit_display.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../my_lib/digit_display.vhd"/>
+        <Attr Name="ImportTime" Val="1538523684"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/my_lib/symetric_freq_divider.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../my_lib/symetric_freq_divider.vhd"/>
+        <Attr Name="ImportTime" Val="1538729859"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/UART_RS232.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/my_lib/main_interconnect.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../my_lib/main_interconnect.vhd"/>
@@ -37,24 +59,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/my_lib/digit_display.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../my_lib/digit_display.vhd"/>
-        <Attr Name="ImportTime" Val="1538523684"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/my_lib/symetric_freq_divider.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../my_lib/symetric_freq_divider.vhd"/>
-        <Attr Name="ImportTime" Val="1538729859"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="main_interconnect"/>
@@ -75,9 +79,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
