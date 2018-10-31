@@ -1,8 +1,8 @@
-Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Fri Oct 26 21:46:40 2018
-| Host         : Qlala-Blade running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+| Date         : Wed Oct 31 03:14:50 2018
+| Host         : Qlala-PC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file main_interconnect_utilization_synth.rpt -pb main_interconnect_utilization_synth.pb
 | Design       : main_interconnect
 | Device       : 7a100tcsg324-1
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   80 |     0 |     63400 |  0.13 |
-|   LUT as Logic          |   80 |     0 |     63400 |  0.13 |
+| Slice LUTs*             |   84 |     0 |     63400 |  0.13 |
+|   LUT as Logic          |   84 |     0 |     63400 |  0.13 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
 | Slice Registers         |   69 |     0 |    126800 |  0.05 |
 |   Register as Flip Flop |   69 |     0 |    126800 |  0.05 |
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   82 |     0 |       210 | 39.05 |
+| Bonded IOB                  |   79 |     0 |       210 | 37.62 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         6 |  0.00 |
@@ -147,16 +147,16 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |   63 |        Flop & Latch |
-| OBUF     |   52 |                  IO |
-| LUT6     |   23 |                 LUT |
-| LUT5     |   21 |                 LUT |
-| OBUFT    |   17 |                  IO |
-| LUT4     |   15 |                 LUT |
-| LUT1     |   14 |                 LUT |
-| IBUF     |   13 |                  IO |
-| LUT3     |   10 |                 LUT |
+| OBUF     |   55 |                  IO |
+| LUT6     |   24 |                 LUT |
+| LUT3     |   22 |                 LUT |
+| OBUFT    |   19 |                  IO |
+| LUT5     |   17 |                 LUT |
+| LUT1     |   15 |                 LUT |
+| LUT4     |   13 |                 LUT |
+| LUT2     |    6 |                 LUT |
 | FDCE     |    6 |        Flop & Latch |
-| LUT2     |    5 |                 LUT |
+| IBUF     |    5 |                  IO |
 | BUFG     |    4 |               Clock |
 | CARRY4   |    3 |          CarryLogic |
 | MUXF7    |    1 |               MuxFx |

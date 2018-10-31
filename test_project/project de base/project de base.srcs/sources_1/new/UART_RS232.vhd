@@ -56,7 +56,7 @@ end UART_RS232;
 
 architecture Behavioral of UART_RS232 is
 CONSTANT START_B:std_logic:='0';
-CONSTANT STOP_B:std_logic:='0';
+CONSTANT STOP_B:std_logic:='1';
 CONSTANT DEFAULT_LINE_STATE:std_logic:='1';
 type rx_state_t is (pending,receiving,valid,user_line_handshake,user_handshake,line_handshake);
 --rx_signal
@@ -79,7 +79,7 @@ begin
 rx_cState<= pending when RST='0' else rx_nState when rising_edge(CLK) else rx_cState;
 
 --RX STATE MACHINE
-RX_NEXT_STATE_LOGIC:process(CLK,rx_cState,RX,rx_I)
+RX_NEXT_STATE_LOGIC:process(rx_cState,RX,rx_I)
 begin
     rx_nState<=rx_cState;
    case rx_cState is
@@ -95,14 +95,15 @@ begin
        when valid=>
         rx_nState<=user_line_handshake;
        when user_line_handshake=>
-            if(rx_ack='1' and RX=STOP_B) then--double validation
-                  rx_nState<=pending;
-            else if(rx_ack='1') then--user acknowledged data
-                  rx_nState<=line_handshake;
-            else if(RX=STOP_B) then--line returned to one
-                rx_nState<=line_handshake;
+            if(rx_ack='1') then--allow to skip synchronisation with the user
+                   if (RX=STOP_B)then--user acknowledged data
+                      rx_nState<=pending;
+                  else
+                      rx_nState<=line_handshake;
+                  end if;
             end if;
-            end if;
+            if(rx_ack='0' and RX=STOP_B) then-- if the user want to see the data before allowing the systeme to resume
+                rx_nState<=user_handshake;
             end if;
        when user_handshake=>
         if(rx_ack='1') then
@@ -113,12 +114,12 @@ begin
              rx_nState<=pending;
          end if;
        when others =>
-           rx_nState<=pending;
+           --rx_nState<=pending;
     end case; 
 
 end process;
 
-RX_ASYNC:process(CLK,rx_cState)
+RX_ASYNC:process(rx_cState)
 begin
 --default
 RTS<='0';
@@ -128,6 +129,7 @@ RTS<='0';
          when receiving  =>
          when valid=>
          when user_line_handshake=>
+            --RTS<='1';
          when user_handshake=>
             RTS<='1';
          when line_handshake=>
@@ -148,6 +150,7 @@ RX_SYNC:process(CLK,rx_cState)
                  when pending =>
                     rx_temp_valid<='0';
                     rx_I<=0;
+                    rx_new_data<='0';
                  when receiving  =>
                     rx_valid<='0';--data are not valid anymore
                     rx_new_data<='0';
@@ -157,7 +160,7 @@ RX_SYNC:process(CLK,rx_cState)
                  when valid=>
                     rx_valid<='1' when rx_temp_valid=RX else '0';--checking parity
                  when user_line_handshake=>
-                    rx_new_data<='1';
+                    rx_new_data<='1';         
                  when others =>
              end case; 
           end if;
@@ -166,7 +169,7 @@ end process;
 
 --TX_STATE_MACHINE
 tx_cState<=pending when RST='0' else tx_nState when rising_edge(CLK) else tx_cState;
-TX_NEXT_STATE_LOGIC:process(CLK,tx_cState,tx_nState,CTS)
+TX_NEXT_STATE_LOGIC:process(tx_cState,tx_nState,CTS)
 begin
     tx_nState<=tx_cState;
     case tx_cState is
@@ -190,7 +193,7 @@ begin
                 tx_nState<=validation;
             end if;
          when validation=>
-            tx_nState<=sending_delay;
+            tx_nState<=pending;--STOP BIT EST LE DEFAULT LINE STATE
          when sending_delay=>
            tx_nState<=pending; 
          when others =>

@@ -199,6 +199,8 @@ signal byte_out : std_logic_vector(7 downto 0);
 signal TX_line : std_logic:='H';
 signal TX_line_late : std_logic;
 signal Ctrl_signal :std_logic;
+signal data_bus_loop : std_logic_vector(7 downto 0);
+signal data_start_loop :std_logic;
 begin
 --valeur par défault
 --AN <= (others =>'1');
@@ -217,7 +219,7 @@ LED16_R <='0';
 LED17_B <='0';
 LED17_G <='0';
 LED17_R <='0';
-JA <=(others=>'Z');
+--JA <=(others=>'Z');
 JB <=(others=>'Z');
 JC <=(others=>'Z');
 JD <=(others=>'Z');
@@ -254,7 +256,7 @@ QSPI_CSN<='Z';
        CLK                              => CLK_10khz,                            
        select_secondary                 => '0',               
        -- Input Ports - Busses
-       disp_byte0(7 downto 0)           => byte_in,         
+       disp_byte0(7 downto 0)           => data_bus_loop,         
        disp_byte1(7 downto 0)           => byte_out,         
        disp_byte2(7 downto 0)           => (others=>'0'),         
        disp_byte3(7 downto 0)           => (others=>'0'),         
@@ -279,19 +281,19 @@ QSPI_CSN<='Z';
 UART_RS232_inst : UART_RS232
    Port map(
      --extern port 
-     TX=>UART_TX_OUT,
+     TX=>TX_line,
      RX=>UART_RX_IN,
      CTS => UART_CTS,
      RTS => Ctrl_signal,
      --port intern rx
-     rx_data  =>byte_out,
-     rx_valid =>led(0),
-     rx_new_data =>led(7),
+     rx_data  =>data_bus_loop,
+     rx_valid =>JA(7),
+     rx_new_data =>data_start_loop,
      rx_ack =>'1',
      
      --port intern tx
-     tx_data  =>byte_in,
-     tx_start =>OK_BTN,
+     tx_data  =>data_bus_loop,
+     tx_start =>data_start_loop,
      tx_done  =>led(1),
      --CLK and RST
      CLK =>CLK_10KHZ,
@@ -301,9 +303,13 @@ UART_RS232_inst : UART_RS232
 led(3)<=OK_BTN;
 led(2)<=UART_CTS;
 UART_RTS<=Ctrl_signal;
+JA(1)<=UART_RX_IN;
+JA(4)<=UART_CTS;
+JA(3)<=Ctrl_signal;
+UART_TX_OUT<=TX_line;
+JA(2)<=TX_line;
 --led(5)<=UART_RX_IN;
 led(4)<=Ctrl_signal;
-TX_line_late<=TX_line when rising_edge(CLK_2MHZ);
 inst:symetric_freq_Divider generic map(10000) port map(CLK=>CLK100MHZ,CLK_out=>CLK_10KHZ);
 inst_1MHZ:symetric_freq_Divider generic map(100) port map(CLK=>CLK100MHZ,CLK_out=>CLK_1MHZ);
 inst_2MHZ:symetric_freq_Divider generic map(50) port map(CLK=>CLK100MHZ,CLK_out=>CLK_2MHZ);
