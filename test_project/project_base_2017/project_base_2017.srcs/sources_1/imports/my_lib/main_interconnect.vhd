@@ -103,6 +103,9 @@ entity  main_interconnect is
 	--USB HID (PS/2)
 	PS2_CLK : inout std_logic;
 	PS2_DATA : inout std_logic;
+	--PWM Audio Amplifier
+	AUD_PWM : out std_logic;
+	AUD_SD : out std_logic;--Shutdown (shutdown amplifiers in the salen key low pass filter.)
 	--ethernet PHY
 	ETH_MDC : out std_logic;
 	ETH_MDIO : inout std_logic;
