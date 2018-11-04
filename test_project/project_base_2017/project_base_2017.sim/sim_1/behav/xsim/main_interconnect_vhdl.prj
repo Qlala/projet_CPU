@@ -1,0 +1,20 @@
+# compile vhdl design source files
+vhdl my_lib  \
+"../../../../../../my_lib/my_lib.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../../../my_lib/Audio_PWM_module.vhd" \
+"../../../../project_base_2017.srcs/sources_1/imports/my_lib/Clock_manager.vhd" \
+"../../../../../../my_lib/PWM_module.vhd" \
+"../../../../project_base_2017.srcs/sources_1/imports/my_lib/digit_display.vhd" \
+"../../../../../../my_lib/square_signal_generator.vhd" \
+"../../../../project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../../project_base_2017.srcs/sources_1/new/UART_RS232.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd" \
+
+# Do not sort compile order
+nosort

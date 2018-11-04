@@ -14,41 +14,106 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2560 
+INFO: Helper process launched with PID 2800 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 389.781 ; gain = 97.688
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 389.973 ; gain = 98.109
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'main_interconnect' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:142]
-INFO: [Synth 8-3491] module 'digit_display' declared at 'E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/digit_display.vhd:36' bound to instance 'digit_display_inst' of component 'digit_display' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:253]
+INFO: [Synth 8-638] synthesizing module 'main_interconnect' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:145]
+INFO: [Synth 8-3491] module 'digit_display' declared at 'E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/digit_display.vhd:36' bound to instance 'digit_display_inst' of component 'digit_display' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:285]
 INFO: [Synth 8-638] synthesizing module 'digit_display' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/digit_display.vhd:60]
 INFO: [Synth 8-226] default block is never used [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/digit_display.vhd:94]
 INFO: [Synth 8-256] done synthesizing module 'digit_display' (1#1) [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/digit_display.vhd:60]
-INFO: [Synth 8-3491] module 'UART_RS232' declared at 'E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/new/UART_RS232.vhd:34' bound to instance 'UART_RS232_inst' of component 'UART_RS232' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:281]
+INFO: [Synth 8-3491] module 'UART_RS232' declared at 'E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/new/UART_RS232.vhd:34' bound to instance 'UART_RS232_inst' of component 'UART_RS232' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:313]
 INFO: [Synth 8-638] synthesizing module 'UART_RS232' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/new/UART_RS232.vhd:57]
 WARNING: [Synth 8-614] signal 'rx_ack' is read in the process but is not in the sensitivity list [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/new/UART_RS232.vhd:82]
 WARNING: [Synth 8-614] signal 'tx_start' is read in the process but is not in the sensitivity list [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/new/UART_RS232.vhd:174]
 WARNING: [Synth 8-614] signal 'tx_I' is read in the process but is not in the sensitivity list [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/new/UART_RS232.vhd:174]
 INFO: [Synth 8-256] done synthesizing module 'UART_RS232' (2#1) [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/new/UART_RS232.vhd:57]
+	Parameter audio_N bound to: 16 - type: integer 
+	Parameter base_freq bound to: 100000000 - type: integer 
+	Parameter sample_freq bound to: 48000 - type: integer 
+INFO: [Synth 8-3491] module 'Audio_PWM_module' declared at 'E:/xilinx_project/CPUproject/projet_CPU/my_lib/Audio_PWM_module.vhd:35' bound to instance 'Audio_PWM_module_0' of component 'Audio_PWM_module' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:334]
+INFO: [Synth 8-638] synthesizing module 'Audio_PWM_module' [E:/xilinx_project/CPUproject/projet_CPU/my_lib/Audio_PWM_module.vhd:51]
+	Parameter audio_N bound to: 16 - type: integer 
+	Parameter base_freq bound to: 100000000 - type: integer 
+	Parameter sample_freq bound to: 48000 - type: integer 
+WARNING: [Synth 8-3512] assigned value '-1149239296' out of range [E:/xilinx_project/CPUproject/projet_CPU/my_lib/Audio_PWM_module.vhd:86]
+	Parameter multiplier bound to: 998244352 - type: integer 
+	Parameter Divide_0 bound to: 100000000 - type: integer 
+	Parameter Divide_1 bound to: 1 - type: integer 
+	Parameter Divide_2 bound to: 3 - type: integer 
+	Parameter Divide_3 bound to: 16 - type: integer 
+	Parameter Divide_4 bound to: 16 - type: integer 
+	Parameter Divide_5 bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'CLOCK_manager' declared at 'E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/Clock_manager.vhd:36' bound to instance 'CLOCK_manager_0' of component 'CLOCK_manager' [E:/xilinx_project/CPUproject/projet_CPU/my_lib/Audio_PWM_module.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'CLOCK_manager' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/Clock_manager.vhd:59]
+	Parameter multiplier bound to: 998244352 - type: integer 
+	Parameter Divide_0 bound to: 100000000 - type: integer 
+	Parameter Divide_1 bound to: 1 - type: integer 
+	Parameter Divide_2 bound to: 3 - type: integer 
+	Parameter Divide_3 bound to: 16 - type: integer 
+	Parameter Divide_4 bound to: 16 - type: integer 
+	Parameter Divide_5 bound to: 16 - type: integer 
+	Parameter BANDWIDTH bound to: HIGH - type: string 
+	Parameter CLKFBOUT_MULT bound to: 998244352 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE bound to: 100000000 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DIVIDE bound to: 3 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.000000 - type: float 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-113] binding component instance 'PLLE2_BASE_inst' to cell 'PLLE2_BASE' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/Clock_manager.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'CLOCK_manager' (3#1) [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/Clock_manager.vhd:59]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'PWM' declared at 'E:/xilinx_project/CPUproject/projet_CPU/my_lib/PWM_module.vhd:34' bound to instance 'PWM_0' of component 'PWM' [E:/xilinx_project/CPUproject/projet_CPU/my_lib/Audio_PWM_module.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'PWM' [E:/xilinx_project/CPUproject/projet_CPU/my_lib/PWM_module.vhd:44]
+	Parameter N bound to: 16 - type: integer 
+WARNING: [Synth 8-3848] Net PWM_out in module/entity PWM does not have driver. [E:/xilinx_project/CPUproject/projet_CPU/my_lib/PWM_module.vhd:37]
+WARNING: [Synth 8-3848] Net PWM_clk in module/entity PWM does not have driver. [E:/xilinx_project/CPUproject/projet_CPU/my_lib/PWM_module.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'PWM' (4#1) [E:/xilinx_project/CPUproject/projet_CPU/my_lib/PWM_module.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'Audio_PWM_module' (5#1) [E:/xilinx_project/CPUproject/projet_CPU/my_lib/Audio_PWM_module.vhd:51]
+	Parameter audio_N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'square_signal_generator' declared at 'E:/xilinx_project/CPUproject/projet_CPU/my_lib/square_signal_generator.vhd:34' bound to instance 'square_signal_generator_0' of component 'square_signal_generator' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:348]
+INFO: [Synth 8-638] synthesizing module 'square_signal_generator' [E:/xilinx_project/CPUproject/projet_CPU/my_lib/square_signal_generator.vhd:46]
+	Parameter audio_N bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'square_signal_generator' (6#1) [E:/xilinx_project/CPUproject/projet_CPU/my_lib/square_signal_generator.vhd:46]
 	Parameter divide_by bound to: 10000 - type: integer 
-INFO: [Synth 8-3491] module 'symetric_freq_Divider' declared at 'E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:36' bound to instance 'inst' of component 'symetric_freq_Divider' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:314]
+INFO: [Synth 8-3491] module 'symetric_freq_Divider' declared at 'E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:36' bound to instance 'inst' of component 'symetric_freq_Divider' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:371]
 INFO: [Synth 8-638] synthesizing module 'symetric_freq_Divider' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:43]
 	Parameter divide_by bound to: 10000 - type: integer 
 INFO: [Synth 8-113] binding component instance 'BUFG_inst' to cell 'BUFG' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:54]
-INFO: [Synth 8-256] done synthesizing module 'symetric_freq_Divider' (3#1) [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'symetric_freq_Divider' (7#1) [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:43]
 	Parameter divide_by bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'symetric_freq_Divider' declared at 'E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:36' bound to instance 'inst_1MHZ' of component 'symetric_freq_Divider' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:315]
+INFO: [Synth 8-3491] module 'symetric_freq_Divider' declared at 'E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:36' bound to instance 'inst_1MHZ' of component 'symetric_freq_Divider' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:372]
 INFO: [Synth 8-638] synthesizing module 'symetric_freq_Divider__parameterized1' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:43]
 	Parameter divide_by bound to: 100 - type: integer 
 INFO: [Synth 8-113] binding component instance 'BUFG_inst' to cell 'BUFG' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:54]
-INFO: [Synth 8-256] done synthesizing module 'symetric_freq_Divider__parameterized1' (3#1) [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'symetric_freq_Divider__parameterized1' (7#1) [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:43]
 	Parameter divide_by bound to: 50 - type: integer 
-INFO: [Synth 8-3491] module 'symetric_freq_Divider' declared at 'E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:36' bound to instance 'inst_2MHZ' of component 'symetric_freq_Divider' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:316]
+INFO: [Synth 8-3491] module 'symetric_freq_Divider' declared at 'E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:36' bound to instance 'inst_2MHZ' of component 'symetric_freq_Divider' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:373]
 INFO: [Synth 8-638] synthesizing module 'symetric_freq_Divider__parameterized3' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:43]
 	Parameter divide_by bound to: 50 - type: integer 
 INFO: [Synth 8-113] binding component instance 'BUFG_inst' to cell 'BUFG' [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:54]
-INFO: [Synth 8-256] done synthesizing module 'symetric_freq_Divider__parameterized3' (3#1) [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:43]
-WARNING: [Synth 8-3848] Net byte_out in module/entity main_interconnect does not have driver. [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:198]
-INFO: [Synth 8-256] done synthesizing module 'main_interconnect' (4#1) [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:142]
+INFO: [Synth 8-256] done synthesizing module 'symetric_freq_Divider__parameterized3' (7#1) [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd:43]
+WARNING: [Synth 8-3848] Net byte_out in module/entity main_interconnect does not have driver. [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:228]
+INFO: [Synth 8-256] done synthesizing module 'main_interconnect' (8#1) [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:145]
 WARNING: [Synth 8-3917] design main_interconnect has port LED16_B driven by constant 0
 WARNING: [Synth 8-3917] design main_interconnect has port LED16_G driven by constant 0
 WARNING: [Synth 8-3917] design main_interconnect has port LED16_R driven by constant 0
@@ -77,6 +142,28 @@ WARNING: [Synth 8-3917] design main_interconnect has port ACL_CSN driven by cons
 WARNING: [Synth 8-3917] design main_interconnect has port TMP_SCL driven by constant 0
 WARNING: [Synth 8-3917] design main_interconnect has port M_CLK driven by constant 0
 WARNING: [Synth 8-3917] design main_interconnect has port M_LRSEL driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port AUD_SD driven by constant 0
+WARNING: [Synth 8-3331] design square_signal_generator has unconnected port RST
+WARNING: [Synth 8-3331] design PWM has unconnected port PWM_out
+WARNING: [Synth 8-3331] design PWM has unconnected port PWM_clk
+WARNING: [Synth 8-3331] design PWM has unconnected port data[15]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[14]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[13]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[12]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[11]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[10]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[9]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[8]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[7]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[6]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[5]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[4]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[3]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[2]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[1]
+WARNING: [Synth 8-3331] design PWM has unconnected port data[0]
+WARNING: [Synth 8-3331] design PWM has unconnected port new_data
+WARNING: [Synth 8-3331] design PWM has unconnected port clk
 WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[15]
 WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[14]
 WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[13]
@@ -156,28 +243,9 @@ WARNING: [Synth 8-3331] design main_interconnect has unconnected port DOWN_BTN
 WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[15]
 WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[14]
 WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[13]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[12]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[11]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[10]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[9]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[8]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[7]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[6]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[5]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[4]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[3]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[2]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[1]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[0]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port SD_CD
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port ACL_MISO
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port ACL_INT[2]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port ACL_INT[1]
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port TMP_INT
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port TMP_CT
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port M_DATA
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 443.785 ; gain = 151.691
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 444.133 ; gain = 152.270
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -186,53 +254,55 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[7] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:253]
-WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[6] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:253]
-WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[5] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:253]
-WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[4] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:253]
-WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[3] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:253]
-WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[2] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:253]
-WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[1] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:253]
-WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[0] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:253]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[7] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:285]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[6] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:285]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[5] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:285]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[4] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:285]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[3] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:285]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[2] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:285]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[1] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:285]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[0] to constant 0 [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:285]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 443.785 ; gain = 151.691
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 444.133 ; gain = 152.270
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '998244352' specified for property 'CLKFBOUT_MULT'. Expecting type 'int' with possible values of '2-64'. The system will either use the default value or the property value will be dropped. Please verify your source files. [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/Clock_manager.vhd:62]
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '100000000' specified for property 'CLKOUT0_DIVIDE'. Expecting type 'int' with possible values of '1-128'. The system will either use the default value or the property value will be dropped. Please verify your source files. [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/Clock_manager.vhd:62]
+Resolution: Please check the value of the property and set to a correct value.
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/constrs_1/imports/my_lib/Nexys-4-DDR-Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'AUD_PWM'. [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/constrs_1/imports/my_lib/Nexys-4-DDR-Master.xdc:213]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/constrs_1/imports/my_lib/Nexys-4-DDR-Master.xdc:213]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AUD_SD'. [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/constrs_1/imports/my_lib/Nexys-4-DDR-Master.xdc:214]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/constrs_1/imports/my_lib/Nexys-4-DDR-Master.xdc:214]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/constrs_1/imports/my_lib/Nexys-4-DDR-Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/constrs_1/imports/my_lib/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_interconnect_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/main_interconnect_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 1 instances were transformed.
+  PLLE2_BASE => PLLE2_ADV: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 792.371 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 787.496 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 792.371 ; gain = 500.277
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 787.496 ; gain = 495.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 792.371 ; gain = 500.277
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 787.496 ; gain = 495.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 792.371 ; gain = 500.277
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 787.496 ; gain = 495.633
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'rx_cState_reg' in module 'UART_RS232'
 INFO: [Synth 8-802] inferred FSM for state register 'tx_cState_reg' in module 'UART_RS232'
@@ -248,6 +318,7 @@ INFO: [Synth 8-5544] ROM "tx_pulled_data" won't be mapped to Block RAM because a
 INFO: [Synth 8-5544] ROM "TX" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "tx_I" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "tx_nState" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/xilinx_project/CPUproject/projet_CPU/my_lib/square_signal_generator.vhd:49]
 INFO: [Synth 8-5546] ROM "clk_intern" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "clk_intern" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "clk_intern" won't be mapped to RAM because it is too sparse
@@ -273,7 +344,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'tx_cState_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rx_cState_reg' using encoding 'sequential' in module 'UART_RS232'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 792.371 ; gain = 500.277
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 787.496 ; gain = 495.633
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -286,6 +357,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   3 Input     16 Bit       Adders := 1     
 	   2 Input     13 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 1     
@@ -302,6 +374,7 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 9     
 +---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 4     
 	   5 Input      8 Bit        Muxes := 1     
@@ -350,6 +423,12 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 3     
 	   5 Input      1 Bit        Muxes := 14    
 	   6 Input      1 Bit        Muxes := 2     
+Module square_signal_generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
 Module symetric_freq_Divider 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -427,10 +506,9 @@ WARNING: [Synth 8-3917] design main_interconnect has port ACL_CSN driven by cons
 WARNING: [Synth 8-3917] design main_interconnect has port TMP_SCL driven by constant 0
 WARNING: [Synth 8-3917] design main_interconnect has port M_CLK driven by constant 0
 WARNING: [Synth 8-3917] design main_interconnect has port M_LRSEL driven by constant 0
-WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[15]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3917] design main_interconnect has port AUD_SD driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 792.371 ; gain = 500.277
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 787.496 ; gain = 495.633
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -442,13 +520,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 792.371 ; gain = 500.277
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 787.496 ; gain = 495.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 801.336 ; gain = 509.242
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 801.863 ; gain = 510.000
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -460,7 +538,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 803.250 ; gain = 511.156
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 804.137 ; gain = 512.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -487,7 +565,7 @@ CRITICAL WARNING: [Synth 8-6030] Inout pin 'JA[4]' is read and/or written withou
 CRITICAL WARNING: [Synth 8-6030] Inout pin 'JA[3]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:33]
 CRITICAL WARNING: [Synth 8-6030] Inout pin 'JA[2]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd:33]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 803.250 ; gain = 511.156
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 804.137 ; gain = 512.273
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -500,7 +578,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 803.250 ; gain = 511.156
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 804.137 ; gain = 512.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -512,25 +590,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 803.250 ; gain = 511.156
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 804.137 ; gain = 512.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 803.250 ; gain = 511.156
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 804.137 ; gain = 512.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 803.250 ; gain = 511.156
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 804.137 ; gain = 512.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 803.250 ; gain = 511.156
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 804.137 ; gain = 512.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -543,54 +621,62 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     4|
-|2     |CARRY4 |     3|
-|3     |LUT1   |    15|
-|4     |LUT2   |     6|
-|5     |LUT3   |    23|
-|6     |LUT4   |    15|
-|7     |LUT5   |    17|
-|8     |LUT6   |    23|
-|9     |FDCE   |     6|
-|10    |FDRE   |    64|
-|11    |IBUF   |     5|
-|12    |OBUF   |    56|
-|13    |OBUFT  |    19|
-+------+-------+------+
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     4|
+|2     |CARRY4     |     3|
+|3     |LUT1       |    15|
+|4     |LUT2       |     6|
+|5     |LUT3       |    23|
+|6     |LUT4       |    15|
+|7     |LUT5       |    17|
+|8     |LUT6       |    23|
+|9     |PLLE2_BASE |     1|
+|10    |FDCE       |     6|
+|11    |FDRE       |    64|
+|12    |IBUF       |     5|
+|13    |OBUF       |    58|
+|14    |OBUFT      |    19|
++------+-----------+------+
 
 Report Instance Areas: 
 +------+---------------------+--------------------------------------+------+
 |      |Instance             |Module                                |Cells |
 +------+---------------------+--------------------------------------+------+
-|1     |top                  |                                      |   256|
-|2     |  UART_RS232_inst    |UART_RS232                            |    88|
-|3     |  digit_display_inst |digit_display                         |    25|
-|4     |  inst               |symetric_freq_Divider                 |    23|
-|5     |  inst_1MHZ          |symetric_freq_Divider__parameterized1 |    17|
-|6     |  inst_2MHZ          |symetric_freq_Divider__parameterized3 |    15|
+|1     |top                  |                                      |   259|
+|2     |  Audio_PWM_module_0 |Audio_PWM_module                      |     1|
+|3     |    CLOCK_manager_0  |CLOCK_manager                         |     1|
+|4     |  UART_RS232_inst    |UART_RS232                            |    88|
+|5     |  digit_display_inst |digit_display                         |    25|
+|6     |  inst               |symetric_freq_Divider                 |    23|
+|7     |  inst_1MHZ          |symetric_freq_Divider__parameterized1 |    17|
+|8     |  inst_2MHZ          |symetric_freq_Divider__parameterized3 |    15|
 +------+---------------------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 803.250 ; gain = 511.156
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 804.137 ; gain = 512.273
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 3 critical warnings and 127 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 803.250 ; gain = 162.570
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 803.250 ; gain = 511.156
+Synthesis finished with 0 errors, 3 critical warnings and 128 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 804.137 ; gain = 168.910
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 804.137 ; gain = 512.273
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '998244352' specified for property 'CLKFBOUT_MULT'. Expecting type 'int' with possible values of '2-64'. The system will either use the default value or the property value will be dropped. Please verify your source files. [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/Clock_manager.vhd:62]
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '100000000' specified for property 'CLKOUT0_DIVIDE'. Expecting type 'int' with possible values of '1-128'. The system will either use the default value or the property value will be dropped. Please verify your source files. [E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/Clock_manager.vhd:62]
+Resolution: Please check the value of the property and set to a correct value.
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 1 instances were transformed.
+  PLLE2_BASE => PLLE2_ADV: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-57 Infos, 170 Warnings, 5 Critical Warnings and 0 Errors encountered.
+74 Infos, 173 Warnings, 7 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 803.656 ; gain = 524.184
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 807.324 ; gain = 528.406
 INFO: [Common 17-1381] The checkpoint 'E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.runs/synth_1/main_interconnect.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_interconnect_utilization_synth.rpt -pb main_interconnect_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 803.656 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 31 16:30:21 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 807.324 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  3 22:18:33 2018...

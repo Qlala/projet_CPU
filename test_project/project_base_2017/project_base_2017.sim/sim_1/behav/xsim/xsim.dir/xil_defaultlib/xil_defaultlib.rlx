@@ -1,0 +1,12 @@
+0.6
+2017.4
+Jan 30 2018
+15:48:17
+E:/xilinx_project/CPUproject/projet_CPU/my_lib/Audio_PWM_module.vhd,1541279633,vhdl,,,,audio_pwm_module,,,,,,,,
+E:/xilinx_project/CPUproject/projet_CPU/my_lib/PWM_module.vhd,1541096287,vhdl,,,,pwm,,,,,,,,
+E:/xilinx_project/CPUproject/projet_CPU/my_lib/square_signal_generator.vhd,1541244260,vhdl,,,,square_signal_generator,,,,,,,,
+E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/Clock_manager.vhd,1540925228,vhdl,,,,clock_manager,,,,,,,,
+E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/digit_display.vhd,1540925228,vhdl,,,,digit_display,,,,,,,,
+E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd,1541278441,vhdl,,,,main_interconnect,,,,,,,,
+E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd,1540925228,vhdl,,,,symetric_freq_divider,,,,,,,,
+E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/new/UART_RS232.vhd,1540999775,vhdl2008,,,,uart_rs232,,,,,,,,

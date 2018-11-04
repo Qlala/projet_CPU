@@ -1,0 +1,7 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto a5ca0299e46a4acfa7ca948b736c7dbb --incr --debug typical --relax --mt 2 -L my_lib -L xil_defaultlib -L secureip --snapshot main_interconnect_behav xil_defaultlib.main_interconnect -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-1537] value 3145728000 is out of target constraint range 0 to 2147483647 [E:/xilinx_project/CPUproject/projet_CPU/my_lib/Audio_PWM_module.vhd:85]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit main_interconnect in library work failed.

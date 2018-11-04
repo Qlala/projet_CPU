@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-| Date         : Wed Oct 31 16:30:21 2018
+| Date         : Sat Nov  3 22:18:33 2018
 | Host         : Qlala-PC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file main_interconnect_utilization_synth.rpt -pb main_interconnect_utilization_synth.pb
 | Design       : main_interconnect
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   80 |     0 |       210 | 38.10 |
+| Bonded IOB                  |   82 |     0 |       210 | 39.05 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         6 |  0.00 |
@@ -115,7 +115,7 @@ Table of Contents
 | BUFGCTRL   |    4 |     0 |        32 | 12.50 |
 | BUFIO      |    0 |     0 |        24 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         6 |  0.00 |
-| PLLE2_ADV  |    0 |     0 |         6 |  0.00 |
+| PLLE2_ADV  |    1 |     0 |         6 | 16.67 |
 | BUFMRCE    |    0 |     0 |        12 |  0.00 |
 | BUFHCE     |    0 |     0 |        96 |  0.00 |
 | BUFR       |    0 |     0 |        24 |  0.00 |
@@ -143,23 +143,24 @@ Table of Contents
 7. Primitives
 -------------
 
-+----------+------+---------------------+
-| Ref Name | Used | Functional Category |
-+----------+------+---------------------+
-| FDRE     |   64 |        Flop & Latch |
-| OBUF     |   56 |                  IO |
-| LUT6     |   23 |                 LUT |
-| LUT3     |   23 |                 LUT |
-| OBUFT    |   19 |                  IO |
-| LUT5     |   17 |                 LUT |
-| LUT4     |   15 |                 LUT |
-| LUT1     |   15 |                 LUT |
-| LUT2     |    6 |                 LUT |
-| FDCE     |    6 |        Flop & Latch |
-| IBUF     |    5 |                  IO |
-| BUFG     |    4 |               Clock |
-| CARRY4   |    3 |          CarryLogic |
-+----------+------+---------------------+
++-----------+------+---------------------+
+|  Ref Name | Used | Functional Category |
++-----------+------+---------------------+
+| FDRE      |   64 |        Flop & Latch |
+| OBUF      |   58 |                  IO |
+| LUT6      |   23 |                 LUT |
+| LUT3      |   23 |                 LUT |
+| OBUFT     |   19 |                  IO |
+| LUT5      |   17 |                 LUT |
+| LUT4      |   15 |                 LUT |
+| LUT1      |   15 |                 LUT |
+| LUT2      |    6 |                 LUT |
+| FDCE      |    6 |        Flop & Latch |
+| IBUF      |    5 |                  IO |
+| BUFG      |    4 |               Clock |
+| CARRY4    |    3 |          CarryLogic |
+| PLLE2_ADV |    1 |               Clock |
++-----------+------+---------------------+
 
 
 8. Black Boxes

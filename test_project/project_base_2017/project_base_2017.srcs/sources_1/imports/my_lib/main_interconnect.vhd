@@ -105,7 +105,7 @@ entity  main_interconnect is
 	PS2_DATA : inout std_logic;
 	--PWM Audio Amplifier
 	AUD_PWM : out std_logic;
-	AUD_SD : out std_logic;--Shutdown (shutdown amplifiers in the salen key low pass filter.)
+	AUD_SD : out std_logic:='0';--Shutdown (shutdown amplifiers in the salen key low pass filter.)
 	--ethernet PHY
 	ETH_MDC : out std_logic;
 	ETH_MDIO : inout std_logic;
@@ -165,6 +165,33 @@ component UART_RS232 is
    RST : in std_logic --active on low front
   );
 end component;
+
+component  Audio_PWM_module is
+generic(
+    audio_N:natural:=16;
+    base_freq:natural:=100e6;--in Hz
+    sample_freq:natural:=48e3
+);
+    Port ( 
+           data : in STD_LOGIC_VECTOR (audio_N-1 downto 0);
+           new_data : in STD_LOGIC;
+           PWM_audio_out: out std_logic;
+           sample_clk : out STD_LOGIC;
+           base_clk : in STD_LOGIC;
+           RST: in std_logic--RST on low
+           );
+end component;
+component  square_signal_generator is
+    generic(
+        audio_N:natural
+    );
+    Port ( 
+           output : out STD_LOGIC_VECTOR (audio_N-1 downto 0);
+           amp : in std_logic_vector;
+           offset : in std_logic_vector(audio_N-1 downto 0);
+           clk : in STD_LOGIC;--clk must be symétric for best possible sound
+           RST : in STD_LOGIC);
+end component;
 component  digit_display is
     Port ( 
     CA : out STD_LOGIC;
@@ -204,6 +231,8 @@ signal TX_line_late : std_logic;
 signal Ctrl_signal :std_logic;
 signal data_bus_loop : std_logic_vector(7 downto 0);
 signal data_start_loop :std_logic;
+signal audio_data_bus : std_logic_vector(15 downto 0);
+signal sample_clk : std_logic;
 begin
 --valeur par dÃ©fault
 --AN <= (others =>'1');
@@ -302,7 +331,32 @@ UART_RS232_inst : UART_RS232
      CLK =>CLK_10KHZ,
      RST =>CPU_RST
     );  
-    
+Audio_PWM_module_0:  Audio_PWM_module 
+    generic map(
+        audio_N=>16,
+        base_freq=>100e6,--in Hz
+        sample_freq=>48e3
+    )
+    Port map( 
+               data =>audio_data_bus,
+               new_data =>sample_clk,
+               PWM_audio_out=>AUD_PWM,
+               sample_clk =>sample_clk,
+               base_clk=>CLK100MHZ,
+               RST=>CPU_RST--RST on low
+     );
+ square_signal_generator_0:  square_signal_generator 
+         generic map(
+             audio_N=>16
+         )
+         Port map( 
+                output =>audio_data_bus,
+                amp =>x"7FFF",
+                offset=>x"8000",
+                clk =>CLK_10KHZ,--clk must be symétric for best possible sound
+                RST=>CPU_RST);
+
+ 
 led(3)<=OK_BTN;
 led(2)<=UART_CTS;
 UART_RTS<=Ctrl_signal;

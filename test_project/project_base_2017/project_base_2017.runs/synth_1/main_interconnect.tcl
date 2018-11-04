@@ -16,9 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache E:/Users/Qlala/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-12540-Qlala-PC/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -30,8 +27,13 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_output_repo e:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+read_vhdl -library my_lib E:/xilinx_project/CPUproject/projet_CPU/my_lib/my_lib.vhd
 read_vhdl -library xil_defaultlib {
+  E:/xilinx_project/CPUproject/projet_CPU/my_lib/Audio_PWM_module.vhd
+  E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/Clock_manager.vhd
+  E:/xilinx_project/CPUproject/projet_CPU/my_lib/PWM_module.vhd
   E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/digit_display.vhd
+  E:/xilinx_project/CPUproject/projet_CPU/my_lib/square_signal_generator.vhd
   E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd
   E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd
 }
