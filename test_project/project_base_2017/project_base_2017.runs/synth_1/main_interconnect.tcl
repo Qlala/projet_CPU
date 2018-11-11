@@ -27,17 +27,15 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_output_repo e:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library my_lib E:/xilinx_project/CPUproject/projet_CPU/my_lib/my_lib.vhd
 read_vhdl -library xil_defaultlib {
-  E:/xilinx_project/CPUproject/projet_CPU/my_lib/Audio_PWM_module.vhd
-  E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/Clock_manager.vhd
-  E:/xilinx_project/CPUproject/projet_CPU/my_lib/PWM_module.vhd
   E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/digit_display.vhd
-  E:/xilinx_project/CPUproject/projet_CPU/my_lib/square_signal_generator.vhd
   E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd
   E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/imports/my_lib/main_interconnect.vhd
 }
-read_vhdl -vhdl2008 -library xil_defaultlib E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/new/UART_RS232.vhd
+read_vhdl -vhdl2008 -library xil_defaultlib {
+  E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.srcs/sources_1/new/UART_RS232.vhd
+  E:/xilinx_project/CPUproject/projet_CPU/my_lib/ext_PLL.vhd
+}
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be

@@ -2,8 +2,8 @@
 # Vivado v2017.4.1 (64-bit)
 # SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
 # IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
-# Start of session at: Sat Nov  3 22:17:54 2018
-# Process ID: 6848
+# Start of session at: Sun Nov 11 19:30:21 2018
+# Process ID: 8368
 # Current directory: E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.runs/synth_1
 # Command line: vivado.exe -log main_interconnect.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_interconnect.tcl
 # Log file: E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.runs/synth_1/main_interconnect.vds

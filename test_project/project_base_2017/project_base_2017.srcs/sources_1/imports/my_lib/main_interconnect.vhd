@@ -221,10 +221,29 @@ component symetric_freq_Divider is
            CLK_out : out STD_LOGIC);
         
 end component;
+component  ext_PLL is
+    generic(
+    Multiplier : natural  :=1;
+    intern_mult : natural:=1;
+    pre_divider : natural :=1;
+    pre_intern_divider : natural :=1;
+    post_divider : natural :=1;
+    intern_post_divider : natural :=1;
+    CLK_in_period : real :=10.0
+    );
+    Port ( 
+    CLK_in : in STD_LOGIC;
+    CLK_out : out STD_LOGIC;
+    RST : in std_logic --reset on low
+    );
+end component ;
+
+
 signal byte_in: std_logic_vector(7 downto 0);
 signal CLK_10KHZ : std_logic;
 signal CLK_2MHZ : std_logic;
 signal CLK_1MHZ : std_logic;
+signal CLK_48KHZ : std_logic;
 signal byte_out : std_logic_vector(7 downto 0);
 signal TX_line : std_logic:='H';
 signal TX_line_late : std_logic;
@@ -331,44 +350,57 @@ UART_RS232_inst : UART_RS232
      CLK =>CLK_10KHZ,
      RST =>CPU_RST
     );  
-Audio_PWM_module_0:  Audio_PWM_module 
-    generic map(
-        audio_N=>16,
-        base_freq=>100e6,--in Hz
-        sample_freq=>48e3
-    )
-    Port map( 
-               data =>audio_data_bus,
-               new_data =>sample_clk,
-               PWM_audio_out=>AUD_PWM,
-               sample_clk =>sample_clk,
-               base_clk=>CLK100MHZ,
-               RST=>CPU_RST--RST on low
-     );
- square_signal_generator_0:  square_signal_generator 
-         generic map(
-             audio_N=>16
-         )
-         Port map( 
-                output =>audio_data_bus,
-                amp =>x"7FFF",
-                offset=>x"8000",
-                clk =>CLK_10KHZ,--clk must be symétric for best possible sound
-                RST=>CPU_RST);
+--Audio_PWM_module_0:  Audio_PWM_module 
+--    generic map(
+--        audio_N=>16,
+--        base_freq=>100e6,--in Hz
+--        sample_freq=>48e3
+--    )
+--    Port map( 
+--               data =>audio_data_bus,
+--               new_data =>sample_clk,
+--               PWM_audio_out=>AUD_PWM,
+--               sample_clk =>sample_clk,
+--               base_clk=>CLK100MHZ,
+--               RST=>CPU_RST--RST on low
+--     );
+-- square_signal_generator_0:  square_signal_generator 
+--         generic map(
+--             audio_N=>16
+--         )
+--         Port map( 
+--                output =>audio_data_bus,
+--                amp =>x"7FFF",
+--                offset=>x"8000",
+--                clk =>CLK_10KHZ,--clk must be symétric for best possible sound
+--                RST=>CPU_RST);
 
  
 led(3)<=OK_BTN;
 led(2)<=UART_CTS;
 UART_RTS<=Ctrl_signal;
-JA(1)<=UART_RX_IN;
-JA(4)<=UART_CTS;
-JA(3)<=Ctrl_signal;
-JA(8)<=data_start_loop;
+JA(1)<=CLK_48KHZ;
 UART_TX_OUT<=TX_line;
-JA(2)<=TX_line;
+JA(2)<=CLK_10KHZ;
 --led(5)<=UART_RX_IN;
 led(4)<=Ctrl_signal;
 inst:symetric_freq_Divider generic map(10000) port map(CLK=>CLK100MHZ,CLK_out=>CLK_10KHZ);
 inst_1MHZ:symetric_freq_Divider generic map(100) port map(CLK=>CLK100MHZ,CLK_out=>CLK_1MHZ);
 inst_2MHZ:symetric_freq_Divider generic map(50) port map(CLK=>CLK100MHZ,CLK_out=>CLK_2MHZ);
+inst_48KHZ: ext_PLL 
+    generic map (
+    Multiplier => 3,
+    intern_mult =>64,
+    pre_divider => 1,
+    pre_intern_divider=>10,
+    intern_post_divider => 100, 
+    post_divider=> 4000,
+    CLK_in_period => 3.333
+    )
+    Port map ( 
+    CLK_in=>CLK100MHZ,
+    CLK_out => CLK_48KHZ,
+    RST => CPU_RST
+    );
+
  end Behavioral;

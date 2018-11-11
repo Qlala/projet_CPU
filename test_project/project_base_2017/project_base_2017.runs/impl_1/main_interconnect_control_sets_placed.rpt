@@ -1,0 +1,87 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Sun Nov 11 19:31:24 2018
+| Host         : Qlala-PC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_interconnect_control_sets_placed.rpt
+| Design       : main_interconnect
+| Device       : xc7a100t
+----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    20 |
+| Unused register locations in slices containing registers |   107 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              19 |           11 |
+| No           | No                    | Yes                    |               6 |            3 |
+| No           | Yes                   | No                     |              25 |            8 |
+| Yes          | No                    | No                     |              15 |            6 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              12 |            9 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------+------------------------------------+-------------------------------------------------------------------------+------------------+----------------+
+|         Clock Signal        |            Enable Signal           |                             Set/Reset Signal                            | Slice Load Count | Bel Load Count |
++-----------------------------+------------------------------------+-------------------------------------------------------------------------+------------------+----------------+
+|  inst_48KHZ/CLK_intern_BUFG |                                    |                                                                         |                1 |              1 |
+|  inst/CLK                   | UART_RS232_inst/__1/i__n_0         |                                                                         |                1 |              1 |
+|  inst/CLK                   | UART_RS232_inst/__3/i__n_0         |                                                                         |                1 |              1 |
+|  inst/CLK                   | UART_RS232_inst/rx_data[3]_i_1_n_0 | UART_RS232_inst/SR[0]                                                   |                1 |              1 |
+|  inst/CLK                   | UART_RS232_inst/rx_data[6]_i_1_n_0 | UART_RS232_inst/SR[0]                                                   |                1 |              1 |
+|  inst/CLK                   | UART_RS232_inst/rx_data[4]_i_1_n_0 | UART_RS232_inst/SR[0]                                                   |                1 |              1 |
+|  inst/CLK                   | UART_RS232_inst/rx_data[1]_i_1_n_0 | UART_RS232_inst/SR[0]                                                   |                1 |              1 |
+|  inst/CLK                   | UART_RS232_inst/rx_data[5]_i_1_n_0 | UART_RS232_inst/SR[0]                                                   |                1 |              1 |
+|  inst/CLK                   | UART_RS232_inst/rx_data[2]_i_1_n_0 | UART_RS232_inst/SR[0]                                                   |                1 |              1 |
+|  inst/CLK                   | UART_RS232_inst/rx_data[7]_i_1_n_0 | UART_RS232_inst/SR[0]                                                   |                1 |              1 |
+|  inst/CLK                   | UART_RS232_inst/rx_data[0]_i_1_n_0 | UART_RS232_inst/SR[0]                                                   |                1 |              1 |
+|  inst/CLK                   | UART_RS232_inst/rx_valid1_out      |                                                                         |                1 |              1 |
+|  inst_48KHZ/CLK_feed_intern |                                    |                                                                         |                1 |              2 |
+|  inst/CLK                   | UART_RS232_inst/rx_I[2]_i_1_n_0    | UART_RS232_inst/SR[0]                                                   |                1 |              4 |
+|  inst/CLK                   | UART_RS232_inst/tx_I               |                                                                         |                2 |              4 |
+|  inst/CLK                   |                                    | UART_RS232_inst/SR[0]                                                   |                3 |              6 |
+|  inst/CLK                   | UART_RS232_inst/tx_pulled_data     |                                                                         |                1 |              8 |
+|  inst_48KHZ/CLK_intern_BUFG |                                    | inst_48KHZ/test_divide.symetric_freq_Divider_inst_out/count[11]_i_1_n_0 |                3 |             11 |
+|  CLK100MHZ_IBUF_BUFG        |                                    | inst/count[13]_i_1_n_0                                                  |                5 |             14 |
+|  inst/CLK                   |                                    |                                                                         |                9 |             16 |
++-----------------------------+------------------------------------+-------------------------------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                    12 |
+| 2      |                     1 |
+| 4      |                     2 |
+| 6      |                     1 |
+| 8      |                     1 |
+| 11     |                     1 |
+| 14     |                     1 |
+| 16+    |                     1 |
++--------+-----------------------+
+
+

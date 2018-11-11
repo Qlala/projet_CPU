@@ -41,16 +41,15 @@ entity symetric_freq_Divider is
 end symetric_freq_Divider;
 
 architecture Behavioral of symetric_freq_Divider is
-signal count : integer range 0 to divide_by/2;
-signal next_count : integer range 0 to divide_by/2;
-signal clk_intern : std_logic;
+signal count : natural  range 0 to divide_by;
+signal next_count : natural range 0 to divide_by;
+--signal clk_intern : std_logic;
 signal clk_sym :std_logic;
 
 begin
 count<=next_count when rising_edge(CLK)else count;
-next_count<= 0 when count=divide_by/2-1 else count+1;
-clk_intern<='1' when count=divide_by/2-1 else '0';
-clk_sym<=not clk_sym when rising_edge(CLK_intern);
+next_count<= 0 when count=divide_by-1 else count+1;
+clk_sym<='1' when count<(divide_by)/2 else '0';
 BUFG_inst : BUFG
 port map (
    O => CLK_out, -- 1-bit output: Clock output
