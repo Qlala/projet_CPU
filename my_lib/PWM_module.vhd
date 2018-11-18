@@ -44,7 +44,7 @@ end PWM;
 architecture Behavioral of PWM is
     signal intern_data:STD_LOGIC_VECTOR (N-1 downto 0);
     signal pulled_data:STD_LOGIC_VECTOR (N-1 downto 0);
-    signal counter:STD_LOGIC_VECTOR (N-1 downto 0);
+    signal counter:unsigned (N-1 downto 0);
     signal intern_PWM_clk:std_logic;
     
 begin
@@ -52,22 +52,23 @@ begin
     begin
         if rising_edge(clk) then
             if new_data='1' then
-                intern_data<=data;
+                pulled_data<=data;
             end if;
+            counter<=counter+1;
         end if;
     
     end process;
-    reg_pulled_data:process(clk,data,new_data,intern_data,intern_PWM_clk)
+    reg_pulled_data:process(intern_PWM_clk,data,new_data,intern_data,intern_PWM_clk)
     begin
-        if rising_edge(clk) then
+        if rising_edge(intern_PWM_clk) then
             if new_data='1' then
-                pulled_data<=data;
-           else if intern_PWM_clk='1' then
-                pulled_data<=intern_data;
+               -- pulled_data<=data;
+           else 
+                --pulled_data<=intern_data;
             end if;
            end if;
-        end if;  
     end process;
-
-
+PWM_out<= '1' when counter < unsigned(pulled_data) else '0';
+intern_PWM_clk<= '1' when counter < TO_UNSIGNED(2**(N-1),N) else '0' ;
+PWM_clk<=intern_PWM_clk;
 end Behavioral;

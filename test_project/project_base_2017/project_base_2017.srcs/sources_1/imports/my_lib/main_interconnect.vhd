@@ -28,8 +28,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+library UNISIM;
+use UNISIM.VComponents.all;
 entity  main_interconnect is
   port (
     AN : out STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -252,6 +252,9 @@ signal data_bus_loop : std_logic_vector(7 downto 0);
 signal data_start_loop :std_logic;
 signal audio_data_bus : std_logic_vector(15 downto 0);
 signal sample_clk : std_logic;
+signal MMCM_feedback : std_logic;
+signal CLKOUT0 : std_logic;
+signal AUD_PWM_temp :std_logic;
 begin
 --valeur par défault
 --AN <= (others =>'1');
@@ -350,20 +353,20 @@ UART_RS232_inst : UART_RS232
      CLK =>CLK_10KHZ,
      RST =>CPU_RST
     );  
---Audio_PWM_module_0:  Audio_PWM_module 
---    generic map(
---        audio_N=>16,
---        base_freq=>100e6,--in Hz
---        sample_freq=>48e3
---    )
---    Port map( 
---               data =>audio_data_bus,
---               new_data =>sample_clk,
---               PWM_audio_out=>AUD_PWM,
---               sample_clk =>sample_clk,
---               base_clk=>CLK100MHZ,
---               RST=>CPU_RST--RST on low
---     );
+Audio_PWM_module_0:  Audio_PWM_module 
+    generic map(
+        audio_N=>12,
+        base_freq=>100e6,--in Hz
+        sample_freq=>48e3
+    )
+    Port map( 
+               data =>sw(11 downto 0),
+               new_data =>'1',
+               PWM_audio_out=>AUD_PWM_temp,
+               sample_clk =>sample_clk,
+               base_clk=>CLK100MHZ,
+               RST=>CPU_RST--RST on low
+     );
 -- square_signal_generator_0:  square_signal_generator 
 --         generic map(
 --             audio_N=>16
@@ -379,28 +382,35 @@ UART_RS232_inst : UART_RS232
 led(3)<=OK_BTN;
 led(2)<=UART_CTS;
 UART_RTS<=Ctrl_signal;
-JA(1)<=CLK_48KHZ;
+JA(1)<= AUD_PWM_temp;
+AUD_PWM<= 'Z' when AUD_PWM_temp='1' else '0';
+AUD_SD<='1';
 UART_TX_OUT<=TX_line;
-JA(2)<=CLK_10KHZ;
+JA(2)<=sample_clk;
 --led(5)<=UART_RX_IN;
 led(4)<=Ctrl_signal;
 inst:symetric_freq_Divider generic map(10000) port map(CLK=>CLK100MHZ,CLK_out=>CLK_10KHZ);
 inst_1MHZ:symetric_freq_Divider generic map(100) port map(CLK=>CLK100MHZ,CLK_out=>CLK_1MHZ);
-inst_2MHZ:symetric_freq_Divider generic map(50) port map(CLK=>CLK100MHZ,CLK_out=>CLK_2MHZ);
-inst_48KHZ: ext_PLL 
-    generic map (
-    Multiplier => 3,
-    intern_mult =>64,
-    pre_divider => 1,
-    pre_intern_divider=>10,
-    intern_post_divider => 100, 
-    post_divider=> 4000,
-    CLK_in_period => 3.333
-    )
-    Port map ( 
-    CLK_in=>CLK100MHZ,
-    CLK_out => CLK_48KHZ,
-    RST => CPU_RST
-    );
+--inst_2MHZ:symetric_freq_Divider generic map(50) port map(CLK=>CLK100MHZ,CLK_out=>CLK_2MHZ);
+--inst_48KHZ: ext_PLL 
+--    generic map (
+--    Multiplier => 3,
+--    intern_mult =>64,
+--    pre_divider => 1,
+--    pre_intern_divider=>10,
+--    intern_post_divider => 100, 
+--    post_divider=> 4000,
+--    CLK_in_period => 3.333
+--    )
+--    Port map ( 
+--    CLK_in=>CLK100MHZ,
+--    CLK_out => CLK_48KHZ,
+--    RST => CPU_RST
+--    );
+
+
+
+					
+
 
  end Behavioral;

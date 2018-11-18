@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-| Date         : Sun Nov 11 19:31:22 2018
+| Date         : Sun Nov 18 18:41:59 2018
 | Host         : Qlala-PC running 64-bit major release  (build 9200)
 | Command      : report_drc -file main_interconnect_drc_opted.rpt -pb main_interconnect_drc_opted.pb -rpx main_interconnect_drc_opted.rpx
 | Design       : main_interconnect
@@ -24,15 +24,14 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 9
-+-----------+----------+-----------------------------------------------------+------------+
-| Rule      | Severity | Description                                         | Violations |
-+-----------+----------+-----------------------------------------------------+------------+
-| CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PLIO-3    | Warning  | Placement Constraints Check for IO constraints      | 4          |
-| REQP-1709 | Warning  | Clock output buffering                              | 1          |
-| RPBF-3    | Warning  | IO port buffering is incomplete                     | 3          |
-+-----------+----------+-----------------------------------------------------+------------+
+             Violations found: 8
++----------+----------+-----------------------------------------------------+------------+
+| Rule     | Severity | Description                                         | Violations |
++----------+----------+-----------------------------------------------------+------------+
+| CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| PLIO-3   | Warning  | Placement Constraints Check for IO constraints      | 4          |
+| RPBF-3   | Warning  | IO port buffering is incomplete                     | 3          |
++----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -67,11 +66,6 @@ Related violations: <none>
 PLIO-3#4 Warning
 Placement Constraints Check for IO constraints  
 Partially locked IO Bus is found. Following components of the IO Bus JD[10:1] are not locked:  JD[6] JD[5]
-Related violations: <none>
-
-REQP-1709#1 Warning
-Clock output buffering  
-PLLE2_ADV connectivity violation. The signal inst_48KHZ/CLK_feed_intern on the inst_48KHZ/PLLE2_BASE_inst/CLKFBOUT pin of inst_48KHZ/PLLE2_BASE_inst does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
 Related violations: <none>
 
 RPBF-3#1 Warning
