@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2017.4.1 (64-bit)              -->
+<!-- Product Version: Vivado v2017.4 (64-bit)              -->
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="E:/xilinx_project/CPUproject/projet_CPU/test_project/project_base_2017/project_base_2017.xpr">
+<Project Version="7" Minor="35" Path="C:/xilinx_project/git_project/projet_CPU/projet_CPU/test_project/project_base_2017/project_base_2017.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="a5ca0299e46a4acfa7ca948b736c7dbb"/>
@@ -140,6 +140,13 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../my_lib/dyn_sym_freq_divider.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../my_lib/ADC_xilinx.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
