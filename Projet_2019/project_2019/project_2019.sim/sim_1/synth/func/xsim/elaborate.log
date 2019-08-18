@@ -1,0 +1,44 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4f5cc5955aeb4fb696772c0ad654913a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot test_cache_wrapper_func_synth xil_defaultlib.test_cache_wrapper -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,9)(1,1)(1,4)(1,7)\]
+Compiling architecture obuf_v of entity unisim.OBUF [\OBUF(1,9)(1,7)(1,4)\]
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="01010100")(0,7)\]
+Compiling architecture lut1_v of entity unisim.LUT1 [\LUT1(init="0001")(0,3)\]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="01000101")(0,7)\]
+Compiling architecture fdce_v of entity unisim.FDCE [fdce_default]
+Compiling architecture fdre_v of entity unisim.FDRE [\FDRE(init='1')\]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1110")(0,3)\]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1011110010000000")(0...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0110")(0,3)\]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="00000010")(0,7)\]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="11111110")(0,7)\]
+Compiling architecture structure of entity xil_defaultlib.Cache_bus_M_to_S [cache_bus_m_to_s_default]
+Compiling architecture structure of entity xil_defaultlib.test_cache_Cache_bus_M_to_S_0_0 [test_cache_cache_bus_m_to_s_0_0_...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="00001000")(0,7)\]
+Compiling architecture fdse_v of entity unisim.FDSE [fdse_default]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0010")(0,3)\]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="00000100")(0,7)\]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0001")(0,3)\]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1111111111111000")(0...]
+Compiling architecture structure of entity xil_defaultlib.Cache_bus_M_to_S_peer [cache_bus_m_to_s_peer_default]
+Compiling architecture structure of entity xil_defaultlib.test_cache_Cache_bus_M_to_S_peer_0_1 [test_cache_cache_bus_m_to_s_peer...]
+Compiling architecture structure of entity xil_defaultlib.test_cache [test_cache_default]
+Compiling architecture structure of entity xil_defaultlib.test_cache_wrapper
+Built simulation snapshot test_cache_wrapper_func_synth

@@ -1,0 +1,43 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port reset -pg 1 -lvl 0 -x -430 -y 480 -defaultsOSRD
+preplace port sys_clock -pg 1 -lvl 0 -x -430 -y 540 -defaultsOSRD
+preplace port W_R_0 -pg 1 -lvl 0 -x -430 -y 170 -defaultsOSRD
+preplace port EN_0 -pg 1 -lvl 0 -x -430 -y 210 -defaultsOSRD
+preplace port W_R_1 -pg 1 -lvl 3 -x 1060 -y 510 -defaultsOSRD
+preplace port discard_valid_0 -pg 1 -lvl 3 -x 1060 -y 570 -defaultsOSRD
+preplace port new_data_0 -pg 1 -lvl 3 -x 1060 -y 210 -defaultsOSRD
+preplace port ack_0 -pg 1 -lvl 0 -x -430 -y 190 -defaultsOSRD
+preplace port busy_0 -pg 1 -lvl 3 -x 1060 -y 190 -defaultsOSRD
+preplace portBus address_0 -pg 1 -lvl 0 -x -430 -y 130 -defaultsOSRD
+preplace portBus data_0 -pg 1 -lvl 0 -x -430 -y 150 -defaultsOSRD
+preplace portBus address_1 -pg 1 -lvl 3 -x 1060 -y 470 -defaultsOSRD
+preplace portBus data_1 -pg 1 -lvl 3 -x 1060 -y 490 -defaultsOSRD
+preplace portBus discard_addr_0 -pg 1 -lvl 3 -x 1060 -y 550 -defaultsOSRD
+preplace inst Cache_bus_M_to_S_peer_0 -pg 1 -lvl 2 -x 750 -y 290 -defaultsOSRD
+preplace inst Cache_bus_M_to_S_0 -pg 1 -lvl 1 -x 400 -y 170 -defaultsOSRD
+preplace netloc clk_wiz_clk_out1 1 0 2 -380 300 N
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 0 2 -370 320 N
+preplace netloc address_0_1 1 0 1 -410J 120n
+preplace netloc data_0_1 1 0 1 -390J 140n
+preplace netloc W_R_0_1 1 0 1 -390J 160n
+preplace netloc EN_0_1 1 0 1 -390J 180n
+preplace netloc Cache_bus_M_to_S_0_cache_bus 1 1 1 550 160n
+preplace netloc Cache_bus_M_to_S_peer_0_new_data 1 2 1 940 210n
+preplace netloc ack_0_1 1 0 2 -400J 60 560
+preplace netloc Cache_bus_M_to_S_peer_0_address 1 2 1 960 240n
+preplace netloc Cache_bus_M_to_S_peer_0_W_R 1 2 1 930 280n
+preplace netloc Cache_bus_M_to_S_peer_0_data 1 2 1 950 260n
+preplace netloc Cache_bus_M_to_S_peer_0_discard_valid 1 2 1 910 340n
+preplace netloc Cache_bus_M_to_S_peer_0_discard_addr 1 2 1 920 320n
+preplace netloc Cache_bus_M_to_S_0_busy 1 1 2 NJ 180 960J
+levelinfo -pg 1 -430 400 750 1060
+pagesize -pg 1 -db -bbox -sgen -590 -220 1250 750
+"
+}
+{
+   "da_board_cnt":"3",
+   "da_clkrst_cnt":"3"
+}

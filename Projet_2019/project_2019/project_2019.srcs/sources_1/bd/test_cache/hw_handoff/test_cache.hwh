@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Aug  6 11:26:26 2019" VIVADOVERSION="2019.1">
+
+  <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys4_ddr:part0:1.1" DEVICE="7a100t" NAME="test_cache" PACKAGE="csg324" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_peer_0" PORT="RST"/>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_0" PORT="RST"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="sys_clock" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_peer_0" PORT="CLK"/>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_0" PORT="CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="address_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_address_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_0" PORT="address"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="data_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_data_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_0" PORT="data"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="W_R_0" SIGIS="undef" SIGNAME="External_Ports_W_R_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_0" PORT="W_R"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="EN_0" SIGIS="undef" SIGNAME="External_Ports_EN_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_0" PORT="EN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="address_1" RIGHT="0" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_peer_0_address">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_peer_0" PORT="address"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="data_1" RIGHT="0" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_peer_0_data">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_peer_0" PORT="data"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="W_R_1" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_peer_0_W_R">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_peer_0" PORT="W_R"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="discard_addr_0" RIGHT="0" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_peer_0_discard_addr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_peer_0" PORT="discard_addr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="discard_valid_0" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_peer_0_discard_valid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_peer_0" PORT="discard_valid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="new_data_0" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_peer_0_new_data">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_peer_0" PORT="new_data"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="ack_0" SIGIS="undef" SIGNAME="External_Ports_ack_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_peer_0" PORT="ack"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="busy_0" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_0_busy">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Cache_bus_M_to_S_0" PORT="busy"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/Cache_bus_M_to_S_0" HWVERSION="1.0" INSTANCE="Cache_bus_M_to_S_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Cache_bus_M_to_S" VLNV="xilinx.com:module_ref:Cache_bus_M_to_S:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="N_bit" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="test_cache_Cache_bus_M_to_S_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="33" NAME="cache_bus" RIGHT="0" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_0_cache_bus">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Cache_bus_M_to_S_peer_0" PORT="cache_bus"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="address" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_address_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="address_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_data_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="data_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="W_R" SIGIS="undef" SIGNAME="External_Ports_W_R_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="W_R_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="EN" SIGIS="undef" SIGNAME="External_Ports_EN_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="EN_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="busy" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_0_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="busy_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sys_clock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RST" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Cache_bus_M_to_S_peer_0" HWVERSION="1.0" INSTANCE="Cache_bus_M_to_S_peer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Cache_bus_M_to_S_peer" VLNV="xilinx.com:module_ref:Cache_bus_M_to_S_peer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="N_bit" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="test_cache_Cache_bus_M_to_S_peer_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="33" NAME="cache_bus" RIGHT="0" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_0_cache_bus">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Cache_bus_M_to_S_0" PORT="cache_bus"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="address" RIGHT="0" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_peer_0_address">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="address_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_peer_0_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="data_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="W_R" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_peer_0_W_R">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="W_R_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="new_data" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_peer_0_new_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="new_data_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ack" SIGIS="undef" SIGNAME="External_Ports_ack_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ack_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="discard_addr" RIGHT="0" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_peer_0_discard_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="discard_addr_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="discard_valid" SIGIS="undef" SIGNAME="Cache_bus_M_to_S_peer_0_discard_valid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="discard_valid_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sys_clock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RST" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

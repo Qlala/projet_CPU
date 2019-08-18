@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/xilinx_project/CPUproject/projet_CPU/Projet_2019/project_2019/project_2019.ip_user_files/bd/test_cache/ip/test_cache_Cache_bus_M_to_S_peer_0_0/sim/test_cache_Cache_bus_M_to_S_peer_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_cache_Cache_bus_M_to_S_peer_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/xilinx_project/CPUproject/projet_CPU/Projet_2019/project_2019/project_2019.ip_user_files/bd/test_cache/sim/test_cache.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_cache'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/xilinx_project/CPUproject/projet_CPU/Projet_2019/project_2019/project_2019.srcs/sources_1/bd/test_cache/hdl/test_cache_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_cache_wrapper'

@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../project_2019.srcs/sources_1/bd/test_cache/ipshared/c923" \
+"../../../../project_2019.ip_user_files/bd/test_cache/ip/test_cache_clk_wiz_2/test_cache_clk_wiz_2_clk_wiz.v" \
+"../../../../project_2019.ip_user_files/bd/test_cache/ip/test_cache_clk_wiz_2/test_cache_clk_wiz_2.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

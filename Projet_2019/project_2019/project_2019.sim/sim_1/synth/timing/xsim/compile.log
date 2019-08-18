@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/xilinx_project/CPUproject/projet_CPU/Projet_2019/project_2019/project_2019.sim/sim_1/synth/timing/xsim/test_cache_wrapper_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cache_bus_M_to_S
+INFO: [VRFC 10-311] analyzing module Cache_bus_M_to_S_peer
+INFO: [VRFC 10-311] analyzing module test_cache
+INFO: [VRFC 10-311] analyzing module test_cache_Cache_bus_M_to_S_0_0
+INFO: [VRFC 10-311] analyzing module test_cache_Cache_bus_M_to_S_peer_0_1
+INFO: [VRFC 10-311] analyzing module test_cache_wrapper
+INFO: [VRFC 10-311] analyzing module glbl

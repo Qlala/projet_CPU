@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="test_cache_Cache_bus_M_to_S_0_0_synth_1" LaunchDir="E:/xilinx_project/CPUproject/projet_CPU/Projet_2019/project_2019/project_2019.runs/test_cache_Cache_bus_M_to_S_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="test_cache_Cache_bus_M_to_S_peer_0_0_synth_1" LaunchDir="E:/xilinx_project/CPUproject/projet_CPU/Projet_2019/project_2019/project_2019.runs/test_cache_Cache_bus_M_to_S_peer_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="E:/xilinx_project/CPUproject/projet_CPU/Projet_2019/project_2019/project_2019.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="test_cache_Cache_bus_M_to_S_0_0_synth_1"/>
+		<Parent Id="test_cache_Cache_bus_M_to_S_peer_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

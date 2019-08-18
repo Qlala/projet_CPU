@@ -1,0 +1,339 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x1246C449442D3E53",
+      "device": "xc7a100tcsg324-1",
+      "name": "test_cache",
+      "synth_flow_mode": "None",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Cache_bus_M_to_S_peer_0": "",
+      "Cache_bus_M_to_S_0": ""
+    },
+    "ports": {
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "reset",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "test_cache_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000"
+          }
+        }
+      },
+      "address_0": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "data_0": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "W_R_0": {
+        "direction": "I"
+      },
+      "EN_0": {
+        "direction": "I"
+      },
+      "address_1": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "data_1": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "W_R_1": {
+        "direction": "O"
+      },
+      "discard_addr_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "discard_valid_0": {
+        "direction": "O"
+      },
+      "new_data_0": {
+        "direction": "O"
+      },
+      "ack_0": {
+        "direction": "I"
+      },
+      "busy_0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "Cache_bus_M_to_S_peer_0": {
+        "vlnv": "xilinx.com:module_ref:Cache_bus_M_to_S_peer:1.0",
+        "xci_name": "test_cache_Cache_bus_M_to_S_peer_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Cache_bus_M_to_S_peer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "test_cache_sys_clock",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "RST": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "cache_bus": {
+            "direction": "I",
+            "left": "33",
+            "right": "0"
+          },
+          "address": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "data": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "W_R": {
+            "direction": "O"
+          },
+          "new_data": {
+            "direction": "O"
+          },
+          "ack": {
+            "direction": "I"
+          },
+          "discard_addr": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "discard_valid": {
+            "direction": "O"
+          }
+        }
+      },
+      "Cache_bus_M_to_S_0": {
+        "vlnv": "xilinx.com:module_ref:Cache_bus_M_to_S:1.0",
+        "xci_name": "test_cache_Cache_bus_M_to_S_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Cache_bus_M_to_S",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "test_cache_sys_clock",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "RST": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "cache_bus": {
+            "direction": "O",
+            "left": "33",
+            "right": "0"
+          },
+          "address": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "W_R": {
+            "direction": "I"
+          },
+          "EN": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_wiz_clk_out1": {
+        "ports": [
+          "sys_clock",
+          "Cache_bus_M_to_S_peer_0/CLK",
+          "Cache_bus_M_to_S_0/CLK"
+        ]
+      },
+      "rst_clk_wiz_100M_peripheral_aresetn": {
+        "ports": [
+          "reset",
+          "Cache_bus_M_to_S_peer_0/RST",
+          "Cache_bus_M_to_S_0/RST"
+        ]
+      },
+      "address_0_1": {
+        "ports": [
+          "address_0",
+          "Cache_bus_M_to_S_0/address"
+        ]
+      },
+      "data_0_1": {
+        "ports": [
+          "data_0",
+          "Cache_bus_M_to_S_0/data"
+        ]
+      },
+      "W_R_0_1": {
+        "ports": [
+          "W_R_0",
+          "Cache_bus_M_to_S_0/W_R"
+        ]
+      },
+      "EN_0_1": {
+        "ports": [
+          "EN_0",
+          "Cache_bus_M_to_S_0/EN"
+        ]
+      },
+      "Cache_bus_M_to_S_0_cache_bus": {
+        "ports": [
+          "Cache_bus_M_to_S_0/cache_bus",
+          "Cache_bus_M_to_S_peer_0/cache_bus"
+        ]
+      },
+      "Cache_bus_M_to_S_peer_0_new_data": {
+        "ports": [
+          "Cache_bus_M_to_S_peer_0/new_data",
+          "new_data_0"
+        ]
+      },
+      "ack_0_1": {
+        "ports": [
+          "ack_0",
+          "Cache_bus_M_to_S_peer_0/ack"
+        ]
+      },
+      "Cache_bus_M_to_S_peer_0_address": {
+        "ports": [
+          "Cache_bus_M_to_S_peer_0/address",
+          "address_1"
+        ]
+      },
+      "Cache_bus_M_to_S_peer_0_W_R": {
+        "ports": [
+          "Cache_bus_M_to_S_peer_0/W_R",
+          "W_R_1"
+        ]
+      },
+      "Cache_bus_M_to_S_peer_0_data": {
+        "ports": [
+          "Cache_bus_M_to_S_peer_0/data",
+          "data_1"
+        ]
+      },
+      "Cache_bus_M_to_S_peer_0_discard_valid": {
+        "ports": [
+          "Cache_bus_M_to_S_peer_0/discard_valid",
+          "discard_valid_0"
+        ]
+      },
+      "Cache_bus_M_to_S_peer_0_discard_addr": {
+        "ports": [
+          "Cache_bus_M_to_S_peer_0/discard_addr",
+          "discard_addr_0"
+        ]
+      },
+      "Cache_bus_M_to_S_0_busy": {
+        "ports": [
+          "Cache_bus_M_to_S_0/busy",
+          "busy_0"
+        ]
+      }
+    }
+  }
+}
