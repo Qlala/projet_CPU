@@ -1,11 +1,34 @@
 #-----------------------------------------------------------
-# Vivado v2018.2.2 (64-bit)
-# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
-# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
-# Start of session at: Tue Oct 30 19:50:08 2018
-# Process ID: 14636
-# Current directory: E:/xilinx_project/CPUproject/projet_CPU/test_project/project de base
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14476 E:\xilinx_project\CPUproject\projet_CPU\test_project\project de base\project de base.xpr
-# Log file: E:/xilinx_project/CPUproject/projet_CPU/test_project/project de base/vivado.log
-# Journal file: E:/xilinx_project/CPUproject/projet_CPU/test_project/project de base\vivado.jou
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 18 19:39:15 2019
+# Process ID: 13752
+# Current directory: C:/xilinx_project/git_project/projet_CPU/projet_CPU/test_project/project de base
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14008 C:\xilinx_project\git_project\projet_CPU\projet_CPU\test_project\project de base\project de base.xpr
+# Log file: C:/xilinx_project/git_project/projet_CPU/projet_CPU/test_project/project de base/vivado.log
+# Journal file: C:/xilinx_project/git_project/projet_CPU/projet_CPU/test_project/project de base\vivado.jou
 #-----------------------------------------------------------
+start_gui
+open_project -read_only {C:/xilinx_project/git_project/projet_CPU/projet_CPU/test_project/project de base/project de base.xpr}
+update_compile_order -fileset sources_1
+save_project_as Project_test C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test -force
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/UART_RS232.vhd] -no_script -reset -force -quiet
+remove_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/UART_RS232.vhd
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/imports/my_lib/digit_display.vhd] -no_script -reset -force -quiet
+remove_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/imports/my_lib/digit_display.vhd
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd] -no_script -reset -force -quiet
+remove_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/imports/my_lib/symetric_freq_divider.vhd
+add_files {C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Clock_manager.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Freq_Divider.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/my_lib.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/dyn_sym_freq_divider.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/main_interconnect_original.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/UART_RS232.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/ADC_xilinx.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/ext_PLL.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/square_signal_generator.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/digit_display.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/main_interconnect.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/UART_module.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/symetric_freq_divider.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/PWM_module.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Audio_PWM_module.vhd}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/main_interconnect_original.vhd] -no_script -reset -force -quiet
+remove_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/main_interconnect_original.vhd
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/main_interconnect.vhd] -no_script -reset -force -quiet
+remove_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/main_interconnect.vhd
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/imports/my_lib/main_interconnect.vhd] -no_script -reset -force -quiet
+remove_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/imports/my_lib/main_interconnect.vhd
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+set_property source_mgmt_mode DisplayOnly [current_project]

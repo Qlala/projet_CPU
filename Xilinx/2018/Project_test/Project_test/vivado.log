@@ -1,0 +1,414 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 18 19:52:06 2019
+# Process ID: 5232
+# Current directory: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14088 C:\xilinx_project\git_project\projet_CPU\projet_CPU\Xilinx\2018\Project_test\Project_test\Project_test.xpr
+# Log file: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/vivado.log
+# Journal file: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 783.484 ; gain = 166.496
+add_files -norecurse C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Mon Mar 18 19:56:02 2019] Launched synth_1...
+Run output will be captured here: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.runs/synth_1/runme.log
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/UART_module.vhd] -no_script -reset -force -quiet
+remove_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/UART_module.vhd
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/ADC_xilinx.vhd] -no_script -reset -force -quiet
+remove_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/ADC_xilinx.vhd
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/dyn_sym_freq_divider.vhd] -no_script -reset -force -quiet
+remove_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/dyn_sym_freq_divider.vhd
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Mon Mar 18 19:56:54 2019] Launched synth_1...
+Run output will be captured here: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.runs/synth_1/runme.log
+set_property library my_lib [get_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/my_lib.vhd]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Mon Mar 18 19:58:40 2019] Launched synth_1...
+Run output will be captured here: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.runs/synth_1/runme.log
+set_property file_type {VHDL 2008} [get_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/UART_RS232.vhd]
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Freq_Divider.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Clock_manager.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Audio_PWM_module.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/PWM_module.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/digit_display.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/ext_PLL.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/square_signal_generator.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/symetric_freq_divider.vhd] -no_script -reset -force -quiet
+remove_files  {C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Freq_Divider.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Clock_manager.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Audio_PWM_module.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/PWM_module.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/digit_display.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/ext_PLL.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/square_signal_generator.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/symetric_freq_divider.vhd}
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/imports/my_lib/Clock_manager.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/imports/my_lib/Freq_Divider.vhd] -no_script -reset -force -quiet
+remove_files  {C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/imports/my_lib/Clock_manager.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/imports/my_lib/Freq_Divider.vhd}
+add_files {C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/Clock_manager.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/Freq_Divider.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/ADC_xilinx.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_RS232.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/dyn_sym_freq_divider.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_module.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/Audio_PWM_module.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/digit_display.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/symetric_freq_divider.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/PWM_module.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/square_signal_generator.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/ext_PLL.vhd}
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/ADC_xilinx.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_module.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/dyn_sym_freq_divider.vhd] -no_script -reset -force -quiet
+remove_files  {C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/ADC_xilinx.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_module.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/dyn_sym_freq_divider.vhd}
+set_property file_type {VHDL 2008} [get_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_RS232.vhd]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Mon Mar 18 20:01:58 2019] Launched synth_1...
+Run output will be captured here: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.runs/synth_1/runme.log
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/UART_RS232.vhd] -no_script -reset -force -quiet
+remove_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/UART_RS232.vhd
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Mon Mar 18 20:03:31 2019] Launched synth_1...
+Run output will be captured here: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.runs/synth_1/runme.log
+set_property file_type {VHDL 2008} [get_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/ext_PLL.vhd]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Mon Mar 18 20:04:45 2019] Launched synth_1...
+Run output will be captured here: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Mon Mar 18 20:05:38 2019] Launched impl_1...
+Run output will be captured here: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.runs/impl_1/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: main_interconnect
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 939.879 ; gain = 73.492
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main_interconnect' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:145]
+INFO: [Synth 8-3491] module 'digit_display' declared at 'C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/digit_display.vhd:36' bound to instance 'digit_display_inst' of component 'digit_display' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:307]
+INFO: [Synth 8-638] synthesizing module 'digit_display' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/digit_display.vhd:60]
+INFO: [Synth 8-226] default block is never used [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/digit_display.vhd:94]
+INFO: [Synth 8-256] done synthesizing module 'digit_display' (1#1) [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/digit_display.vhd:60]
+INFO: [Synth 8-3491] module 'UART_RS232' declared at 'C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_RS232.vhd:34' bound to instance 'UART_RS232_inst' of component 'UART_RS232' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:335]
+INFO: [Synth 8-638] synthesizing module 'UART_RS232' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_RS232.vhd:57]
+WARNING: [Synth 8-614] signal 'rx_ack' is read in the process but is not in the sensitivity list [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_RS232.vhd:82]
+WARNING: [Synth 8-614] signal 'tx_start' is read in the process but is not in the sensitivity list [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_RS232.vhd:174]
+WARNING: [Synth 8-614] signal 'tx_I' is read in the process but is not in the sensitivity list [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_RS232.vhd:174]
+INFO: [Synth 8-256] done synthesizing module 'UART_RS232' (2#1) [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_RS232.vhd:57]
+	Parameter audio_N bound to: 12 - type: integer 
+	Parameter base_freq bound to: 100000000 - type: integer 
+	Parameter sample_freq bound to: 48000 - type: integer 
+INFO: [Synth 8-3491] module 'Audio_PWM_module' declared at 'C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/Audio_PWM_module.vhd:36' bound to instance 'Audio_PWM_module_0' of component 'Audio_PWM_module' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:356]
+INFO: [Synth 8-638] synthesizing module 'Audio_PWM_module' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/Audio_PWM_module.vhd:52]
+	Parameter audio_N bound to: 12 - type: integer 
+	Parameter base_freq bound to: 100000000 - type: integer 
+	Parameter sample_freq bound to: 48000 - type: integer 
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 7.864320 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 4.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT1_DIVIDE bound to: 4 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter COMPENSATION bound to: INTERNAL - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.000000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.000000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: 0 - type: bool 
+INFO: [Synth 8-113] binding component instance 'MMCME2_ADV_inst' to cell 'MMCME2_ADV' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/Audio_PWM_module.vhd:101]
+	Parameter N bound to: 12 - type: integer 
+INFO: [Synth 8-3491] module 'PWM' declared at 'C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/PWM_module.vhd:34' bound to instance 'PWM_0' of component 'PWM' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/Audio_PWM_module.vhd:201]
+INFO: [Synth 8-638] synthesizing module 'PWM' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/PWM_module.vhd:44]
+	Parameter N bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'PWM' (3#1) [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/PWM_module.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'Audio_PWM_module' (4#1) [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/Audio_PWM_module.vhd:52]
+	Parameter divide_by bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'symetric_freq_Divider' declared at 'C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/symetric_freq_divider.vhd:36' bound to instance 'inst' of component 'symetric_freq_Divider' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:392]
+INFO: [Synth 8-638] synthesizing module 'symetric_freq_Divider' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/symetric_freq_divider.vhd:43]
+	Parameter divide_by bound to: 10000 - type: integer 
+INFO: [Synth 8-113] binding component instance 'BUFG_inst' to cell 'BUFG' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/symetric_freq_divider.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'symetric_freq_Divider' (5#1) [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/symetric_freq_divider.vhd:43]
+	Parameter divide_by bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'symetric_freq_Divider' declared at 'C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/symetric_freq_divider.vhd:36' bound to instance 'inst_1MHZ' of component 'symetric_freq_Divider' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:393]
+INFO: [Synth 8-638] synthesizing module 'symetric_freq_Divider__parameterized1' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/symetric_freq_divider.vhd:43]
+	Parameter divide_by bound to: 100 - type: integer 
+INFO: [Synth 8-113] binding component instance 'BUFG_inst' to cell 'BUFG' [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/symetric_freq_divider.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'symetric_freq_Divider__parameterized1' (5#1) [C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/symetric_freq_divider.vhd:43]
+WARNING: [Synth 8-3848] Net byte_out in module/entity main_interconnect does not have driver. [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:247]
+INFO: [Synth 8-256] done synthesizing module 'main_interconnect' (6#1) [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:145]
+WARNING: [Synth 8-3917] design main_interconnect has port LED16_B driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port LED16_G driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port LED16_R driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port LED17_B driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port LED17_G driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port LED17_R driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port VGA_R[3] driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port VGA_R[2] driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port VGA_R[1] driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port VGA_R[0] driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port VGA_G[3] driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port VGA_G[2] driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port VGA_G[1] driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port VGA_G[0] driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port VGA_B[3] driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port VGA_B[2] driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port VGA_B[1] driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port VGA_B[0] driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port VGA_HS driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port VGA_VS driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port SD_RESET driven by constant 1
+WARNING: [Synth 8-3917] design main_interconnect has port SD_SCK driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port ACL_MOSI driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port ACL_SCLK driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port ACL_CSN driven by constant 1
+WARNING: [Synth 8-3917] design main_interconnect has port TMP_SCL driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port M_CLK driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port M_LRSEL driven by constant 0
+WARNING: [Synth 8-3917] design main_interconnect has port AUD_SD driven by constant 1
+WARNING: [Synth 8-3331] design Audio_PWM_module has unconnected port RST
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[15]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[14]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[13]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[12]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[11]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[10]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[9]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[8]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[7]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[6]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[5]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LED[0]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JA[10]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JA[9]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JA[8]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JA[6]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JA[5]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JA[4]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JA[3]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JB[10]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JB[9]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JB[8]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JB[7]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JB[6]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JB[5]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JB[4]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JB[3]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JB[2]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JB[1]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JC[10]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JC[9]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JC[8]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JC[7]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JC[6]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JC[5]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JC[4]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JC[3]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JC[2]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JC[1]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JD[10]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JD[9]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JD[8]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JD[7]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JD[6]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JD[5]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JD[4]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JD[3]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JD[2]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port JD[1]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port XA_N[4]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port XA_N[3]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port XA_N[2]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port XA_N[1]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port XA_P[4]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port XA_P[3]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port XA_P[2]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port XA_P[1]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SD_CMD
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SD_DAT[3]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SD_DAT[2]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SD_DAT[1]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SD_DAT[0]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port TMP_SDA
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port PS2_CLK
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port PS2_DATA
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port ETH_MDIO
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port ETH_CRSDV
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port ETH_RXERR
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port ETH_RXD[1]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port ETH_RXD[0]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port ETH_INTN
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port QSPI_DQ[3]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port QSPI_DQ[2]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port QSPI_DQ[1]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port QSPI_DQ[0]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port LEFT_BTN
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port UP_BTN
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port RIGHT_BTN
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port DOWN_BTN
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[15]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[14]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[13]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SW[12]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port SD_CD
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port ACL_MISO
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port ACL_INT[2]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port ACL_INT[1]
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port TMP_INT
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port TMP_CT
+WARNING: [Synth 8-3331] design main_interconnect has unconnected port M_DATA
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 993.910 ; gain = 127.523
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[7] to constant 0 [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:307]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[6] to constant 0 [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:307]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[5] to constant 0 [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:307]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[4] to constant 0 [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:307]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[3] to constant 0 [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:307]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[2] to constant 0 [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:307]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[1] to constant 0 [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:307]
+WARNING: [Synth 8-3295] tying undriven pin digit_display_inst:disp_byte1[0] to constant 0 [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd:307]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 993.910 ; gain = 127.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 993.910 ; gain = 127.523
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 3 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 33 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/constrs_1/imports/my_lib/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/constrs_1/imports/my_lib/Nexys-4-DDR-Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1334.719 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 1376.137 ; gain = 509.750
+32 Infos, 132 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 1376.137 ; gain = 509.750
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Mon Mar 18 20:07:33 2019] Launched impl_1...
+Run output will be captured here: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+[Mon Mar 18 20:20:34 2019] Launched synth_1...
+Run output will be captured here: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.runs/synth_1/runme.log
+[Mon Mar 18 20:20:34 2019] Launched impl_1...
+Run output will be captured here: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Mon Mar 18 20:25:05 2019] Launched impl_1...
+Run output will be captured here: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.runs/impl_1/runme.log
+close_project
+open_project -read_only {C:/xilinx_project/git_project/projet_CPU/projet_CPU/test_project/project de base/project de base.xpr}
+INFO: [Project 1-313] Project file moved from 'E:/xilinx_project/CPUproject/projet_CPU/test_project/project de base' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-229] Project 'project de base.xpr' is read-only and therefore could not be upgraded for this version of Vivado.  Use 'File | Save Project As...' if you wish to save an upgraded copy.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+save_project_as project_1 C:/Users/Qlala/Documents/FE_SUP/Lecon/project_1 -force
+create_bd_design "design_1"
+Wrote  : <C:\Users\Qlala\Documents\FE_SUP\Lecon\project_1\project_1.srcs\sources_1\bd\design_1\design_1.bd> 
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {1} axi_periph {Enabled} cache {8KB} clk {New Clocking Wizard (100 MHz)} debug_module {Debug Only} ecc {None} local_mem {8KB} preset {Real-time}}  [get_bd_cells microblaze_0]
+apply_bd_automation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1388.180 ; gain = 0.000
+endgroup
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {/clk_wiz_1/clk_out1 (100 MHz)} Clk_xbar {/clk_wiz_1/clk_out1 (100 MHz)} Master {/microblaze_0/M_AXI_DC} Slave {/microblaze_0_axi_intc/s_axi} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins microblaze_0/M_AXI_DC]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {/clk_wiz_1/clk_out1 (100 MHz)} Clk_xbar {/clk_wiz_1/clk_out1 (100 MHz)} Master {/microblaze_0/M_AXI_IC} Slave {/microblaze_0_axi_intc/s_axi} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins microblaze_0/M_AXI_IC]
+</microblaze_0_axi_intc/S_AXI/Reg> is being mapped into </microblaze_0/Instruction> at <0x41200000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins clk_wiz_1/CLK_IN1_D]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 diff_clock_rtl_0
+INFO: [board_rule 100-100] set_property CONFIG.FREQ_HZ 100000000 /diff_clock_rtl_0
+INFO: [board_rule 100-100] connect_bd_intf_net /diff_clock_rtl_0 /clk_wiz_1/CLK_IN1_D
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto} rst_polarity {ACTIVE_HIGH}}  [get_bd_pins clk_wiz_1/reset]
+INFO: [board_rule 100-100] create_bd_port -dir I reset_rtl_0 -type rst
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY  /reset_rtl_0
+INFO: [board_rule 100-100] connect_bd_net /reset_rtl_0 /clk_wiz_1/reset
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_HIGH /reset_rtl_0
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto} rst_polarity {ACTIVE_LOW}}  [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+INFO: [board_rule 100-100] create_bd_port -dir I reset_rtl_0_0 -type rst
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY  /reset_rtl_0_0
+INFO: [board_rule 100-100] connect_bd_net /reset_rtl_0_0 /rst_clk_wiz_1_100M/ext_reset_in
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset_rtl_0_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mig_7series:4.2 mig_7series_0
+endgroup
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /mig_7series_0/sys_rst'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /mig_7series_0/sys_rst'
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto} rst_polarity {ACTIVE_LOW}}  [get_bd_pins mig_7series_0/sys_rst]
+INFO: [board_rule 100-100] create_bd_port -dir I reset_rtl_0_0_1 -type rst
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY  /reset_rtl_0_0_1
+INFO: [board_rule 100-100] connect_bd_net /reset_rtl_0_0_1 /mig_7series_0/sys_rst
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset_rtl_0_0_1
+save_bd_design
+Wrote  : <C:\Users\Qlala\Documents\FE_SUP\Lecon\project_1\project_1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/Qlala/Documents/FE_SUP/Lecon/project_1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 20 10:52:30 2019...

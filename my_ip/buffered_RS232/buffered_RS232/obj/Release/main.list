@@ -1,0 +1,223 @@
+GAS LISTING C:\Users\Qlala\AppData\Local\Temp\cczd8jtn.s 			page 1
+
+
+   1              		.file	"main.c"
+   2              		.text
+   3              		.section .rdata,"dr"
+   4              	.LC0:
+   5 0000 4572726F 		.ascii "Error in opening serial port\0"
+   5      7220696E 
+   5      206F7065 
+   5      6E696E67 
+   5      20736572 
+   6 001d 000000   		.align 8
+   7              	.LC1:
+   8 0020 6F70656E 		.ascii "opening serial port successful\0"
+   8      696E6720 
+   8      73657269 
+   8      616C2070 
+   8      6F727420 
+   9              	.LC2:
+  10 003f 696E7469 		.ascii "intialisizing params\0"
+  10      616C6973 
+  10      697A696E 
+  10      67207061 
+  10      72616D73 
+  11              		.text
+  12              		.p2align 4,,15
+  13              		.globl	_Z10RS232_initPciPPv
+  15              		.seh_proc	_Z10RS232_initPciPPv
+  16              	_Z10RS232_initPciPPv:
+  17 0000 57       		pushq	%rdi
+  18              		.seh_pushreg	%rdi
+  19 0001 56       		pushq	%rsi
+  20              		.seh_pushreg	%rsi
+  21 0002 53       		pushq	%rbx
+  22              		.seh_pushreg	%rbx
+  23 0003 4883EC60 		subq	$96, %rsp
+  24              		.seh_stackalloc	96
+  25              		.seh_endprologue
+  26 0007 4531C9   		xorl	%r9d, %r9d
+  27 000a 4531C0   		xorl	%r8d, %r8d
+  28 000d 89D7     		movl	%edx, %edi
+  29 000f C7442428 		movl	$0, 40(%rsp)
+  29      00000000 
+  30 0017 BA000000 		movl	$-1073741824, %edx
+  30      C0
+  31 001c 48C74424 		movq	$0, 48(%rsp)
+  31      30000000 
+  31      00
+  32 0025 C7442420 		movl	$3, 32(%rsp)
+  32      03000000 
+  33 002d FF150000 		call	*__imp_CreateFileA(%rip)
+  33      0000
+  34 0033 4883F8FF 		cmpq	$-1, %rax
+  35 0037 4889C3   		movq	%rax, %rbx
+  36 003a 747E     		je	.L5
+  37 003c 488D0D20 		leaq	.LC1(%rip), %rcx
+  37      000000
+  38 0043 E8000000 		call	printf
+  38      00
+GAS LISTING C:\Users\Qlala\AppData\Local\Temp\cczd8jtn.s 			page 2
+
+
+  39              	.L3:
+  40 0048 488D0D3F 		leaq	.LC2(%rip), %rcx
+  40      000000
+  41 004f E8000000 		call	printf
+  41      00
+  42 0054 488D7424 		leaq	64(%rsp), %rsi
+  42      40
+  43 0059 4889D9   		movq	%rbx, %rcx
+  44 005c 48C74424 		movq	$0, 68(%rsp)
+  44      44000000 
+  44      00
+  45 0065 4889F2   		movq	%rsi, %rdx
+  46 0068 C7442440 		movl	$28, 64(%rsp)
+  46      1C000000 
+  47 0070 48C74424 		movq	$0, 76(%rsp)
+  47      4C000000 
+  47      00
+  48 0079 48C74424 		movq	$0, 84(%rsp)
+  48      54000000 
+  48      00
+  49 0082 FF150000 		call	*__imp_GetCommState(%rip)
+  49      0000
+  50 0088 B8080100 		movl	$264, %eax
+  50      00
+  51 008d 4889F2   		movq	%rsi, %rdx
+  52 0090 4889D9   		movq	%rbx, %rcx
+  53 0093 804C2449 		orb	$48, 73(%rsp)
+  53      30
+  54 0098 897C2444 		movl	%edi, 68(%rsp)
+  55 009c 66894424 		movw	%ax, 82(%rsp)
+  55      52
+  56 00a1 C6442454 		movb	$0, 84(%rsp)
+  56      00
+  57 00a6 FF150000 		call	*__imp_SetCommState(%rip)
+  57      0000
+  58 00ac BA010000 		movl	$1, %edx
+  58      00
+  59 00b1 4889D9   		movq	%rbx, %rcx
+  60 00b4 FF150000 		call	*__imp_SetCommMask(%rip)
+  60      0000
+  61              	.L5:
+  62 00ba 488D0D00 		leaq	.LC0(%rip), %rcx
+  62      000000
+  63 00c1 E8000000 		call	printf
+  63      00
+  64 00c6 EB80     		jmp	.L3
+  65              		.seh_endproc
+  66 00c8 0F1F8400 		.p2align 4,,15
+  66      00000000 
+  67              		.globl	_Z14RS232_read_onePvPc
+  69              		.seh_proc	_Z14RS232_read_onePvPc
+  70              	_Z14RS232_read_onePvPc:
+  71 00d0 56       		pushq	%rsi
+  72              		.seh_pushreg	%rsi
+  73 00d1 53       		pushq	%rbx
+  74              		.seh_pushreg	%rbx
+  75 00d2 4883EC48 		subq	$72, %rsp
+GAS LISTING C:\Users\Qlala\AppData\Local\Temp\cczd8jtn.s 			page 3
+
+
+  76              		.seh_stackalloc	72
+  77              		.seh_endprologue
+  78 00d6 4531C0   		xorl	%r8d, %r8d
+  79 00d9 4889CB   		movq	%rcx, %rbx
+  80 00dc 4889D6   		movq	%rdx, %rsi
+  81 00df 488D5424 		leaq	60(%rsp), %rdx
+  81      3C
+  82 00e4 FF150000 		call	*__imp_WaitCommEvent(%rip)
+  82      0000
+  83 00ea 4531C9   		xorl	%r9d, %r9d
+  84 00ed 4889F2   		movq	%rsi, %rdx
+  85 00f0 4889D9   		movq	%rbx, %rcx
+  86 00f3 48C74424 		movq	$0, 32(%rsp)
+  86      20000000 
+  86      00
+  87 00fc 41B80100 		movl	$1, %r8d
+  87      0000
+  88 0102 FF150000 		call	*__imp_ReadFile(%rip)
+  88      0000
+  89 0108 0FAEF0   		mfence
+  90 010b 4883C448 		addq	$72, %rsp
+  91 010f 5B       		popq	%rbx
+  92 0110 5E       		popq	%rsi
+  93 0111 C3       		ret
+  94              		.seh_endproc
+  95 0112 0F1F4000 		.p2align 4,,15
+  95      662E0F1F 
+  95      84000000 
+  95      0000
+  96              		.globl	_Z15RS232_write_onePvc
+  98              		.seh_proc	_Z15RS232_write_onePvc
+  99              	_Z15RS232_write_onePvc:
+ 100 0120 4883EC38 		subq	$56, %rsp
+ 101              		.seh_stackalloc	56
+ 102              		.seh_endprologue
+ 103 0124 4531C9   		xorl	%r9d, %r9d
+ 104 0127 41B80100 		movl	$1, %r8d
+ 104      0000
+ 105 012d 88542448 		movb	%dl, 72(%rsp)
+ 106 0131 488D5424 		leaq	72(%rsp), %rdx
+ 106      48
+ 107 0136 48C74424 		movq	$0, 32(%rsp)
+ 107      20000000 
+ 107      00
+ 108 013f FF150000 		call	*__imp_WriteFile(%rip)
+ 108      0000
+ 109 0145 90       		nop
+ 110 0146 4883C438 		addq	$56, %rsp
+ 111 014a C3       		ret
+ 112              		.seh_endproc
+ 114 014b 90909090 		.section .rdata,"dr"
+ 114      90
+ 115              	.LC3:
+ 116 0054 5C5C2E5C 		.ascii "\\\\.\\COM4\0"
+ 116      434F4D34 
+ 116      00
+ 117 005d 000000   		.section	.text.startup,"x"
+GAS LISTING C:\Users\Qlala\AppData\Local\Temp\cczd8jtn.s 			page 4
+
+
+ 118              		.p2align 4,,15
+ 119              		.globl	main
+ 121              		.seh_proc	main
+ 122              	main:
+ 123 0000 4883EC38 		subq	$56, %rsp
+ 124              		.seh_stackalloc	56
+ 125              		.seh_endprologue
+ 126 0004 E8000000 		call	__main
+ 126      00
+ 127 0009 4C8D4424 		leaq	40(%rsp), %r8
+ 127      28
+ 128 000e BA102700 		movl	$10000, %edx
+ 128      00
+ 129 0013 488D0D54 		leaq	.LC3(%rip), %rcx
+ 129      000000
+ 130 001a E8000000 		call	_Z10RS232_initPciPPv
+ 130      00
+ 131 001f 90       		nop
+ 132              		.seh_endproc
+ 133              		.ident	"GCC: (x86_64-posix-sjlj-rev0, Built by MinGW-W64 project) 8.1.0"
+GAS LISTING C:\Users\Qlala\AppData\Local\Temp\cczd8jtn.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+C:\Users\Qlala\AppData\Local\Temp\cczd8jtn.s:16     .text:0000000000000000 _Z10RS232_initPciPPv
+C:\Users\Qlala\AppData\Local\Temp\cczd8jtn.s:70     .text:00000000000000d0 _Z14RS232_read_onePvPc
+C:\Users\Qlala\AppData\Local\Temp\cczd8jtn.s:99     .text:0000000000000120 _Z15RS232_write_onePvc
+C:\Users\Qlala\AppData\Local\Temp\cczd8jtn.s:122    .text.startup:0000000000000000 main
+
+UNDEFINED SYMBOLS
+__imp_CreateFileA
+__imp_GetCommState
+__imp_SetCommState
+__imp_SetCommMask
+__imp_WaitCommEvent
+__imp_ReadFile
+__imp_WriteFile
+__main
+printf

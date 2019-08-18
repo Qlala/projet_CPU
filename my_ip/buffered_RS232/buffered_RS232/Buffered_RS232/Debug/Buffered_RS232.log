@@ -1,0 +1,4 @@
+﻿  Buffered_RS232.cpp
+c:\xilinx_project\git_project\projet_cpu\projet_cpu\my_ip\buffered_rs232\buffered_rs232\buffered_rs232\buffered_rs232.cpp(33): warning C4101: 'byte_read' : variable locale non référencée
+c:\xilinx_project\git_project\projet_cpu\projet_cpu\my_ip\buffered_rs232\buffered_rs232\buffered_rs232\buffered_rs232.cpp(32): warning C4101: 'buff_one' : variable locale non référencée
+  Buffered_RS232.vcxproj -> C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\buffered_RS232\Buffered_RS232\Debug\Buffered_RS232.exe
