@@ -1,0 +1,95 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 18 19:52:06 2019
+# Process ID: 5232
+# Current directory: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14088 C:\xilinx_project\git_project\projet_CPU\projet_CPU\Xilinx\2018\Project_test\Project_test\Project_test.xpr
+# Log file: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/vivado.log
+# Journal file: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.xpr
+add_files -norecurse C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/new/main_interconnect.vhd
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/UART_module.vhd] -no_script -reset -force -quiet
+remove_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/UART_module.vhd
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/ADC_xilinx.vhd] -no_script -reset -force -quiet
+remove_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/ADC_xilinx.vhd
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/dyn_sym_freq_divider.vhd] -no_script -reset -force -quiet
+remove_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/dyn_sym_freq_divider.vhd
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+set_property library my_lib [get_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/my_lib.vhd]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+set_property file_type {VHDL 2008} [get_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/UART_RS232.vhd]
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Freq_Divider.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Clock_manager.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Audio_PWM_module.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/PWM_module.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/digit_display.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/ext_PLL.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/square_signal_generator.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/symetric_freq_divider.vhd] -no_script -reset -force -quiet
+remove_files  {C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Freq_Divider.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Clock_manager.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/Audio_PWM_module.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/PWM_module.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/digit_display.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/ext_PLL.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/square_signal_generator.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/symetric_freq_divider.vhd}
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/imports/my_lib/Clock_manager.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/imports/my_lib/Freq_Divider.vhd] -no_script -reset -force -quiet
+remove_files  {C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/imports/my_lib/Clock_manager.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/2018/Project_test/Project_test/Project_test.srcs/sources_1/imports/my_lib/Freq_Divider.vhd}
+add_files {C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/Clock_manager.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/Freq_Divider.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/ADC_xilinx.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_RS232.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/dyn_sym_freq_divider.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_module.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/Audio_PWM_module.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/digit_display.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/symetric_freq_divider.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/PWM_module.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/square_signal_generator.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/ext_PLL.vhd}
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/ADC_xilinx.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_module.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/dyn_sym_freq_divider.vhd] -no_script -reset -force -quiet
+remove_files  {C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/ADC_xilinx.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_module.vhd C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/dyn_sym_freq_divider.vhd}
+set_property file_type {VHDL 2008} [get_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/UART_RS232.vhd]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+export_ip_user_files -of_objects  [get_files C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/UART_RS232.vhd] -no_script -reset -force -quiet
+remove_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_lib/UART_RS232.vhd
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+set_property file_type {VHDL 2008} [get_files  C:/xilinx_project/git_project/projet_CPU/projet_CPU/my_ip/ext_PLL.vhd]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+synth_design -rtl -name rtl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_project
+open_project -read_only {C:/xilinx_project/git_project/projet_CPU/projet_CPU/test_project/project de base/project de base.xpr}
+update_compile_order -fileset sources_1
+save_project_as project_1 C:/Users/Qlala/Documents/FE_SUP/Lecon/project_1 -force
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {1} axi_periph {Enabled} cache {8KB} clk {New Clocking Wizard (100 MHz)} debug_module {Debug Only} ecc {None} local_mem {8KB} preset {Real-time}}  [get_bd_cells microblaze_0]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {/clk_wiz_1/clk_out1 (100 MHz)} Clk_xbar {/clk_wiz_1/clk_out1 (100 MHz)} Master {/microblaze_0/M_AXI_DC} Slave {/microblaze_0_axi_intc/s_axi} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins microblaze_0/M_AXI_DC]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {/clk_wiz_1/clk_out1 (100 MHz)} Clk_xbar {/clk_wiz_1/clk_out1 (100 MHz)} Master {/microblaze_0/M_AXI_IC} Slave {/microblaze_0_axi_intc/s_axi} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins microblaze_0/M_AXI_IC]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins clk_wiz_1/CLK_IN1_D]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto} rst_polarity {ACTIVE_HIGH}}  [get_bd_pins clk_wiz_1/reset]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto} rst_polarity {ACTIVE_LOW}}  [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mig_7series:4.2 mig_7series_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto} rst_polarity {ACTIVE_LOW}}  [get_bd_pins mig_7series_0/sys_rst]
+save_bd_design

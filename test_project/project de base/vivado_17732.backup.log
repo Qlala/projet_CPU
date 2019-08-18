@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 18 19:33:58 2019
+# Process ID: 17732
+# Current directory: C:/xilinx_project/git_project/projet_CPU/projet_CPU/test_project/project de base
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12248 C:\xilinx_project\git_project\projet_CPU\projet_CPU\test_project\project de base\project de base.xpr
+# Log file: C:/xilinx_project/git_project/projet_CPU/projet_CPU/test_project/project de base/vivado.log
+# Journal file: C:/xilinx_project/git_project/projet_CPU/projet_CPU/test_project/project de base\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project -read_only {C:/xilinx_project/git_project/projet_CPU/projet_CPU/test_project/project de base/project de base.xpr}
+INFO: [Project 1-313] Project file moved from 'E:/xilinx_project/CPUproject/projet_CPU/test_project/project de base' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-229] Project 'project de base.xpr' is read-only and therefore could not be upgraded for this version of Vivado.  Use 'File | Save Project As...' if you wish to save an upgraded copy.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 775.695 ; gain = 157.742
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 18 19:35:43 2019...
