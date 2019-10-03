@@ -40,8 +40,8 @@ entity Cache_bus_slave_to_master is
     adress : in std_logic_vector(N_bit-1 downto 0);
     data : in std_logic_vector(N_bit-1 downto 0);
     EN : in std_logic;
-    
-    
+    WR : in std_logic;--WRite='1' read = '0'
+	ANSWER :std_logic;--'1' if this is the state of a memory somewhere
     CLK : in std_logic;
     RST : in std_logic
   );
@@ -55,15 +55,17 @@ alias address_flag_driver : std_logic is cache_bus_driver(N_bit);
 alias WR_bus_driver : std_logic is cache_bus_driver(N_bit+1);
 alias handshake_driver : std_logic is cache_bus_driver(N_bit+2);
 
+
 alias data_adr_bus : std_logic_vector(N_bit-1 downto 0) is slave_cache_bus(N_bit-1 downto 0);
 alias address_flag : std_logic is slave_cache_bus(N_bit);
 alias WR_bus: std_logic is slave_cache_bus(N_bit+1);
 alias handshake : std_logic is slave_cache_bus(N_bit+2);
+alias ACK : std_logic is cache_bus(N_bit+3);
 --buff
 signal data_buf : std_logic_vector(N_bit-1 downto 0);
 signal addr_buf : std_logic_vector(N_bit-1 downto 0);
 --state machine
-type state_t is (idle,sending_addr_R,sending_addr_W,sending_data,fighting_over_adress_R,fighting_over_adress_W);
+type state_t is (idle,sending_addr_W,sending_addr_R,sending_data,fighting_over_adress_W,fighting_over_adress_R);
 signal curr_state,next_state : state_t;
 
 begin
@@ -72,9 +74,24 @@ NEXT_STATE_LOGIC:process(curr_state,data_adr_bus,address_flag,WR_bus)
 begin
 	next_state<=curr_state;
 	case curr_state is
-		when idle=>		
+		when idle=>	
+			if handshake='0' then
+				if EN='1' then
+					if WR ='1' then
+						next_state<=sending_addr_W;
+					else
+						next_state<=sending_addr_R;
+					end if;
+				end if;
+			end if;
 		when sending_addr_R=>
+			if data_adr_bus /= addr_buf then
+				next_state<= sending_data;
+			else 
+				next_state<=fighting_over_adress_R;
+			end if
 		when sending_addr_W=>
+		
 		when sending_data>
 		when fighting over_adress_R=>
 		when fighting over_adress_W=>

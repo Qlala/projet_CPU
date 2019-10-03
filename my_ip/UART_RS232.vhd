@@ -32,13 +32,18 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity UART_RS232 is
-  generic(N:natural:=8);
+  generic(
+      N:natural:=8;
+      START_B:std_logic:='0';
+      STOP_B:std_logic:='1';
+      DEFAULT_LINE_STATE:std_logic:='1';
+  );
   Port (
    --extern port 
    TX:out std_logic:='H';
    RX: in std_logic;
    CTS : in std_logic:='H';--droit d'envoyer (ligne libre?) (asserted if the line is clear)(active on low)
-   RTS : out std_logic:='H';--pret a recevoir (asserted if reeady to send)(active on low)
+   RTS : out std_logic:='H';--pret a recevoir (asserted if ready to send)(active on low)
    --port intern rx
    rx_data : out std_logic_vector(N-1 downto 0);
    rx_valid : out std_logic; --1 if valid
@@ -56,9 +61,7 @@ entity UART_RS232 is
 end UART_RS232;
 
 architecture Behavioral of UART_RS232 is
-CONSTANT START_B:std_logic:='0';
-CONSTANT STOP_B:std_logic:='1';
-CONSTANT DEFAULT_LINE_STATE:std_logic:='1';
+
 type rx_state_t is (pending,receiving,valid,user_line_handshake,user_handshake,line_handshake);
 --rx_signal
 signal rx_cState : rx_state_t:=pending;
