@@ -37,6 +37,7 @@ entity UART_RS232 is
       START_B:std_logic:='0';
       STOP_B:std_logic:='1';
       DEFAULT_LINE_STATE:std_logic:='1';
+      PARITY_CHECK:boolean:=TRUE
   );
   Port (
    --extern port 
@@ -48,7 +49,7 @@ entity UART_RS232 is
    rx_data : out std_logic_vector(N-1 downto 0);
    rx_valid : out std_logic; --1 if valid
    rx_new_data : out  std_logic;--assert if data is valid
-   rx_ack : in std_logic :='1';--asert to acknowledge data.
+   rx_ack : in std_logic :='1';--assert to acknowledge data.
    
    --port intern tx
    tx_data: in std_logic_vector(N-1 downto 0);
@@ -94,7 +95,11 @@ begin
         end if;
        when receiving  =>
         if(rx_I=N-1) then
-            rx_nState<=valid;
+            if PARITY_CHECK then 
+                rx_nState<=valid;
+            else
+                rx_nState<=user_line_handshake;
+            end if;
         end if;
        when valid=>
         rx_nState<=user_line_handshake;
@@ -164,7 +169,9 @@ RX_SYNC:process(CLK,rx_cState)
                     rx_data(rx_I)<=RX;
                     rx_temp_valid<=rx_temp_valid xor RX;--computing parity
                  when valid=>
-                    rx_valid<='1' when rx_temp_valid=RX else '0';--checking parity
+                    if PARITY_CHECK then
+                        rx_valid<='1' when rx_temp_valid=RX else '0';--checking parity
+                    end if;
                  when user_line_handshake=>
                     rx_new_data<='1';         
                  when others =>
@@ -196,7 +203,12 @@ begin
             tx_nState<=sending;
          when sending =>
             if(tx_I=N-1) then
-                tx_nState<=validation;
+                if PARITY_CHECK then
+                    tx_nState<=validation;
+                else
+                    tx_nState<=pending;
+                end if;
+                
             end if;
          when validation=>
             tx_nState<=pending;--STOP BIT EST LE DEFAULT LINE STATE
@@ -238,6 +250,7 @@ begin
                 tx_I<=tx_I+1;
                 TX<=tx_pulled_data(tx_I);
                 tx_temp_valid<=tx_temp_valid xor tx_pulled_data(tx_I);
+                tx_done<='1';
             when validation=>
                 TX<=tx_temp_valid;
                 tx_done<='1';
