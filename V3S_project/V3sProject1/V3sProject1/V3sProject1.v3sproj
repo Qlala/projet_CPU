@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Syntax Check</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace>Work</RootNamespace>
+    <AssemblyName>V3sProject1</AssemblyName>
+    <ProjectGuid>{57791927-2CD2-4346-8A27-A2725836BD19}</ProjectGuid>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <V3S-Project-Type>V3S Project</V3S-Project-Type>
+    <Name>V3sProject1</Name>
+    <ProjectFolder>C:\xilinx_project\git_project\projet_CPU\projet_CPU\V3S_project\V3sProject1\V3sProject1</ProjectFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Syntax Check' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Full Compilation' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TopLevelEntity>
+    </TopLevelEntity>
+  </PropertyGroup>
+  <ItemGroup>
+    <LinkedFolder Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\">
+      <RelativePath>..\..\..\my_ip\</RelativePath>
+    </LinkedFolder>
+    <LinkedFolder Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\cache_bus\">
+      <RelativePath>..\..\..\my_ip\cache_bus\</RelativePath>
+    </LinkedFolder>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\UART_I2C.vhd">
+      <SubType>Content</SubType>
+      <LibraryName>work</LibraryName>
+      <ContentTypeProperty>Vhdl</ContentTypeProperty>
+      <NamingCheck>True</NamingCheck>
+      <ParsingOptions>FullParse</ParsingOptions>
+      <NotificationLevel>All</NotificationLevel>
+      <LinkedFolder>C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\</LinkedFolder>
+    </Content>
+    <Content Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\testbenches\tb_UART_RS232.vhd">
+      <SubType>Content</SubType>
+      <Link>tb_UART_RS232.vhd</Link>
+      <LibraryName>work</LibraryName>
+      <ContentTypeProperty>Vhdl</ContentTypeProperty>
+      <NamingCheck>True</NamingCheck>
+      <ParsingOptions>FullParse</ParsingOptions>
+      <NotificationLevel>All</NotificationLevel>
+    </Content>
+    <Content Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\ADC_xilinx.vhd">
+      <SubType>Content</SubType>
+      <LibraryName>work</LibraryName>
+      <ContentTypeProperty>Vhdl</ContentTypeProperty>
+      <NamingCheck>True</NamingCheck>
+      <ParsingOptions>FullParse</ParsingOptions>
+      <NotificationLevel>All</NotificationLevel>
+      <LinkedFolder>C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\</LinkedFolder>
+    </Content>
+    <Content Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\Audio_PWM_module.vhd">
+      <SubType>Content</SubType>
+      <LibraryName>work</LibraryName>
+      <ContentTypeProperty>Vhdl</ContentTypeProperty>
+      <NamingCheck>True</NamingCheck>
+      <ParsingOptions>FullParse</ParsingOptions>
+      <NotificationLevel>All</NotificationLevel>
+      <LinkedFolder>C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\</LinkedFolder>
+    </Content>
+    <Content Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\Clock_manager.vhd">
+      <SubType>Content</SubType>
+      <LibraryName>work</LibraryName>
+      <ContentTypeProperty>Vhdl</ContentTypeProperty>
+      <NamingCheck>True</NamingCheck>
+      <ParsingOptions>FullParse</ParsingOptions>
+      <NotificationLevel>All</NotificationLevel>
+      <LinkedFolder>C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\</LinkedFolder>
+    </Content>
+    <Content Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\digit_display.vhd">
+      <SubType>Content</SubType>
+      <LibraryName>work</LibraryName>
+      <ContentTypeProperty>Vhdl</ContentTypeProperty>
+      <NamingCheck>True</NamingCheck>
+      <ParsingOptions>FullParse</ParsingOptions>
+      <NotificationLevel>All</NotificationLevel>
+      <LinkedFolder>C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\</LinkedFolder>
+    </Content>
+    <Content Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\dyn_sym_freq_divider.vhd">
+      <SubType>Content</SubType>
+      <LibraryName>work</LibraryName>
+      <ContentTypeProperty>Vhdl</ContentTypeProperty>
+      <NamingCheck>True</NamingCheck>
+      <ParsingOptions>FullParse</ParsingOptions>
+      <NotificationLevel>All</NotificationLevel>
+      <LinkedFolder>C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\</LinkedFolder>
+    </Content>
+    <Content Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\ext_PLL.vhd">
+      <SubType>Content</SubType>
+      <LibraryName>work</LibraryName>
+      <ContentTypeProperty>Vhdl</ContentTypeProperty>
+      <NamingCheck>True</NamingCheck>
+      <ParsingOptions>FullParse</ParsingOptions>
+      <NotificationLevel>All</NotificationLevel>
+      <LinkedFolder>C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\</LinkedFolder>
+    </Content>
+    <Content Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\Freq_Divider.vhd">
+      <SubType>Content</SubType>
+      <LibraryName>work</LibraryName>
+      <ContentTypeProperty>Vhdl</ContentTypeProperty>
+      <NamingCheck>True</NamingCheck>
+      <ParsingOptions>FullParse</ParsingOptions>
+      <NotificationLevel>All</NotificationLevel>
+      <LinkedFolder>C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\</LinkedFolder>
+    </Content>
+    <Content Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\PWM_module.vhd">
+      <SubType>Content</SubType>
+      <LibraryName>work</LibraryName>
+      <ContentTypeProperty>Vhdl</ContentTypeProperty>
+      <NamingCheck>True</NamingCheck>
+      <ParsingOptions>FullParse</ParsingOptions>
+      <NotificationLevel>All</NotificationLevel>
+      <LinkedFolder>C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\</LinkedFolder>
+    </Content>
+    <Content Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\square_signal_generator.vhd">
+      <SubType>Content</SubType>
+      <LibraryName>work</LibraryName>
+      <ContentTypeProperty>Vhdl</ContentTypeProperty>
+      <NamingCheck>True</NamingCheck>
+      <ParsingOptions>FullParse</ParsingOptions>
+      <NotificationLevel>All</NotificationLevel>
+      <LinkedFolder>C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\</LinkedFolder>
+    </Content>
+    <Content Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\symetric_freq_divider.vhd">
+      <SubType>Content</SubType>
+      <LibraryName>work</LibraryName>
+      <ContentTypeProperty>Vhdl</ContentTypeProperty>
+      <NamingCheck>True</NamingCheck>
+      <ParsingOptions>FullParse</ParsingOptions>
+      <NotificationLevel>All</NotificationLevel>
+      <LinkedFolder>C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\</LinkedFolder>
+    </Content>
+    <Content Include="C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\UART_RS232.vhd">
+      <SubType>Content</SubType>
+      <LibraryName>work</LibraryName>
+      <ContentTypeProperty>Vhdl</ContentTypeProperty>
+      <NamingCheck>True</NamingCheck>
+      <ParsingOptions>FullParse</ParsingOptions>
+      <NotificationLevel>All</NotificationLevel>
+      <LinkedFolder>C:\xilinx_project\git_project\projet_CPU\projet_CPU\my_ip\</LinkedFolder>
+    </Content>
+  </ItemGroup>
+  <!-- insertExternalFiles !-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

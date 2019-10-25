@@ -1,0 +1,91 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/xilinx_project/git_project/projet_CPU/projet_CPU/testbenches
+Etb_uart_rs232
+Z1 w1570637523
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8tb_UART_RS232.vhd
+Z6 Ftb_UART_RS232.vhd
+l0
+L8
+V?N^JHjmNnES2jn=4DO^Zk3
+!s100 j=aIb2GlcmanC3F8eOHZ>1
+Z7 OV;C;10.5b;63
+33
+Z8 !s110 1570638074
+!i10b 1
+Z9 !s108 1570638074.000000
+Z10 !s90 -reportprogress|300|-2008|tb_UART_RS232.vhd|
+Z11 !s107 tb_UART_RS232.vhd|
+!i113 1
+Z12 o-2008
+Z13 tExplicit 1 CvgOpt 0
+Artl_sim
+Z14 DEx4 work 10 uart_rs232 0 22 iG6[4eU7PKO7j5^8Wk6Oh2
+R2
+R3
+R4
+Z15 DEx4 work 13 tb_uart_rs232 0 22 ?N^JHjmNnES2jn=4DO^Zk3
+l33
+L11
+Z16 VI46;l5IX@7Bd@cK>SRVoz0
+Z17 !s100 _:7X4bOkbUOiGNX2ZUgEo0
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Euart_rs232
+Z18 w1570638069
+R3
+R4
+R0
+Z19 8../my_ip/UART_RS232.vhd
+Z20 F../my_ip/UART_RS232.vhd
+l0
+L34
+ViG6[4eU7PKO7j5^8Wk6Oh2
+!s100 Z45[1>VB`?8Z8eGi^`6L[2
+R7
+33
+R8
+!i10b 1
+R9
+Z21 !s90 -reportprogress|300|-2008|../my_ip/UART_RS232.vhd|
+Z22 !s107 ../my_ip/UART_RS232.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+R14
+l83
+L64
+VPR4RI`3L^AoSbjV[RIRSG3
+!s100 33TWW?T?g=LYn2=MA`F7:1
+R7
+33
+R8
+!i10b 1
+R9
+R21
+R22
+!i113 1
+R12
+R13

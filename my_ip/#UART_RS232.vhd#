@@ -77,14 +77,14 @@ type tx_state_t is (pending,waiting_peer,start_bit,sending,validation,sending_de
 signal tx_cState : tx_state_t:=pending;
 signal tx_nState : tx_state_t:=pending;
 
-signal tx_I:natural range N-1 downto 0;
+signal tx_I:natural range N downto 0;
 signal tx_temp_valid : std_logic:='0';
  signal tx_pulled_data :std_logic_vector(N-1 downto 0);
 begin
 rx_cState<= pending when RST='0' else rx_nState when rising_edge(CLK) else rx_cState;
 
 --RX STATE MACHINE
-RX_NEXT_STATE_LOGIC:process(rx_cState,RX,rx_I,rx_ack)
+RX_NEXT_STATE_LOGIC:process(rx_cState,RX,rx_I)
 begin
     rx_nState<=rx_cState;
    case rx_cState is
@@ -165,15 +165,12 @@ RX_SYNC:process(CLK,rx_cState)
                  when receiving  =>
                     rx_valid<='0';--data are not valid anymore
                     rx_new_data<='0';
-                    
-                    rx_I<=rx_I+1 when rx_I<N-1 else rx_I;
+                    rx_I<=rx_I+1;
                     rx_data(rx_I)<=RX;
                     rx_temp_valid<=rx_temp_valid xor RX;--computing parity
                  when valid=>
                     if PARITY_CHECK then
                         rx_valid<='1' when rx_temp_valid=RX else '0';--checking parity
-                    else
-                        rx_valid<='1';         
                     end if;
                  when user_line_handshake=>
                     rx_new_data<='1';         
@@ -185,7 +182,7 @@ end process;
 
 --TX_STATE_MACHINE
 tx_cState<=pending when RST='0' else tx_nState when rising_edge(CLK) else tx_cState;
-TX_NEXT_STATE_LOGIC:process(tx_cState,tx_nState,CTS,tx_I,tx_start)
+TX_NEXT_STATE_LOGIC:process(tx_cState,tx_nState,CTS)
 begin
     tx_nState<=tx_cState;
     case tx_cState is
@@ -234,7 +231,7 @@ begin
 
 end process;
 
-TX_SYNC:process(CLK,tx_cState,CTS,tx_I)
+TX_SYNC:process(CLK,tx_cState,CTS)
 begin
     if rising_edge(CLK) then
         case tx_cState is
@@ -250,12 +247,10 @@ begin
                 TX<=START_B;
                 tx_temp_valid<='0';
             when sending =>
-                tx_I<=tx_I+1 when tx_I<N-1 else tx_I;
+                tx_I<=tx_I+1;
                 TX<=tx_pulled_data(tx_I);
                 tx_temp_valid<=tx_temp_valid xor tx_pulled_data(tx_I);
-                if tx_I=N-1 and not PARITY_CHECK  then
-                    tx_done<='1';
-                end if;
+                tx_done<='1';
             when validation=>
                 TX<=tx_temp_valid;
                 tx_done<='1';
