@@ -1,0 +1,32 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port SD_CMD -pg 1 -lvl 3 -x 860 -y 690 -defaultsOSRD
+preplace port SD_SCK -pg 1 -lvl 3 -x 860 -y 670 -defaultsOSRD
+preplace port SD_RESET -pg 1 -lvl 3 -x 860 -y 650 -defaultsOSRD
+preplace port UART_CTS -pg 1 -lvl 3 -x 860 -y 890 -defaultsOSRD
+preplace port UART_RXD_OUT -pg 1 -lvl 3 -x 860 -y 870 -defaultsOSRD
+preplace port sys_clock -pg 1 -lvl 0 -x -10 -y 0 -defaultsOSRD
+preplace port SD_CD -pg 1 -lvl 0 -x -10 -y 500 -defaultsOSRD
+preplace port UART_TXD_IN -pg 1 -lvl 0 -x -10 -y 620 -defaultsOSRD
+preplace port UART_RTS -pg 1 -lvl 0 -x -10 -y 640 -defaultsOSRD
+preplace portBus SD_DAT -pg 1 -lvl 3 -x 860 -y 580 -defaultsOSRD
+preplace inst main_interconnect_0 -pg 1 -lvl 2 -x 620 -y 510 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 170 -y -10 -defaultsOSRD
+preplace netloc Net 1 2 1 780 560n
+preplace netloc main_interconnect_0_SD_SCK 1 2 1 790 540n
+preplace netloc main_interconnect_0_SD_RESET 1 2 1 800 520n
+preplace netloc main_interconnect_0_UART_CTS 1 2 1 780 760n
+preplace netloc main_interconnect_0_UART_RXD_OUT 1 2 1 800 740n
+preplace netloc sys_clock_1 1 0 1 NJ 0
+preplace netloc clk_wiz_0_clk_out1 1 1 1 260 -20n
+preplace netloc SD_CD_0_1 1 0 2 NJ 500 NJ
+preplace netloc Net1 1 2 1 N 580
+preplace netloc UART_TXD_IN_0_1 1 0 2 NJ 620 NJ
+preplace netloc UART_RTS_0_1 1 0 2 NJ 640 NJ
+levelinfo -pg 1 -10 170 620 860
+pagesize -pg 1 -db -bbox -sgen -180 -110 1030 1240
+"
+}
+

@@ -1,0 +1,538 @@
+/*
+
+Xilinx Vivado v2019.1.3 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2644227 on Wed Sep  4 09:45:24 MDT 2019
+IP Build: 2633630 on Wed Sep  4 12:30:14 MDT 2019
+
+Process ID (PID): 2488
+License: Customer
+
+Current time: 	Mon Dec 16 14:03:30 CET 2019
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 863 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Qlala
+User home directory: C:/Users/Qlala
+User working directory: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_dont_edit/project_2019_Nexys4
+User country: 	FR
+User language: 	fr
+User locale: 	fr_FR
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.1
+RDI_DATADIR: C:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/Qlala/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/Qlala/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/Qlala/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_dont_edit/project_2019_Nexys4/vivado.log
+Vivado journal file location: 	C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_dont_edit/project_2019_Nexys4/vivado.jou
+Engine tmp dir: 	C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_dont_edit/project_2019_Nexys4/.Xil/Vivado-2488-Qlala-Blade
+
+Xilinx Environment Variables
+----------------------------
+ALTERAOCLSDKROOT: C:\altera\14.1\hld
+INTELFPGAOCLSDKROOT: C:\altera\14.1\hld
+XILINX: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.1
+XILINX_SDK: C:/Xilinx/SDK/2019.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 645 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 89 MB (+90959kb) [00:00:08]
+// [Engine Memory]: 604 MB (+481516kb) [00:00:08]
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\xilinx_project\git_project\projet_CPU\projet_CPU\Xilinx\Projet_2019_dont_edit\project_2019_Nexys4\project_2019_Nexys4.xpr. Version: Vivado v2019.1.3 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_dont_edit/project_2019_Nexys4/project_2019_Nexys4.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_dont_edit/project_2019_Nexys4' 
+// HMemoryUtils.trashcanNow. Engine heap size: 717 MB. GUI used memory: 50 MB. Current time: 12/16/19, 2:03:32 PM CET
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_dont_edit/project_2019_Nexys4/project_2019_Nexys4.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_dont_edit/project_2019_Nexys4' INFO: [Project 1-313] Project file moved from 'C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_BASIC_dont_edit/project_2019_Nexys4' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 858 MB (+234752kb) [00:00:16]
+// [GUI Memory]: 95 MB (+1891kb) [00:00:17]
+// [GUI Memory]: 103 MB (+2838kb) [00:00:18]
+// WARNING: HEventQueue.dispatchEvent() is taking  3321 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 924.426 ; gain = 279.871 
+// Project name: project_2019_Nexys4; location: C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_dont_edit/project_2019_Nexys4; part: xc7a100tcsg324-1
+// [Engine Memory]: 908 MB (+7464kb) [00:00:20]
+dismissDialog("Open Project"); // by (cl)
+// Tcl Message: update_compile_order -fileset sources_1 
+// y (cl): Project is Read-Only: addNotify
+// Elapsed time: 12 seconds
+selectButton(PAResourceOtoP.Project_SAVE_PROJECT_AS, "Save Project As..."); // a (y)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_PROJECT_AS
+// aE (cl): Save Project As: addNotify
+dismissDialog("Project is Read-Only"); // y (cl)
+// Elapsed time: 18 seconds
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "project_nexys_2019"); // Y (Q, aE)
+// [GUI Memory]: 109 MB (+866kb) [00:00:53]
+setText(PAResourceOtoP.ProjectNameChooser_CHOOSE_PROJECT_LOCATION, "C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_1", true); // am (al, aE)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+// 'o' command handler elapsed time: 25 seconds
+// TclEventType: PROJECT_RENAME
+dismissDialog("Save Project As"); // aE (cl)
+// TclEventType: FILE_SET_CHANGE
+// by (cl):  Save Project As : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: save_project_as project_nexys_2019 C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_1/project_nexys_2019 -force 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_1/project_nexys_2019' 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PROJECT_RENAME
+// Tcl Message: save_project_as: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 968.234 ; gain = 0.000 
+// by (cl):  Save Constraints : addNotify
+dismissDialog("Save Constraints"); // by (cl)
+// PAPropertyPanels.initPanels (design_1.bd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1 (design_1.bd)]", 1, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1 (design_1.bd)]", 1, false, false, false, false, false, true); // B (F, cl) - Double Click
+// by (cl):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_1/project_nexys_2019/project_nexys_2019.srcs/sources_1/bd/design_1/design_1.bd} 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Successfully read diagram <design_1> from BD file <C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_1/project_nexys_2019/project_nexys_2019.srcs/sources_1/bd/design_1/design_1.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 975 MB (+23240kb) [00:01:19]
+// [GUI Memory]: 117 MB (+3164kb) [00:01:20]
+// WARNING: HEventQueue.dispatchEvent() is taking  1753 ms.
+// TclEventType: RSB_CONNECTION_CHANGE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1000.148 ; gain = 31.914 
+dismissDialog("Open Block Design"); // by (cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 980 MB. GUI used memory: 58 MB. Current time: 12/16/19, 2:04:43 PM CET
+// Elapsed time: 152 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 234, 298, 1254, 587, false, false, false, true, false); // gl (k, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // ae (an, cl)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ah (an, cl)
+// ci (cl): Add Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ci)
+dismissDialog("Add Module"); // ci (cl)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// by (cl):  Add Module : addNotify
+// Tcl Message: create_bd_cell -type module -reference main_interconnect main_interconnect_0 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: LOAD_FEATURE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// a (cl): Critical Messages: addNotify
+dismissDialog("Add Module"); // by (cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,011 MB. GUI used memory: 63 MB. Current time: 12/16/19, 2:07:28 PM CET
+// Elapsed time: 10 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cl)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 533, 480, 1254, 587, false, false, false, true, false); // gl (k, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // ae (an, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ah (an, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/QSPI_CSN] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/QSPI_DQ] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/ETH_INTN] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/ETH_REFCLK] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/ETH_TXD] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/ETH_TXEN] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/ETH_RXD] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/ETH_RXERR] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/ETH_CRSDV] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/ETH_RSTN] 
+// Tcl Message: endgroup 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets main_interconnect_0_ETH_RSTN] [get_bd_ports ETH_RSTN_0] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets Net4] [get_bd_ports ETH_CRSDV_0] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets Net3] [get_bd_ports ETH_RXERR_0] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets Net2] [get_bd_ports ETH_RXD_0] 
+// Elapsed time: 37 seconds
+selectButton(PAResourceCommand.PACommandNames_SELECT_AREA, "System_select_area"); // u (f, cl): TRUE
+// Run Command: PAResourceCommand.PACommandNames_SELECT_AREA
+// bT (cl): Select Area: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (bT)
+dismissDialog("Select Area"); // bT (cl)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// f (cl): Confirm Delete: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// Tcl Message: startgroup 
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Confirm Delete"); // f (cl)
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets Net] [get_bd_nets Net1] [get_bd_nets main_interconnect_0_ETH_REFCLK] [get_bd_nets main_interconnect_0_ETH_TXD] [get_bd_nets main_interconnect_0_ETH_TXEN] [get_bd_nets main_interconnect_0_QSPI_CSN] 
+// Tcl Message: delete_bd_objs [get_bd_ports ETH_TXEN_0] [get_bd_ports ETH_REFCLK_0] [get_bd_ports ETH_INTN_0] [get_bd_ports QSPI_CSN_0] [get_bd_ports ETH_TXD_0] [get_bd_ports QSPI_DQ_0] 
+// Tcl Message: endgroup 
+// [GUI Memory]: 124 MB (+1140kb) [00:05:15]
+// [Engine Memory]: 1,029 MB (+5226kb) [00:05:15]
+// Elapsed time: 10 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 448, 208, 1254, 587, false, false, false, true, false); // gl (k, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, cl)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/M_CLK] 
+// Tcl Message: endgroup 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'endgroup' INFO: [Common 17-17] undo 'make_bd_pins_external  [get_bd_pins main_interconnect_0/M_CLK]' INFO: [Common 17-17] undo 'startgroup' 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/M_CLK] 
+// Tcl Message: endgroup 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 674, 163, 1254, 587, false, false, false, true, false); // gl (k, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, cl)
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "External Port Properties..."); // ah (an, cl)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "M_CLK", true); // Y (Q, cl)
+// Tcl Command: 'set_property name M_CLK [get_bd_ports M_CLK_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name M_CLK [get_bd_ports M_CLK_0] 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 453, 210, 1254, 587, false, false, false, true, false); // gl (k, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, cl)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/M_LRSEL] 
+// Tcl Message: endgroup 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,032 MB. GUI used memory: 66 MB. Current time: 12/16/19, 2:09:13 PM CET
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 696, 202, 1254, 587, false, false, false, true, false); // gl (k, cl) - Popup Trigger
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "M_LRSEL", true); // Y (Q, cl)
+// Tcl Command: 'set_property name M_LRSEL [get_bd_ports M_LRSEL_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name M_LRSEL [get_bd_ports M_LRSEL_0] 
+expandTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, Nets]", 4); // i (O, cl)
+collapseTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, Nets]", 4); // i (O, cl)
+selectTab((HResource) null, (HResource) null, "Signals", 2); // aK (aH, cl)
+selectTab((HResource) null, (HResource) null, "Board", 3); // aK (aH, cl)
+// Elapsed time: 11 seconds
+selectTree(PAResourceAtoD.BoardTreePanel_BOARD_TREE_PANEL, "[Nexys4 DDR, External Memory, Onboard Micro SD Slot]", 11, false); // aj (O, cl)
+selectTree(PAResourceAtoD.BoardTreePanel_BOARD_TREE_PANEL, "[Nexys4 DDR, External Memory, Onboard Micro SD Slot]", 11, false, false, false, false, true, false); // aj (O, cl) - Popup Trigger
+selectTree(PAResourceAtoD.BoardTreePanel_BOARD_TREE_PANEL, "[Nexys4 DDR, External Memory, Onboard Micro SD Slot]", 11, false, false, false, false, true, false); // aj (O, cl) - Popup Trigger
+selectTree(PAResourceAtoD.BoardTreePanel_BOARD_TREE_PANEL, "[Nexys4 DDR, External Memory, Onboard Micro SD Slot]", 11, false); // aj (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_CONNECT_PREFERRED_BOARD_INTERFACE
+// HOptionPane Warning: ''Onboard Micro SD Slot' board component cannot be connected because no possible options to connect. (Auto Connect)'
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+selectTree(PAResourceAtoD.BoardTreePanel_BOARD_TREE_PANEL, "[Nexys4 DDR, External Memory, Onboard Micro SD Slot]", 11, false, false, false, false, true, false); // aj (O, cl) - Popup Trigger
+selectTree(PAResourceAtoD.BoardTreePanel_BOARD_TREE_PANEL, "[Nexys4 DDR, External Memory, Onboard Micro SD Slot]", 11, false, false, false, false, true, false); // aj (O, cl) - Popup Trigger
+selectMenuItem(PAResourceAtoD.BoardTreePanel_CONNECT_BOARD_COMPONENT, "Connect Board Component..."); // ah (an, cl)
+// HOptionPane Warning: ''Onboard Micro SD Slot' board component cannot be connected because no possible options to connect. (Connect Board Part Interface)'
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// Elapsed time: 11 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 450, 209, 1254, 587, false, false, false, true, false); // gl (k, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, cl)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/SD_CMD] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/SD_SCK] 
+// Tcl Message: endgroup 
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "SD_SCK", true); // Y (Q, cl)
+// Tcl Command: 'set_property name SD_SCK [get_bd_ports SD_SCK_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name SD_SCK [get_bd_ports SD_SCK_0] 
+// Elapsed time: 10 seconds
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "SD_CMD", true); // Y (Q, cl)
+// Tcl Command: 'set_property name SD_CMD [get_bd_ports SD_CMD_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name SD_CMD [get_bd_ports SD_CMD_0] 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/SD_RESET] 
+// Tcl Message: endgroup 
+// Elapsed time: 19 seconds
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "SD_RESET", true); // Y (Q, cl)
+// Tcl Command: 'set_property name SD_RESET [get_bd_ports SD_RESET_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name SD_RESET [get_bd_ports SD_RESET_0] 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 466, 293, 1254, 587, false, false, false, true, false); // gl (k, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/UART_CTS] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/UART_RXD_OUT] 
+// Tcl Message: endgroup 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 763, 246, 1254, 587, false, false, false, true, false); // gl (k, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, cl)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, cl)
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "UART_RXD_OUT", true); // Y (Q, cl)
+// Tcl Command: 'set_property name UART_RXD_OUT [get_bd_ports UART_RXD_OUT_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name UART_RXD_OUT [get_bd_ports UART_RXD_OUT_0] 
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "UART_CTS", true); // Y (Q, cl)
+// Tcl Command: 'set_property name UART_CTS [get_bd_ports UART_CTS_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name UART_CTS [get_bd_ports UART_CTS_0] 
+// Elapsed time: 13 seconds
+selectTree(PAResourceAtoD.BoardTreePanel_BOARD_TREE_PANEL, "[Nexys4 DDR, Clock, System Clock]", 5, false); // aj (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_CONNECT_PREFERRED_BOARD_INTERFACE
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 
+// by (cl):  Auto Connect : addNotify
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,152 MB. GUI used memory: 67 MB. Current time: 12/16/19, 2:11:28 PM CET
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// [Engine Memory]: 1,152 MB (+75086kb) [00:08:08]
+// Tcl Message: apply_board_connection -board_interface "sys_clock" -ip_intf "clk_wiz_0/clock_CLK_IN1" -diagram "design_1"  
+// Tcl Message: INFO: [board_interface 100-100] current_bd_design design_1 INFO: [board_interface 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /clk_wiz_0] INFO: [board_interface 100-100] set_property CONFIG.CLK_IN1_BOARD_INTERFACE sys_clock [get_bd_cells -quiet /clk_wiz_0] INFO: [board_interface 100-100] create_bd_port -dir I sys_clock -type clk INFO: [board_interface 100-100] set_property CONFIG.FREQ_HZ 100000000 /sys_clock INFO: [board_interface 100-100] set_property CONFIG.PHASE 0.000 /sys_clock INFO: [board_interface 100-100] connect_bd_net /sys_clock /clk_wiz_0/clk_in1 INFO: [board_interface 100-100] set_property CONFIG.FREQ_HZ 100000000 /sys_clock 
+// Tcl Message: endgroup 
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins main_interconnect_0/CLK100MHZ] 
+// Tcl Message: endgroup 
+// Tcl Command: 'set_property location {1.5 619 485} [get_bd_cells main_interconnect_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1.5 619 485} [get_bd_cells main_interconnect_0] 
+// Tcl Command: 'set_property location {2 617 510} [get_bd_cells main_interconnect_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 617 510} [get_bd_cells main_interconnect_0] 
+// Elapsed time: 35 seconds
+selectTab((HResource) null, (HResource) null, "Design", 1); // aK (aH, cl)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aK (aH, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main_interconnect(Behavioral) (main_interconnect_original.vhd)]", 2, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main_interconnect(Behavioral) (main_interconnect_original.vhd)]", 2, false, false, false, false, false, true); // B (F, cl) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,190 MB. GUI used memory: 71 MB. Current time: 12/16/19, 2:12:07 PM CET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // k (j, cl)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets main_interconnect_0_M_CLK] [get_bd_ports M_CLK] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets main_interconnect_0_M_LRSEL] [get_bd_ports M_LRSEL] 
+// Elapsed time: 14 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 456, 279, 1254, 593, false, false, false, true, false); // gl (k, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/SD_CD] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/SD_DAT] 
+// Tcl Message: endgroup 
+// Elapsed time: 24 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1041, 335, 1254, 593, false, false, false, true, false); // gl (k, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ae (an, Popup.HeavyWeightWindow)
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "SD_DAT", true); // Y (Q, cl)
+// Tcl Command: 'set_property name SD_DAT [get_bd_ports SD_DAT_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name SD_DAT [get_bd_ports SD_DAT_0] 
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "SD_CD", true); // Y (Q, cl)
+// Tcl Command: 'set_property name SD_CD [get_bd_ports SD_CD_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name SD_CD [get_bd_ports SD_CD_0] 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/UART_TXD_IN] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins main_interconnect_0/UART_RTS] 
+// Tcl Message: endgroup 
+// Elapsed time: 28 seconds
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "UART_TXD_IN", true); // Y (Q, cl)
+// Tcl Command: 'set_property name UART_TXD_IN [get_bd_ports UART_TXD_IN_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name UART_TXD_IN [get_bd_ports UART_TXD_IN_0] 
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "UART_RTS", true); // Y (Q, cl)
+// Tcl Command: 'set_property name UART_RTS [get_bd_ports UART_RTS_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name UART_RTS [get_bd_ports UART_RTS_0] 
+// Elapsed time: 609 seconds
+selectButton(PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN, "save_rsb_design"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : <C:\xilinx_project\git_project\projet_CPU\projet_CPU\Xilinx\Projet_2019_1\project_nexys_2019\project_nexys_2019.srcs\sources_1\bd\design_1\design_1.bd>  Wrote  : <C:/xilinx_project/git_project/projet_CPU/projet_CPU/Xilinx/Projet_2019_1/project_nexys_2019/project_nexys_2019.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE

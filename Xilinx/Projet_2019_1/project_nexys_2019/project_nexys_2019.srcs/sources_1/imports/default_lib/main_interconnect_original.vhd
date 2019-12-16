@@ -142,8 +142,8 @@ end main_interconnect;
 architecture Behavioral of main_interconnect is
  
 begin
---valeur par default
-AN <=(others <='1');
+--valeur par défault
+AN <= (others =>'1');
 CA <='0';
 CB <='0';
 CC <='0';
@@ -152,32 +152,32 @@ CE <='0';
 CF <='0';
 CG <='0';
 DP <='0';
-led<=(others<='0');w
+led<=(others=>'0');
 LED16_B <='0';
 LED16_G <='0';
 LED16_R <='0';
 LED17_B <='0';
 LED17_G <='0';
 LED17_R <='0';
-JA <=(others<='Z');
-JB <=(others<='Z');
-JC <=(others<='Z');
-JD <=(others<='Z');
-XA_N <=(others<='Z');
-XA_P <=(others<='Z');
-VGA_R<=(others<='0');
-VGA_G<=(others<='0');
-VGA_B<=(others<='0');
+JA <=(others=>'Z');
+JB <=(others=>'Z');
+JC <=(others=>'Z');
+JD <=(others=>'Z');
+XA_N <=(others=>'Z');
+XA_P <=(others=>'Z');
+VGA_R<=(others=>'0');
+VGA_G<=(others=>'0');
+VGA_B<=(others=>'0');
 VGA_HS <='0';
 VGA_VS <='0';
-SD_RESET <='1':--mettre à 0 pour activé
+SD_RESET <='1';--mettre Ã  0 pour activÃ©
 SD_SCK <='0';
-SD_CMD <='Z'
-SD_DAT <=(others<='Z');
+SD_CMD <='Z';
+SD_DAT <=(others=>'Z');
 ACL_MOSI <='0';
 ACL_SCLK <='0';
 ACL_CSN <='1';--actif sur niveau bas
-TMP_SCL<='0';e
+TMP_SCL<='0';
  M_CLK <='0';
  M_LRSEL <='0';
 UART_RXD_OUT<='0';
@@ -185,7 +185,7 @@ UART_CTS <='0';
 ETH_MDC <='Z';
 ETH_RSTN <='Z';
 ETH_TXEN<='Z';
-ETH_TXD<=(others<='Z'):
+ETH_TXD<=(others=>'Z');
 ETH_REFCLK<='Z';
 QSPI_CSN<='Z';
  

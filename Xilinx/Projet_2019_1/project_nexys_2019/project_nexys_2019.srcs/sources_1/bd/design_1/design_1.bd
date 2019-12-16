@@ -1,0 +1,401 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a100tcsg324-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1.3"
+    },
+    "design_tree": {
+      "main_interconnect_0": "",
+      "clk_wiz_0": ""
+    },
+    "ports": {
+      "SD_CMD": {
+        "direction": "IO"
+      },
+      "SD_SCK": {
+        "direction": "O"
+      },
+      "SD_RESET": {
+        "type": "rst",
+        "direction": "O"
+      },
+      "UART_CTS": {
+        "direction": "O"
+      },
+      "UART_RXD_OUT": {
+        "direction": "O"
+      },
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "PHASE": {
+            "value": "0.000"
+          }
+        }
+      },
+      "SD_CD": {
+        "direction": "I"
+      },
+      "SD_DAT": {
+        "direction": "IO",
+        "left": "3",
+        "right": "0"
+      },
+      "UART_TXD_IN": {
+        "direction": "I"
+      },
+      "UART_RTS": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "main_interconnect_0": {
+        "vlnv": "xilinx.com:module_ref:main_interconnect:1.0",
+        "xci_name": "design_1_main_interconnect_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "main_interconnect",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CPU_RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "SD_RESET": {
+            "type": "rst",
+            "direction": "O"
+          },
+          "M_CLK": {
+            "type": "clk",
+            "direction": "O"
+          },
+          "PS2_CLK": {
+            "type": "clk",
+            "direction": "IO"
+          },
+          "ETH_RSTN": {
+            "type": "rst",
+            "direction": "O"
+          },
+          "AN": {
+            "direction": "O",
+            "left": "0",
+            "right": "7"
+          },
+          "CA": {
+            "direction": "O"
+          },
+          "CB": {
+            "direction": "O"
+          },
+          "CC": {
+            "direction": "O"
+          },
+          "CD": {
+            "direction": "O"
+          },
+          "CE": {
+            "direction": "O"
+          },
+          "CF": {
+            "direction": "O"
+          },
+          "CG": {
+            "direction": "O"
+          },
+          "DP": {
+            "direction": "O"
+          },
+          "OK_BTN": {
+            "direction": "I"
+          },
+          "LEFT_BTN": {
+            "direction": "I"
+          },
+          "UP_BTN": {
+            "direction": "I"
+          },
+          "RIGHT_BTN": {
+            "direction": "I"
+          },
+          "DOWN_BTN": {
+            "direction": "I"
+          },
+          "SW": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "led": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "LED16_B": {
+            "direction": "O"
+          },
+          "LED16_G": {
+            "direction": "O"
+          },
+          "LED16_R": {
+            "direction": "O"
+          },
+          "LED17_B": {
+            "direction": "O"
+          },
+          "LED17_G": {
+            "direction": "O"
+          },
+          "LED17_R": {
+            "direction": "O"
+          },
+          "JA": {
+            "direction": "IO",
+            "left": "10",
+            "right": "1"
+          },
+          "JB": {
+            "direction": "IO",
+            "left": "10",
+            "right": "1"
+          },
+          "JC": {
+            "direction": "IO",
+            "left": "10",
+            "right": "1"
+          },
+          "JD": {
+            "direction": "IO",
+            "left": "10",
+            "right": "1"
+          },
+          "XA_N": {
+            "direction": "IO",
+            "left": "4",
+            "right": "1"
+          },
+          "XA_P": {
+            "direction": "IO",
+            "left": "4",
+            "right": "1"
+          },
+          "VGA_R": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "VGA_G": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "VGA_B": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "VGA_HS": {
+            "direction": "O"
+          },
+          "VGA_VS": {
+            "direction": "O"
+          },
+          "SD_SCK": {
+            "direction": "O"
+          },
+          "SD_CMD": {
+            "direction": "IO"
+          },
+          "SD_DAT": {
+            "direction": "IO",
+            "left": "3",
+            "right": "0"
+          },
+          "SD_CD": {
+            "direction": "I"
+          },
+          "ACL_MISO": {
+            "direction": "I"
+          },
+          "ACL_MOSI": {
+            "direction": "O"
+          },
+          "ACL_SCLK": {
+            "direction": "O"
+          },
+          "ACL_CSN": {
+            "direction": "O"
+          },
+          "ACL_INT": {
+            "direction": "I",
+            "left": "2",
+            "right": "1"
+          },
+          "TMP_SCL": {
+            "direction": "O"
+          },
+          "TMP_SDA": {
+            "direction": "IO"
+          },
+          "TMP_INT": {
+            "direction": "I"
+          },
+          "TMP_CT": {
+            "direction": "I"
+          },
+          "M_DATA": {
+            "direction": "I"
+          },
+          "M_LRSEL": {
+            "direction": "O"
+          },
+          "UART_TXD_IN": {
+            "direction": "I"
+          },
+          "UART_RXD_OUT": {
+            "direction": "O"
+          },
+          "UART_CTS": {
+            "direction": "O"
+          },
+          "UART_RTS": {
+            "direction": "I"
+          },
+          "PS2_DATA": {
+            "direction": "IO"
+          },
+          "ETH_MDC": {
+            "direction": "O"
+          },
+          "ETH_MDIO": {
+            "direction": "IO"
+          },
+          "ETH_CRSDV": {
+            "direction": "IO"
+          },
+          "ETH_RXERR": {
+            "direction": "IO"
+          },
+          "ETH_RXD": {
+            "direction": "IO",
+            "left": "1",
+            "right": "0"
+          },
+          "ETH_TXEN": {
+            "direction": "O"
+          },
+          "ETH_TXD": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "ETH_REFCLK": {
+            "direction": "O"
+          },
+          "ETH_INTN": {
+            "direction": "IO"
+          },
+          "QSPI_DQ": {
+            "direction": "IO",
+            "left": "3",
+            "right": "0"
+          },
+          "QSPI_CSN": {
+            "direction": "O"
+          },
+          "CLK100MHZ": {
+            "direction": "I"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "parameters": {
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "SD_CMD",
+          "main_interconnect_0/SD_CMD"
+        ]
+      },
+      "main_interconnect_0_SD_SCK": {
+        "ports": [
+          "main_interconnect_0/SD_SCK",
+          "SD_SCK"
+        ]
+      },
+      "main_interconnect_0_SD_RESET": {
+        "ports": [
+          "main_interconnect_0/SD_RESET",
+          "SD_RESET"
+        ]
+      },
+      "main_interconnect_0_UART_CTS": {
+        "ports": [
+          "main_interconnect_0/UART_CTS",
+          "UART_CTS"
+        ]
+      },
+      "main_interconnect_0_UART_RXD_OUT": {
+        "ports": [
+          "main_interconnect_0/UART_RXD_OUT",
+          "UART_RXD_OUT"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "main_interconnect_0/CLK100MHZ"
+        ]
+      },
+      "SD_CD_0_1": {
+        "ports": [
+          "SD_CD",
+          "main_interconnect_0/SD_CD"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "SD_DAT",
+          "main_interconnect_0/SD_DAT"
+        ]
+      },
+      "UART_TXD_IN_0_1": {
+        "ports": [
+          "UART_TXD_IN",
+          "main_interconnect_0/UART_TXD_IN"
+        ]
+      },
+      "UART_RTS_0_1": {
+        "ports": [
+          "UART_RTS",
+          "main_interconnect_0/UART_RTS"
+        ]
+      }
+    }
+  }
+}
